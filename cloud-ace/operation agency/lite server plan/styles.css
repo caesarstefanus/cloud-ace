@@ -1,0 +1,217 @@
+body {
+  background-color: #e1e8ff;
+}
+
+/* main */
+
+.main-container {
+  margin: auto;
+  padding: 0;
+  width: 1100px;
+  /*height: 1000px;*/
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 85%, rgba(225,232,255,0.7665441176470589) 100%);
+}
+
+.main-container {
+  margin: auto;
+  padding: 0;
+  width: 1100px;
+  /*height: 1000px;*/
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 85%, rgba(225,232,255,0.7665441176470589) 100%);
+}
+
+.main-container h1 {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-size: 35px;
+  line-height: 1.5;
+  color: black;
+  padding-top: 50px;
+}
+
+.main-container h1::after {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 70px;
+  margin: 0 auto;
+  background-color: #026fd1;
+}
+
+.main-container h2 {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-size: 30px;
+  line-height: 1.5;
+  color: white;
+  padding: 0 0 0 50px;
+  background-color: #026fd1;
+  width: 90%;
+  margin: 10px auto 10px auto;
+  text-align: left;
+}
+
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+/*circles*/
+
+.circles--box {
+  display: flex;
+  /*
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 30px;
+  */
+  max-width: 1100px;
+  margin: 0 100px 0 100px;
+  /*background-color: magenta;*/
+}
+
+.circle--box {
+  width: 250px;
+  margin: 0 auto;
+  /*background-color: green;*/
+}
+
+/*
+.circle {
+  padding: 50% 0;
+  height: 0;
+  width: 246px;
+  background: blue;
+  border: 2px solid #666;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  font: 15px Arial, sans-serif;
+  margin: 0;
+}
+*/
+
+.circle {
+  position: relative;
+  display: block;
+  margin: 2em 0;
+  /*background-color: transparent;*/
+  color: black; /*text-color*/
+  text-align: center;
+  font-weight: bold;
+}
+
+.circle:after {
+  display: block;
+  padding-bottom: 100%;
+  width: 244px;
+  height: 0;
+  border-radius: 50%;
+  border: 3px solid #026fd1;
+  /*background-color: #ddd;*/
+  content: "";
+}
+
+.circle__inner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.circle__wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.circle__content {
+  display: table-cell;
+  padding: 1em;
+  vertical-align: middle;
+}
+
+/* service table */
+table.service-table {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #FFFFFF;
+  width: 1000px;
+  height: 600px;
+  text-align: left;
+  border-collapse: collapse;
+  margin: 50px auto 50px auto;
+}
+
+table.service-table td, table.service-table th {
+  border-bottom: 1px solid #AAAAAA;
+  padding: 3px 3px;
+}
+
+table.service-table thead {
+  border-bottom: 4px solid gray;
+}
+
+table.service-table thead th {
+  font-weight: normal;
+  text-align: left;
+  font-size: 24px;
+  font-weight: bold;
+  width: 250px;
+  height: 60px;
+}
+
+table.service-table tr td:nth-child(1) {
+  border-bottom: 1px solid black;
+  font-weight: bold;
+  text-align: left;
+  width: 30%;
+}
+
+/* plan table */
+/*set size? if not, it automatically adjust according font-size*/
+table.plan-table {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  width: 1000px;
+  height: 600px;
+  text-align: left;
+  font-size: 13px;
+  border: 1px solid #CCCCCC;
+  border-collapse: collapse;
+  margin: 50px auto 50px auto;
+}
+
+table.plan-table td, table.plan-table th {
+  border: 1px solid #CCCCCC;
+  padding: 3px 3px;
+}
+
+table.plan-table thead {
+  /*border-bottom: 4px solid gray;*/
+}
+
+table.plan-table th {
+  font-weight: normal;
+  text-align: center;
+  font-size: 15px;
+  /*width: 250px;
+  height: 60px;*/
+  background-color: #e1e8ff;
+  color: #026fd1;
+}
+
+.plan-table-reference {
+  list-style: none;
+  width: 1000px;
+  height: auto;
+  text-align: left;
+  margin: 20px auto 50px auto;
+  font-size: 16px;
+}

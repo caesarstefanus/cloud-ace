@@ -1,0 +1,41 @@
+booster website
+
+#add media query, check screen size for mobile 767px?
+#2em, 15px padding? 100% scale size
+
+pricing website
+first part
+
+#put empty gray boxes instead of 3 images (just in case also put the img src, maybe not enough time)
+#for the 3 circles, make them consistent with the blue theme color
+#put the last 3 make sure of the template but comment out (the one that has link)
+#style: when mouse-over the box, they got the shadows, and separated from each other
+
+
+second part, very important, contains plan
+
+#minus margin for the image? probably
+#for image, use the image from the japanese website as is
+#try make the image scroll-able (because the size is too large) overflow x auto , or other good ideas for the mobile site
+#make the most expensive one stands out?
+#scroll might make it NOT noticable in the first look -> try put a rounded corner or any noticeable corner style (maybe padding)
+#collapse style column (only scroll able on the right side)
+#light blue and white stripe table
+#remove outer border of the table
+#or, worst case, put the plans in a rows
+
+3rd & 4th part
+
+#just put in blank gray box for the image
+
+Free option service section
+#light gray background for the boxes
+#comment out the link button
+
+Option section
+
+#put the layout and images
+#comment out the link button
+
+#put the size for every box, to make it easier. Cut off the text? make sure the length of the text is not too long
+#careful with spacing between text and images

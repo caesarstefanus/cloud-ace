@@ -1,0 +1,27 @@
+1
+
+Application Server
+API Server
+Master Data Management
+Data Reference
+Data Analysis Instruction
+Data Analysis
+Data Cooperation
+
+2
+Logs inside GCE instances are collected using Logging Agent.
+Other than that, logs are automatically collected using GCP.
+
+GCE instances
+
+For every resources, up to 10GB of logs can be stored.
+Logs storage period is 30 days.
+By setting the logs metrics, we can mark the range of saved logs in GCS.
+
+Logs metrics
+
+The logs is stored from SDL.
+After a fixed period of time, the logs will be moved automatically to ColdLine.
+Basically, it's impossible to cancel the logs.
+
+GCS bucket

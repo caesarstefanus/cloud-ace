@@ -1,0 +1,15 @@
+#Singapore website notes
+
+#smaller window problems
+-> The text hits other text when the window is smaller(Companies who moved to the cloud with Cloud Ace)
+-> So does the images (meet the team)
+
+Take notes on the main style
+(to make it easier to edit in the future)
+-> Website color template: text color, background
+-> text size, header size, box size,
+-> font-family: 'Roboto'
+-> line height?
+-> usage of hex color or text e.g. 'black' 'white'
+-> no main container? -> the possibility to use flex box for smaller window
+-> @media (media queries) option window sizes

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Light Server Plan</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="main-container">
+    <h1>Light Server Plan</h1>
+    <div class="circles--box">
+        <div class="circle--box">
+          <div class="circle">
+            <div class="circle__inner">
+              <div class="circle__wrapper">
+                <div class="circle__content">
+                  テストサーバーや<br>
+                  検証環境で<br>
+                  ご利用の方
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="circle--box">
+          <div class="circle">
+            <div class="circle__inner">
+              <div class="circle__wrapper">
+                <div class="circle__content">
+                  障害時対応レベルが<br>
+                  高くない環境で<br>
+                  利用の方
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="circle--box">
+          <div class="circle">
+            <div class="circle__inner">
+              <div class="circle__wrapper">
+                <div class="circle__content">
+                  まずGCEを試してみたい、<br>という方
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <h2>Service Outline</h2>
+    <img src="https://www.cloud-ace.jp/wp-content/uploads/2014/09/basic-ico00.png" alt="service" class="image">
+    <table class="service-table">
+    <thead>
+      <tr>
+      <th>Category</th>
+      <th>Outline</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>Server Monitoring</td>
+        <td>We will monitor and notify server resources and failure status 24 hours a day.</td>
+      </tr>
+      <tr>
+        <td>Data Backup</td>
+        <td>Once a day, we will back up your data and notify you the results.</td>
+      </tr>
+      <tr>
+        <td>Security Measures</td>
+        <td>We will restrict access by setting up login environment and Firewall.</td>
+      </tr>
+      <tr>
+        <td>24 Hours 365 Days Support</td>
+        <td>Cloud Ace technical staff will provide support via phone and e-mail.</td>
+      </tr>
+      <tr>
+        <td>Centralized Issue Management</td>
+        <td>We share information with our customers on the web.</td>
+      </tr>
+      <tr>
+        <td>Cyber Risk Insurance</td>
+        <td>Free cyber risk insurance for GCP users. Click here for details (link?).</td>
+      </tr>
+    </tbody>
+    </table>
+
+    <h2>Plan Details</h2>
+    <table class="plan-table">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th colspan="2">Item</th>
+        <th>Explanation</th>
+        <th>Support Time</th>
+        <th>Support</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <th rowspan="5">Service/<br>
+      Resouce Monitoring</th>
+    <td rowspan="2">Monitoring</td>
+    <td>Communication monitoring</td>
+    <td>Implement various monitoring</td>
+    <td>24 hours/365 days</td>
+    <td>◯</td>
+    </tr>
+    <tr>
+    <td>
+      <プロセス監視<br>
+      リソース監視<br>
+      （CPU使用率、<br>
+      Disk使用率）
+    </td>
+    <td>各種監視を実施</td>
+    <td>－</td>
+    <td>－</td>
+    </tr>
+    <tr>
+      <td rowspan="2">障害対応</td>
+      <td>自動通知</td>
+      <td>監視閾値を超過した際の自動メール通知</td>
+      <td>24時間/365日</td>
+      <td>◯</td>
+    </tr>
+    <tr>
+      <td>一次対応<br>
+        -電話連絡<br>
+        -サーバ再起動<br>
+        -プロセス起動/停止/再起動</td>
+      <td>自動メール通知をトリガーに、予め定められた一次対応を実施</td>
+      <td>24時間/365日(*1)</td>
+      <td>▲(*1)</td>
+    </tr>
+    <tr>
+      <td>変更管理</td>
+      <td>監視項目の追加/変更/削除</td>
+      <td>監視項目の変更を実施</td>
+      <td>平日</td>
+      <td>◯</td>
+    </tr>
+    <tr>
+      <th rowspan="3">バックアップ/<br>
+        リストア</th>
+      <td rowspan="2">バックアップ</td>
+      <td>スケジュールの登録/変更</td>
+      <td>バックアップの設定登録、<br>
+        変更を実施</td>
+      <td>平日</td>
+      <td>◯</td>
+    </tr>
+    <tr>
+      <td>バックアップ結果確認</td>
+      <td>バックアップ結果を自動で通知</td>
+      <td>24時間/365日</td>
+      <td>◯</td>
+    </tr>
+    <tr>
+      <td>リストア</td>
+      <td>手動でリストア</td>
+      <td>依頼に基づきリストアを実施</td>
+      <td>平日</td>
+      <td>◯</td>
+    </tr>
+    <tr>
+      <th rowspan="3">Security</th>
+      <td>Login Environment</td>
+      <td>Linux</td>
+      <td>SSH, Webmin, FTPを標準提供<br>
+      （提供時に事前に設定）</td>
+      <td>平日</td>
+      <td>◯</td>
+    </tr>
+    <tr>
+      <td>Access Restriction</td>
+      <td>FireWall addition/change</td>
+      <td>FireWallにてアクセス制限を実施</td>
+      <td>平日</td>
+      <td>◯</td>
+    </tr>
+    <tr>
+      <td>脆弱性パッチ適用</td>
+      <td>OSへのパッチ適用</td>
+      <td>影響度の大きなものについて、お客様との調整に<br>より年4回まで対応可能</td>
+      <td>–</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <th>サポート</th>
+      <td>GCP<br>
+      技術サポート</td>
+      <td>メール/電話でのサポート</td>
+      <td>クラウドエースの技術スタッフによるサポート
+      （必要に応じてGoogleサポートへのエスカレーション）</td>
+      <td>平日</td>
+      <td>平日</td>
+    </tr>
+    <tr>
+      <th>課題の<br>
+        一元管理</th>
+      <td>課題管理</td>
+      <td>サポートWebシステム</td>
+      <td>Webにて課題をお客様と情報共有</td>
+      <td>24時間/365日</td>
+      <td>◯<br>(*2)</td>
+    </tr>
+    </tbody>
+    </table>
+    <div class="plan-table-reference">
+      (*1) お客様連絡に基づいて、OSの再起動を実施（OSフリーズなどOS操作が出来なくなり、管理コンソールから再起動が必要な場合）<br>
+      (*2) 変更管理のみ
+    </div>
+
+    <h2>プラン</h2>
+    <table class="plan-table">
+    <thead>
+      <tr>
+        <th>Plan</th>
+        <th>Instance Type</th>
+        <th>Virtual Core</th>
+        <th>Memory</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+      <th rowspan="5">Standard</th>
+      <td>n1-standard-1</td>
+      <td>1</td>
+      <td>3.75 GB</td>
+      <td>41,000 Yen</td>
+    </tr>
+    <tr>
+      <td>n1-standard-2</td>
+      <td>2</td>
+      <td>7.5 GB</td>
+      <td>49,000 Yen</td>
+    </tr>
+    <tr>
+      <td>n1-standard-4</td>
+      <td>4</td>
+      <td>15 GB</td>
+      <td>63,000 Yen</td>
+    </tr>
+    <tr>
+      <td>n1-standard-8</td>
+      <td>8</td>
+      <td>30 GB</td>
+      <td>93,000 Yen</td>
+    </tr>
+    <tr>
+      <td>n1-standard-16</td>
+      <td>16</td>
+      <td>60 GB</td>
+      <td>153,000 Yen</td>
+    </tr>
+
+    <tr>
+      <th rowspan="4">High Memory<br>
+      (For machine that needs <br>
+      memory more than virtual core)</th>
+      <td>n1-highmem-2</td>
+      <td>2</td>
+      <td>13 GB</td>
+      <td>52,000 Yen</td>
+    </tr>
+    <tr>
+      <td>n1-highmem-4</td>
+      <td>4</td>
+      <td>26 GB</td>
+      <td>71,000 Yen</td>
+    </tr>
+    <tr>
+      <td>n1-highmem-8</td>
+      <td>8</td>
+      <td>52 GB</td>
+      <td>108,000 Yen</td>
+    </tr>
+    <tr>
+      <td>n1-highmem-16</td>
+      <td>16</td>
+      <td>104 GB</td>
+      <td>182,000 Yen</td>
+    </tr>
+
+    <tr>
+      <th rowspan="4">High CPU<br>
+      (For machine that needs <br>
+      virtual core more than memory)</th>
+      <td>n1-highcpu-2</td>
+      <td>2</td>
+      <td>1.8 GB</td>
+      <td>45,000 Yen</td>
+    </tr>
+    <tr>
+      <td>n1-highcpu-4</td>
+      <td>4</td>
+      <td>3.6 GB</td>
+      <td>56,000 Yen</td>
+    </tr>
+    <tr>
+      <td>n1-highcpu-8</td>
+      <td>8</td>
+      <td>7.2 GB</td>
+      <td>78,000 Yen</td>
+    </tr>
+    <tr>
+      <td>n1-highcpu-16</td>
+      <td>16</td>
+      <td>14.4 GB</td>
+      <td>123,000 Yen</td>
+    </tr>
+
+    <tr>
+      <th rowspan="2">Joint Core</th>
+      <td>f1-micro</td>
+      <td>1</td>
+      <td>0.6 GB</td>
+      <td>23,000 Yen</td>
+    </tr>
+    <tr>
+      <td>g1-small</td>
+      <td>1</td>
+      <td>1.7 GB</td>
+      <td>32,000 Yen</td>
+    </tr>
+    </tbody>
+    </table>
+    <div class="plan-table-reference">
+      (*1) 各プランには、デフォルトの永続ディスク100GBが含まれております。<br>
+      (*2) 各プランには、デフォルトのインターネット下りネットワーク料金として100GBの転送量が含まれております。<br>
+      こちらは無料OSの場合の料金です。有料OSをご利用になる場合の追加料金は、以下の「有料OS利用料」(link?)にてご確認ください。
+    </div>
+
+    <h2>Option</h2>
+    <table class="plan-table">
+    <thead>
+      <tr>
+        <th colspan="2">Option Name</th>
+        <th colspan="2">Price</th>
+      </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+      <th colspan="2">MySQL Installation Option</th>
+      <td>84,000 Yen</td>
+      <td>/installation</td>
+    </tr>
+    <tr>
+      <th rowspan="2">Persistent Disk</th>
+      <th>Setting Capacity</th>
+      <td>1,500 Yen</td>
+      <td>/100 GB monthly</td>
+    </tr>
+    <tr>
+      <th>SSD</th>
+      <td>3,400 Yen</td>
+      <td>/100 GB monthly</td>
+    </tr>
+    <tr>
+      <th colspan="2">Local SSD</th>
+      <td>4,400 Yen</td>
+      <td>/100 GB</td>
+    </tr>
+    <tr>
+      <th colspan="2">Image Storage</th>
+      <td>1,700 Yen</td>
+      <td>/100 GB monthly</td>
+    </tr>
+    <tr>
+      <th colspan="2">Network Transfer Volume</th>
+      <td>2,200 Yen</td>
+      <td>/100 GB</td>
+    </tr>
+
+    <tr>
+      <th rowspan="3">Load Balancer</th>
+      <th>Service Fee</th>
+      <td>4,300 Yen</td>
+      <td>/month (up until 5 rules)</td>
+    </tr>
+    <tr>
+      <th>Additional Rule</th>
+      <td>1,700 Yen</td>
+      <td>/month (1 rule addition)</td>
+    </tr>
+    <tr>
+      <th>Processing Data</th>
+      <td>190 Yen</td>
+      <td>/100 GB</td>
+    </tr>
+
+    <tr>
+      <th rowspan="3">VPN Option</th>
+      <th>Initial Cost</th>
+      <td>50,000 Yen</td>
+      <td>/time</td>
+    </tr>
+    <tr>
+      <th>Monthly Cost</th>
+      <td>25,000 Yen</td>
+      <td>/month</td>
+    </tr>
+    <tr>
+      <th>Setting Support Cost</th>
+      <td>100,000 Yen</td>
+      <td>/time</td>
+    </tr>
+    </tbody>
+    </table>
+    <div class="plan-table-reference">
+      ※料金は税抜き表示です。<br>
+      ※メールでの監視通知は24時間/365日、運用保守・障害対応は平日営業時間（10時-19時）のみです。<br>
+      平日19時以降翌朝10時までと、土日祝日は終日、対応時間外となります。
+    </div>
+
+    <h2>有料OS利用料</h2>
+    <table class="plan-table">
+    <thead>
+      <tr>
+        <th colspan="2">Option Name</th>
+        <th colspan="2">Price</th>
+      </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+      <th rowspan="2">RHEL</th>
+      <th>4 個以下の仮想 CPUの場合</th>
+      <td>6,800 Yen</td>
+      <td>/core /month</td>
+    </tr>
+    <tr>
+      <th>5 個以上の仮想 CPUの場合</th>
+      <td>14,700 Yen</td>
+      <td>/core /month</td>
+    </tr>
+
+    <tr>
+      <th rowspan="2">SUSE</th>
+      <th>f1-micro / g1-small</th>
+      <td>2,300 Yen</td>
+      <td>/month</td>
+    </tr>
+    <tr>
+      <th>その他全てのマシンタイプの場合</th>
+      <td>12,400 Yen</td>
+      <td>/month</td>
+    </tr>
+
+    <tr>
+      <th rowspan="2">Windows Server</th>
+      <th>f1-micro / g1-small</th>
+      <td>2,300 Yen</td>
+      <td>/month</td>
+    </tr>
+    <tr>
+      <th>その他全てのマシンタイプの場合（コア/時間）</th>
+      <td>4,500 Yen</td>
+      <td>/month</td>
+    </tr>
+
+    <tr>
+      <th rowspan="2">SQL Server</th>
+      <th>SQL Server Standard (core/hour)</th>
+      <td>23,000 Yen</td>
+      <td>/core /month<br>
+        (Windows OS fee included)</td>
+    </tr>
+    <tr>
+      <th>SQL Server Web (core/hour)</th>
+      <td>5,800 Yen</td>
+      <td>/core /month<br>
+        (Windows OS fee included)</td>
+    </tr>
+    </tbody>
+    </table>
+    <div class="plan-table-reference">
+      ※有料OSをご利用の場合は、上にある無料OSのプラン料金にこちらの料金を追加させていただきます。
+    </div>
+  </div>
+</body>
