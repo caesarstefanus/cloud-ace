@@ -87,7 +87,7 @@
     </table>
 
     <h2>Plan Details</h2>
-    <table class="plan-table">
+    <table class="plan-table plan-details-width">
     <thead>
       <tr>
         <th>Category</th>
@@ -104,7 +104,7 @@
     <td rowspan="2">Monitoring</td>
     <td>Communication monitoring</td>
     <td>Implement various monitoring</td>
-    <td>24 hours/365 days</td>
+    <td>24 hours / 365 days</td>
     <td>◯</td>
     </tr>
     <tr>
@@ -122,7 +122,7 @@
       <td rowspan="2">障害対応</td>
       <td>自動通知</td>
       <td>監視閾値を超過した際の自動メール通知</td>
-      <td>24時間/365日</td>
+      <td>24 hours / 365 days</td>
       <td>◯</td>
     </tr>
     <tr>
@@ -131,8 +131,10 @@
         -サーバ再起動<br>
         -プロセス起動/停止/再起動</td>
       <td>自動メール通知をトリガーに、予め定められた一次対応を実施</td>
-      <td>24時間/365日(*1)</td>
-      <td>▲(*1)</td>
+      <td>24 hours / 365 days<br>
+        (*1)</td>
+      <td>▲ <br>
+        (*1)</td>
     </tr>
     <tr>
       <td>変更管理</td>
@@ -142,9 +144,9 @@
       <td>◯</td>
     </tr>
     <tr>
-      <th rowspan="3">バックアップ/<br>
-        リストア</th>
-      <td rowspan="2">バックアップ</td>
+      <th rowspan="3">Backup/<br>
+        Restore</th>
+      <td rowspan="2">Backup</td>
       <td>スケジュールの登録/変更</td>
       <td>バックアップの設定登録、<br>
         変更を実施</td>
@@ -154,11 +156,11 @@
     <tr>
       <td>バックアップ結果確認</td>
       <td>バックアップ結果を自動で通知</td>
-      <td>24時間/365日</td>
+      <td>24 hours / 365 days</td>
       <td>◯</td>
     </tr>
     <tr>
-      <td>リストア</td>
+      <td>Restore</td>
       <td>手動でリストア</td>
       <td>依頼に基づきリストアを実施</td>
       <td>平日</td>
@@ -188,9 +190,8 @@
       <td>–</td>
     </tr>
     <tr>
-      <th>サポート</th>
-      <td>GCP<br>
-      技術サポート</td>
+      <th>Support</th>
+      <td>GCP Technical Support</td>
       <td>メール/電話でのサポート</td>
       <td>クラウドエースの技術スタッフによるサポート
       （必要に応じてGoogleサポートへのエスカレーション）</td>
@@ -198,12 +199,11 @@
       <td>平日</td>
     </tr>
     <tr>
-      <th>課題の<br>
-        一元管理</th>
+      <th>課題の一元管理</th>
       <td>課題管理</td>
       <td>サポートWebシステム</td>
       <td>Webにて課題をお客様と情報共有</td>
-      <td>24時間/365日</td>
+      <td>24 hours / 365 days</td>
       <td>◯<br>(*2)</td>
     </tr>
     </tbody>
@@ -213,8 +213,8 @@
       (*2) 変更管理のみ
     </div>
 
-    <h2>プラン</h2>
-    <table class="plan-table">
+    <h2>Plan</h2>
+    <table class="plan-table plan-width">
     <thead>
       <tr>
         <th>Plan</th>
@@ -336,7 +336,7 @@
     </div>
 
     <h2>Option</h2>
-    <table class="plan-table">
+    <table class="plan-table option-width">
     <thead>
       <tr>
         <th colspan="2">Option Name</th>
@@ -414,12 +414,12 @@
     </table>
     <div class="plan-table-reference">
       ※料金は税抜き表示です。<br>
-      ※メールでの監視通知は24時間/365日、運用保守・障害対応は平日営業時間（10時-19時）のみです。<br>
+      ※メールでの監視通知は24 hours / 365 days、運用保守・障害対応は平日営業時間（10時-19時）のみです。<br>
       平日19時以降翌朝10時までと、土日祝日は終日、対応時間外となります。
     </div>
 
     <h2>有料OS利用料</h2>
-    <table class="plan-table">
+    <table class="plan-table os-width">
     <thead>
       <tr>
         <th colspan="2">Option Name</th>
@@ -430,12 +430,12 @@
     <tbody>
     <tr>
       <th rowspan="2">RHEL</th>
-      <th>4 個以下の仮想 CPUの場合</th>
+      <th>4 or less virtual CPU</th>
       <td>6,800 Yen</td>
       <td>/core /month</td>
     </tr>
     <tr>
-      <th>5 個以上の仮想 CPUの場合</th>
+      <th>5 or more virtual CPU</th>
       <td>14,700 Yen</td>
       <td>/core /month</td>
     </tr>
@@ -447,7 +447,7 @@
       <td>/month</td>
     </tr>
     <tr>
-      <th>その他全てのマシンタイプの場合</th>
+      <th>Other Machine Types</th>
       <td>12,400 Yen</td>
       <td>/month</td>
     </tr>
@@ -459,20 +459,20 @@
       <td>/month</td>
     </tr>
     <tr>
-      <th>その他全てのマシンタイプの場合（コア/時間）</th>
+      <th>Other Machine Types (core / hour)</th>
       <td>4,500 Yen</td>
       <td>/month</td>
     </tr>
 
     <tr>
       <th rowspan="2">SQL Server</th>
-      <th>SQL Server Standard (core/hour)</th>
+      <th>SQL Server Standard (core / hour)</th>
       <td>23,000 Yen</td>
       <td>/core /month<br>
         (Windows OS fee included)</td>
     </tr>
     <tr>
-      <th>SQL Server Web (core/hour)</th>
+      <th>SQL Server Web (core / hour)</th>
       <td>5,800 Yen</td>
       <td>/core /month<br>
         (Windows OS fee included)</td>
