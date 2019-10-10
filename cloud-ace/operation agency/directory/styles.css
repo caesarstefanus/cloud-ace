@@ -18,7 +18,7 @@ body {
   text-align: center;
   font-size: 35px;
   line-height: 1.5;
-  color: black;
+  color: #026fd1;
   padding-top: 50px;
 }
 
@@ -31,7 +31,7 @@ body {
   background-color: #026fd1;
 }
 
-.main-container p{
+.main-container p {
   font-family: 'Roboto', sans-serif;
   text-align: center;
   font-size: 15px;
@@ -47,11 +47,12 @@ body {
 }
 
 /* option */
+
 .plan-wrapper {
   display: flex;
   flex-direction: row;
   width: 990px;
-  height: 450px;
+  height: 440px;
   margin: 10px auto;
 }
 
@@ -81,24 +82,26 @@ body {
   font-size: 20px;
   font-weight: bold;
   text-align: left;
-  line-height: 3;
-  color: white;
-  padding-left: 10px;
+  /*line-height: 2;*/
+  color: #FFFFFF;
+  padding: 0 0 0 10px;
+  margin: 20px 0 0 0;
   display: block;
 }
 
 .plan-box-price {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
-  line-height: 2;
+  /*line-height: 2;*/
   text-align: left;
-  color: white;
-  padding-left: 10px;
+  color: #FFFFFF;
+  padding: 0 0 0 10px;
+  margin: 10px 0 0 0;
   display: block;
 }
 
 .plan-box-row-wrapper {
-  height: 110px;
+  height: 100px;
   width: 370px;
   display: flex;
   flex-direction: column;
@@ -133,8 +136,8 @@ body {
   content: "";
   display: block;
   height: 1px;
-  /*margin: 0 auto;*/
-  width: 410px;
+  margin: 0 0 0 -5px; /* little bit left */
+  width: 420px;
   background-color: #026fd1;
 }
 
@@ -145,12 +148,13 @@ body {
   text-align: left;
   font-size: 14px;
   line-height: 35px;
-  margin: 20px 0 0 -20px;
+  margin: 20px 0 0 -10px;
+  color: #3e3e3e;
 }
 
 .plan-box-list li:before {
   content: "\29BF";
-  color: blue;
+  color: #026fd1;
 }
 
 .plan-box-list li span {
@@ -161,7 +165,7 @@ body {
 .plan-box-button {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  color: white;
+  color: #FFFFFF;
   text-align: center;
   vertical-align: middle;
   border-radius: 25px;
@@ -175,5 +179,15 @@ body {
 }
 
 .theme-color {
-  background-color: #0057a3;
+  /*background-color: #0057a3;*/
+  background-color: #026fd1;
+}
+
+/* debug */
+.cyan {
+  background-color: cyan;
+}
+
+.red {
+  background-color: red;
 }
