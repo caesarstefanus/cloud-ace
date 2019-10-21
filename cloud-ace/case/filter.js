@@ -101,6 +101,7 @@ function showCards(selectedService, selectedIndustry) {
     }
   }
   */
+  
   for (var i = 0; i < serviceTag.length; i++) {
     for (var j = 0; j < industryTag.length; j++) {
       if (selectedService.localeCompare(serviceTag[i])) {

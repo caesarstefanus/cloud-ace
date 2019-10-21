@@ -172,7 +172,8 @@ a {
 .cards-tags {
   text-decoration: none;
   height: 50px;
-  /*margin: auto auto 10px auto;*/
+  width: 90%;
+  margin: auto auto auto 5%;
 }
 
 .tags {
@@ -181,14 +182,14 @@ a {
   list-style: none;
   display: inline;
   padding: 0;
-  margin: 0 0 0 5%;
+  margin: 0 0 0 0;
 }
 
 .tags .service {
   background-color: white;
   color: #7F7F7F;
-  display: inline;
-  margin: auto 5px auto auto;
+  display: inline-block;
+  margin: auto 5px 5px auto;
   padding: 3px 3px 3px 3px;
   border: 1px solid #7F7F7F;
   font-size: 10px;
@@ -197,8 +198,8 @@ a {
 .tags .industry {
   background-color: #7F7F7F;
   color: #FFFFFF;
-  display: inline;
-  margin: auto 5px auto auto;
+  display: inline-block;
+  margin: auto 5px 5px auto;
   padding: 3px 3px 3px 3px;
   border: 1px solid #7F7F7F;
   font-size: 10px;
