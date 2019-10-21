@@ -1,7 +1,8 @@
 /*
 loop through all cards
 check the tags in each card
-if the tags match, append 'show' to card class, remove otherwise
+if the tags match, append 'show' to card class
+otherwise, remove the 'show' class (the cards are hidden by default)
 after 1, 2 (or maybe more) filtering show all cards (those which contains the 'show' class)
 */
 
@@ -48,14 +49,12 @@ function addCard(index) {
   if (!cardList[index].classList.contains('show')) {
     cardList[index].classList.add('show');
   }
-  //event.preventDefault();
 }
 
 function removeCard(index) {
   if (cardList[index].classList.contains('show')) {
     cardList[index].classList.remove('show');
   }
-  //event.preventDefault();
 }
 
 function filter(selectedService = "", selectedIndustry = "") {
@@ -74,7 +73,6 @@ function filter(selectedService = "", selectedIndustry = "") {
       removeCard(i);
     }
   }
-  //event.preventDefault();
 }
 
 // When submit is clicked

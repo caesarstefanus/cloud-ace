@@ -1,4 +1,4 @@
-when using the new_filter.js:
+Things to note when using the new_filter.js:
 
 html style must exactly match the main.html styling:
 
