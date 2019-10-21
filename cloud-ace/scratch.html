@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>scratch</title>
+  <link rel="stylesheet" href="scratch.css">
+</head>
+
+<form id="js-form">
+  <select id="js-service">
+            <option value="0" selected>サービスを選ぶ</option>
+            <option value="1">GCP総合支援サービス</option>
+            <option value="2">GCP系各種オプションサービス</option>
+            <option value="3">技術支援・開発</option>
+            <option value="4">AI・機械学習</option>
+            <option value="5">トレーニング</option>
+            <option value="6">オプション</option>
+    </select>
+    <div class="icon">❖</div>
+    <select id="js-industry">
+            <option value="0" selected>業種を選ぶ</option>
+            <option value="1">ウェブサービス</option>
+            <option value="2">ゲーム</option>
+            <option value="3">マスコミ・メディア</option>
+            <option value="4">レジャー・エンタメ</option>
+            <option value="5">不動産・建築</option>
+            <option value="6">人材・教育</option>
+            <option value="7">官公庁・自治体</option>
+            <option value="8">情報通信・IT</option>
+            <option value="9">流通・小売</option>
+            <option value="10">製造</option>
+            <option value="11">金融・保険</option>
+    </select>
+  <button type="submit" id="js-submit">submit</button>
+</form>
+
+<div class="cards-wrapper">
+      <div class="cards">
+        <a href="https://www.google.com">
+          <img src="https://www.cloud-ace.jp/wp-content/uploads/2019/10/pic_blueelfin-1-600x450.png" alt="" class="cards-image">
+          <div class="cards-title">ブルーエルフィン株式会社</div>
+          <div class="cards-description">マルチクラウドで対応できる人材育成を！</div>
+          <div class="cards-tags">
+            <ul class="tags">
+              <li class="service">トレーニング</li>
+              <li class="industry">情報通信・IT</li>
+            </ul>
+          </div>
+        </a>
+      </div>
+      <div class="cards">
+        <a href="https://www.google.com">
+          <img src="https://www.cloud-ace.jp/wp-content/uploads/2019/08/gca_logo_1200-600x450.jpg" alt="" class="cards-image">
+          <div class="cards-title">一般社団法人　ゲームカルチャー協会</div>
+          <div class="cards-description">前例のないサービス開発に Google Compute Engine™️ を採用</div>
+          <div class="cards-tags">
+            <ul class="tags">
+              <li class="service">技術支援・開発</li>
+              <li class="industry">情報通信・IT</li>
+            </ul>
+          </div>
+        </a>
+      </div>
+  </div>
+
+<script type="text/javascript" src="submit.js"></script>
