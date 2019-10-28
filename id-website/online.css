@@ -1,16 +1,11 @@
 /* body */
 body {
-	/* somehow this is necessary for local */
-	margin: 0;
-	padding: 0;
-	/**/
 	background-color: #FFFFFF;
 }
 
 .page-template-default {
 	background-color: #FFFFFF;
-	/* and so is this */
-	/* to remove the small gap in all directions */
+/* remove the small gap in all directions */
 	padding: 0;
 	margin: 0;
 }
@@ -24,15 +19,12 @@ body {
 	position: fixed;
 	background-color: #FFFFFF;
 	width: 100%;
-	padding: 0;
-	margin: 0;
-	/*height: 50px;*/
 }
 
 .main-menu {
 /*background-color: #026fd1;*/
 /*overflow: hidden;*/
-	margin: 0 200px 0 200px;
+	margin: 0 200px;
 	padding: 0;
 	list-style-type: none;
 	position: relative;
@@ -42,16 +34,10 @@ body {
 	float: left;
 	color: #f2f2f2;
 	text-align: center;
-	/*padding: 15px;*/
-
-	padding: 0;
-
+	padding: 15px;
 	text-decoration: none;
 	font-size: 17px;
 	width: 120px;
-	height: 50px;
-	/*background-color: blue;*/
-	transition: all 0.4s ease;
 }
 
 .main-menu a {
@@ -60,39 +46,20 @@ body {
 	font-size: 16px;
 	color: rgba(0,0,0,0.6399999857);
 	font-weight: 300;
-
-	line-height: 50px;
-	/*padding: 0 10px 0 10px;*/
-	margin: 0;
-	padding: 0;
-	display: block;
-
-	vertical-align: middle;
-	text-align: center;
-
-	/*background-color: red;*/
 }
 
 .main-menu li:hover {
-	/*transition: background-color 0.4s;*/
 	background-color: #ddd;
 	color: black;
 }
 
 .main-menu li:hover .sub-menu {
-	transition: all 2s ease;
 	background-color: #FFFFFF;
 	color: black;
 	display: block;
-	opacity: 1;
 }
 
 /* down arrow symbol */
-/* override the <a> first */
-.menu-item-has-children a {
-	margin: 0 0 -20px 0;
-}
-
 .menu-item-has-children::after {
 	content: "";
 /*background-color: red;*/
@@ -104,22 +71,12 @@ body {
 	-webkit-transform: rotate(45deg);
 }
 
-.menu-item-has-children:hover::after {
-	transition: transform 0.5s ease;
-	transform: rotate(225deg);
-}
-
-.menu-item-has-children:not(hover)::after {
-	transition: transform 0.5s ease;
-	transform: rotate(45deg);
-}
-
 .sub-menu {
 	padding: 0;
-	margin: 20px 0 0 0;
-	/*margin: 15px 0 0 -15px;*/
+	margin: 15px 0 0 -15px;
 	list-style-type: none;
-	display: none; /*hidden by default*/
+	display: none;
+/*hidden by default*/
 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 	position: absolute;
 }
@@ -148,12 +105,11 @@ body {
   color: white;
 }
 */
-
 /* page title */
 .page-title-image {
 /*background-position: center;*/
 /*background-blend-mode: darken;*/
-	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://idcloudace.files.wordpress.com/2019/10/page-title.jpg?w=1024');
+	background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('https://idcloudace.files.wordpress.com/2019/10/page-title.jpg?w=1024');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -301,13 +257,3 @@ p {
 #actionbar {
 	display: none;
 }
-
-.skip-link {
-	display: none;
-}
-
-/*
-.main-navigation {
-	display: none;
-}
-*/
