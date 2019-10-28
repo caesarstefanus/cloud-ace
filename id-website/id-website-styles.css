@@ -32,7 +32,7 @@ body {
 .main-menu {
 /*background-color: #026fd1;*/
 /*overflow: hidden;*/
-	margin: 0 200px 0 200px;
+	margin: 0 auto 0 auto;
 	padding: 0;
 	list-style-type: none;
 	position: relative;
@@ -157,7 +157,7 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	padding: 170px 100px 0;
+	padding: 100px 100px 0;
 	height: 530px;
 	width: auto;
 }
@@ -175,13 +175,23 @@ body {
 
 .page-title-text-2 {
 /*background-color: cyan;*/
-	margin: 30px 0 0;
+	margin: 30px 0 30px 0;
 	font-size: 36px;
 	text-align: center;
 	vertical-align: middle;
 	color: #FFFFFF;
 	font-family: 'Roboto', sans-serif;
 	text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px 2px 10px #333333;
+}
+
+@media screen and (max-width: 600px) {
+	.page-title-text-1 {
+		font-size: 48px;
+	}
+
+	.page-title-text-2 {
+		font-size: 24px;
+	}
 }
 
 /* text: general header and paragraph*/
@@ -230,7 +240,7 @@ p {
 	position: relative;
 	vertical-align: center;
 	text-align: center;
-	background-color: #026fd1;
+	background-color: /*#026fd1;*/ #003371;
 }
 
 .logo-wrapper {
@@ -238,7 +248,7 @@ p {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: #003371;
+	/*background-color: #003371;*/
 	height: 100px;
 	width: 100%;
 /*z-index: 1000;*/
@@ -254,19 +264,44 @@ p {
 .contact-wrapper {
 	position: relative;
 	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
-	background-color: #003371;
+	/*background-color: #003371;*/
 	width: 100%;
-/*z-index: 1000;*/
 }
 
 .contact-wrapper img {
 	display: flex;
-	text-align: center;
+	/*text-align: center;*/
 	height: 40px;
-	margin: 10px 10px 20px;
+	width: 180px;
+	margin: 10px 10px 20px 20px;
 	background-color: #FFFFFF;
+}
+
+@media (max-width: 400px) {
+	/* quick fix because the flex does not work ... for now */
+	/*
+	.contact-wrapper {
+		display: inline-block;
+	}
+
+	.contact-wrapper img {
+		display: inline-block;
+	}
+	.contact-wrapper a {
+		display: inline-block;
+	}
+	.contact-wrapper a img {
+		display: inline-block;
+	}
+	*/
+	/* smart fix, flex direction from row to column */
+	.contact-wrapper {
+		flex-flow: column;
+	}
 }
 
 /* hide all these parts */
