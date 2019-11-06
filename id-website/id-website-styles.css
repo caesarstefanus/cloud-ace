@@ -206,7 +206,7 @@ body {
 	}
 }
 
-/* text: general header and paragraph*/
+/* main-design: header, text, container, gray-white */
 h1 {
 	font-family: 'Roboto', sans-serif;
 	text-align: center;
@@ -247,6 +247,27 @@ p {
 	*/
 }
 
+.main-container {
+  max-width: 80%;
+  margin: 0 auto 0 auto;
+}
+
+/* Backgrounds */
+
+.gray-bg{
+  background-color: #EFEFEF;
+}
+
+.white-bg{
+  background-color: #FFFFFF;
+}
+
+.blue-bg{
+  background-color: #026fd1;
+}
+
+/* end of main-design */
+
 /* footer */
 .site-footer {
 	vertical-align: center;
@@ -277,7 +298,7 @@ p {
 	display: flex;
 	text-align: center;
 	height: 40px;
-	/*margin: 20px auto 10px;*/
+/*margin: 20px auto 10px;*/
 }
 
 /* 75px */
