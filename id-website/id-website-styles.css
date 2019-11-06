@@ -1,57 +1,72 @@
 /* body */
 body {
-	/* somehow this is necessary for local */
+/* somehow this is necessary for local */
 	margin: 0;
 	padding: 0;
-	/**/
+/**/
 	background-color: #FFFFFF;
 }
 
 .page-template-default {
 	background-color: #FFFFFF;
-	/* and so is this */
-	/* to remove the small gap in all directions */
+/* and so is this */
+/* to remove the small gap in all directions */
 	padding: 0;
 	margin: 0;
 }
 
+.site-content {
+	min-height: calc(100vh - 200px);
+}
+
+@media (max-width: 420px) {
+	.site-content {
+		min-height: calc(100vh - 245px);
+	}
+}
+
 /* menu bar */
-.menu-customized-menu-container {
+.main-navigation {
 /*background-color: red;*/
 /*background-color: #026fd1;*/
-	display: flex;
+	display: inline-block;
 /*height: 80px;*/
 	position: fixed;
 	background-color: #FFFFFF;
 	width: 100%;
 	padding: 0;
 	margin: 0;
-	/*height: 50px;*/
+/*height: 50px;*/
+	top: 0;
+	left: 0;
+	right: 0;
 }
 
 .main-menu {
 /*background-color: #026fd1;*/
 /*overflow: hidden;*/
-	margin: 0 auto 0 auto;
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 auto;
 	padding: 0;
 	list-style-type: none;
 	position: relative;
 }
 
 .main-menu li {
-	float: left;
+/*float: left;*/
 	color: #f2f2f2;
 	text-align: center;
-	/*padding: 15px;*/
-
+/*padding: 15px;*/
 	padding: 0;
-
 	text-decoration: none;
 	font-size: 17px;
-	width: 120px;
+	width: 200px;
 	height: 50px;
-	/*background-color: blue;*/
-	transition: all 0.4s ease;
+/*background-color: blue;*/
+	transition: all .4s ease;
 }
 
 .main-menu a {
@@ -60,21 +75,18 @@ body {
 	font-size: 16px;
 	color: rgba(0,0,0,0.6399999857);
 	font-weight: 300;
-
 	line-height: 50px;
-	/*padding: 0 10px 0 10px;*/
+/*padding: 0 10px 0 10px;*/
 	margin: 0;
 	padding: 0;
 	display: block;
-
 	vertical-align: middle;
 	text-align: center;
-
-	/*background-color: red;*/
+/*background-color: red;*/
 }
 
 .main-menu li:hover {
-	/*transition: background-color 0.4s;*/
+/*transition: background-color 0.4s;*/
 	background-color: #ddd;
 	color: black;
 }
@@ -88,9 +100,9 @@ body {
 }
 
 /* down arrow symbol */
-/* override the <a> first */
+/* override the  first */
 .menu-item-has-children a {
-	margin: 0 0 -20px 0;
+	margin: 0 0 -20px;
 }
 
 .menu-item-has-children::after {
@@ -105,21 +117,22 @@ body {
 }
 
 .menu-item-has-children:hover::after {
-	transition: transform 0.5s ease;
+	transition: transform .5s ease;
 	transform: rotate(225deg);
 }
 
 .menu-item-has-children:not(hover)::after {
-	transition: transform 0.5s ease;
+	transition: transform .5s ease;
 	transform: rotate(45deg);
 }
 
 .sub-menu {
 	padding: 0;
-	margin: 20px 0 0 0;
-	/*margin: 15px 0 0 -15px;*/
+	margin: 20px 0 0;
+/*margin: 15px 0 0 -15px;*/
 	list-style-type: none;
-	display: none; /*hidden by default*/
+	display: none;
+/*hidden by default*/
 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 	position: absolute;
 }
@@ -130,7 +143,7 @@ body {
 	text-align: center;
 	text-decoration: none;
 	font-size: 17px;
-	width: 120px;
+	width: 200px;
 /*margin: 15px 0 0 0;*/
 /*padding: 15px 15px 15px 15px;*/
 }
@@ -148,12 +161,11 @@ body {
   color: white;
 }
 */
-
 /* page title */
 .page-title-image {
 /*background-position: center;*/
 /*background-blend-mode: darken;*/
-	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://idcloudace.files.wordpress.com/2019/10/page-title.jpg?w=1024');
+	background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('https://idcloudace.files.wordpress.com/2019/10/page-title.jpg?w=1024');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -175,7 +187,7 @@ body {
 
 .page-title-text-2 {
 /*background-color: cyan;*/
-	margin: 30px 0 30px 0;
+	margin: 30px 0;
 	font-size: 36px;
 	text-align: center;
 	vertical-align: middle;
@@ -225,7 +237,7 @@ p {
 	line-height: 1.5;
 	color: #3e3e3e;
 	margin: 30px auto;
-	padding: 0 10px;
+	padding: 10px;
 /*max-width: 800px;*/
 /*background-color: lime;*/
 /*width: 50%;*/
@@ -236,72 +248,210 @@ p {
 }
 
 /* footer */
-.page-footer {
-	position: relative;
+.site-footer {
 	vertical-align: center;
 	text-align: center;
-	background-color: /*#026fd1;*/ #003371;
+	background-color: #003371;
+	height: 200px;
 }
 
-.logo-wrapper {
+@media (max-width: 420px) {
+	.site-footer {
+		height: 225px;
+	}
+}
+
+/* 75px */
+.footer-logo-wrapper {
 	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	/*background-color: #003371;*/
-	height: 100px;
+/*background-color: #003371;*/
+	height: 75px;
 	width: 100%;
 /*z-index: 1000;*/
 }
 
-.logo-wrapper img {
+.footer-logo-wrapper img {
 	display: flex;
 	text-align: center;
 	height: 40px;
-	margin: 20px auto 10px;
+	/*margin: 20px auto 10px;*/
 }
 
-.contact-wrapper {
+/* 75px */
+.footer-contact-wrapper {
 	position: relative;
 	display: flex;
 	flex-flow: row;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
-	/*background-color: #003371;*/
+/*background-color: #003371;*/
+	height: 75px;
 	width: 100%;
 }
 
-.contact-wrapper img {
+@media (max-width: 420px) {
+	.footer-contact-wrapper {
+		height: 120px;
+	}
+}
+
+.footer-contact-wrapper img {
 	display: flex;
-	/*text-align: center;*/
+/*text-align: center;*/
 	height: 40px;
 	width: 180px;
-	margin: 10px 10px 20px 20px;
+	margin: 10px 10px 10px 20px;
 	background-color: #FFFFFF;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
 	/* quick fix because the flex does not work ... for now */
 	/*
-	.contact-wrapper {
-		display: inline-block;
-	}
+																										.footer-contact-wrapper {
+																											display: inline-block;
+																										}
 
-	.contact-wrapper img {
-		display: inline-block;
-	}
-	.contact-wrapper a {
-		display: inline-block;
-	}
-	.contact-wrapper a img {
-		display: inline-block;
-	}
-	*/
+																										.footer-contact-wrapper img {
+																											display: inline-block;
+																										}
+																										.footer-contact-wrapper a {
+																											display: inline-block;
+																										}
+																										.footer-contact-wrapper a img {
+																											display: inline-block;
+																										}
+																										*/
 	/* smart fix, flex direction from row to column */
-	.contact-wrapper {
+	.footer-contact-wrapper {
 		flex-flow: column;
 	}
+}
+
+/* height 50px */
+.footer-copyright {
+	font-family: 'Roboto', sans-serif;
+	vertical-align: center;
+	text-align: center;
+	color: #FFFFFF;
+	background-color: #003371;
+	line-height: 50px;
+	height: 50px;
+}
+
+@media (max-width: 420px) {
+
+}
+
+/* table */
+/* service table */
+table.company-profile-table {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	width: 1000px;
+/*height: 600px;*/
+/*not that good, better to set the height of table header and row */
+	text-align: left;
+	border-collapse: collapse;
+	margin: 50px auto;
+}
+
+table.company-profile-table td, table.company-profile-table th {
+	border-bottom: 1px solid #AAAAAA;
+	padding: 3px 3px 3px 5px;
+}
+
+table.company-profile-table thead {
+	border-bottom: 4px solid gray;
+}
+
+table.company-profile-table thead th {
+	font-weight: normal;
+	text-align: left;
+	font-size: 24px;
+	font-weight: bold;
+/*width: 250px;*/
+	height: 60px;
+}
+
+table.company-profile-table tr td:nth-child(1) {
+	border-bottom: 1px solid #000000;
+	font-weight: bold;
+	text-align: left;
+	width: 30%;
+}
+
+table.company-profile-table tr td {
+	text-align: left;
+	height: 50px;
+}
+
+table.company-profile-table ul {
+	padding: 0;
+}
+
+table.company-profile-table li {
+	margin: 0 0 0 20px;
+}
+
+table.company-profile-table p {
+	padding: 3px 3px 3px 5px;
+	margin: 0;
+}
+
+/* overseas office box */
+.office-box-wrapper {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 90%;
+	margin: 0 5%;
+}
+
+.office-box {
+	height: 600px;
+	width: 420px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	margin: 20px auto;
+}
+
+.office-box img {
+	width: 90%;
+	height: auto;
+	margin: 0 auto;
+	padding: 5%;
+	vertical-align: middle;
+}
+
+.office-box p {
+	padding: 0;
+	margin: 0;
+}
+
+.office-box .title {
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0 0 5%;
+}
+
+.office-box .description {
+	font-family: 'Roboto', sans-serif;
+	text-align: left;
+	padding: 0 0 0 5%;
+	font-size: 15px;
+	font-weight: normal;
+}
+
+.office-box > a {
+	font-family: 'Roboto', sans-serif;
+	text-align: left;
+	padding: 0 0 0 5%;
 }
 
 /* hide all these parts */

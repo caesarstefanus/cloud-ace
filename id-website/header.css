@@ -1,0 +1,139 @@
+/* body */
+body {
+	/* somehow this is necessary for local */
+	margin: 0;
+	padding: 0;
+
+	background-color: #FFFFFF;
+}
+
+.page-template-default {
+	background-color: #FFFFFF;
+/* and so is this */
+/* to remove the small gap in all directions */
+	padding: 0;
+	margin: 0;
+}
+
+.site-content {
+	min-height: calc(100vh - 200px);
+}
+
+@media (max-width: 420px) {
+	.site-content {
+		min-height: calc(100vh - 245px);
+	}
+}
+
+/* menu bar */
+.main-navigation {
+	display: inline-block;
+	position: fixed;
+	background-color: #FFFFFF;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.main-menu {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 auto;
+	padding: 0;
+	list-style-type: none;
+	position: relative;
+}
+
+.main-menu li {
+	color: #f2f2f2;
+	text-align: center;
+	padding: 0;
+	text-decoration: none;
+	font-size: 17px;
+	width: 200px;
+	height: 50px;
+	transition: all .4s ease;
+}
+
+.main-menu a {
+	text-decoration: none;
+	font-family: Lato, sans-serif;
+	font-size: 16px;
+	color: rgba(0,0,0,0.6399999857);
+	font-weight: 300;
+	line-height: 50px;
+
+	margin: 0;
+	padding: 0;
+	display: block;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.main-menu li:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+.main-menu li:hover .sub-menu {
+	transition: all 2s ease;
+	background-color: #FFFFFF;
+	color: black;
+	display: block;
+	opacity: 1;
+}
+
+/* down arrow symbol */
+/* override the a first */
+.menu-item-has-children a {
+	margin: 0 0 -20px;
+}
+
+.menu-item-has-children::after {
+	content: "";
+	border: solid black;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+}
+
+.menu-item-has-children:hover::after {
+	transition: transform .5s ease;
+	transform: rotate(225deg);
+}
+
+.menu-item-has-children:not(hover)::after {
+	transition: transform .5s ease;
+	transform: rotate(45deg);
+}
+
+.sub-menu {
+	padding: 0;
+	margin: 20px 0 0;
+	list-style-type: none;
+	display: none; /*hidden by default*/
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	position: absolute;
+}
+
+.sub-menu li {
+	float: none;
+	color: #FFFFFF;
+	text-align: center;
+	text-decoration: none;
+	font-size: 17px;
+	width: 200px;
+}
+
+.sub-menu li:hover {
+	background-color: #ddd;
+	color: black;
+}
