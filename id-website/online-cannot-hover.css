@@ -103,18 +103,21 @@ body {
 /*transition: background-color 0.4s;*/
 	background-color: #ddd;
 	color: black;
+
 }
 
 .main-menu li:hover .sub-menu {
-/*transition: all 2s ease;*/
+	/*transition: all 2s ease;*/
 	background-color: #FFFFFF;
 	color: black;
 	display: block;
 	opacity: 1;
+
 }
 
 .main-menu li:hover .menu-item-has-children li {
 	display: none;
+
 }
 
 /* down arrow symbol */
@@ -137,11 +140,13 @@ body {
 .menu-item-has-children:hover::after {
 	transition: transform .5s ease;
 	transform: rotate(225deg);
+
 }
 
 .menu-item-has-children:not(hover)::after {
 	transition: transform .5s ease;
 	transform: rotate(45deg);
+
 }
 
 .sub-menu {
@@ -163,12 +168,12 @@ body {
 }
 
 .sub-menu li {
-/*float: none;*/
+	/*float: none;*/
 	color: #FFFFFF;
 	text-align: center;
 	text-decoration: none;
 	font-size: 17px;
-/*width: 200px;*/
+	/*width: 200px;*/
 /*margin: 15px 0 0 0;*/
 /*padding: 15px 15px 15px 15px;*/
 }
@@ -177,7 +182,6 @@ body {
 	.sub-menu li {
 		width: 100%;
 	}
-
 	.sub-menu .sub-menu {
 		width: 100%;
 	}
@@ -189,34 +193,40 @@ body {
 }
 
 /* new menu parts */
+
 .main-menu li:hover .menu-item-has-children::after {
 	content: "";
-/*background-color: red;*/
+ /*background-color: red;*/
 	border: solid black;
 	border-width: 0 3px 3px 0;
 	display: inline-block;
 	padding: 3px;
 	transform: rotate(-45deg);
 	-webkit-transform: rotate(-45deg);
+
 	text-align: right;
-	float: right;
+  float:right;
 	margin-top: -10px;
 	margin-right: 5px;
+
 }
 
 .main-menu li:hover .menu-item-has-children:hover::after {
 	transition: transform .5s ease;
 	transform: rotate(135deg);
+
 }
 
 .main-menu li:hover .menu-item-has-children:not(hover)::after {
 	transition: transform .5s ease;
 	transform: rotate(-45deg);
+
 }
 
 /* new menu parts */
 .main-menu li:hover .menu-item-has-children:hover {
-/*background-color: red;*/
+	/*background-color: red;*/
+
 }
 
 .main-menu li:hover .menu-item-has-children:hover ul {
@@ -224,11 +234,13 @@ body {
 	margin-top: -30px;
 	position: absolute;
 	left: 100%;
+
 }
 
 .main-menu li:hover .menu-item-has-children:hover li {
 	display: block;
-/*background-color: blue;*/
+	/*background-color: blue;*/
+
 }
 
 /* Add a color to the active/current link */
@@ -389,20 +401,20 @@ p {
 @media (max-width: 420px) {
 	/* quick fix because the flex does not work ... for now */
 	/*
-																														.footer-contact-wrapper {
-																															display: inline-block;
-																														}
+																												.footer-contact-wrapper {
+																													display: inline-block;
+																												}
 
-																														.footer-contact-wrapper img {
-																															display: inline-block;
-																														}
-																														.footer-contact-wrapper a {
-																															display: inline-block;
-																														}
-																														.footer-contact-wrapper a img {
-																															display: inline-block;
-																														}
-																														*/
+																												.footer-contact-wrapper img {
+																													display: inline-block;
+																												}
+																												.footer-contact-wrapper a {
+																													display: inline-block;
+																												}
+																												.footer-contact-wrapper a img {
+																													display: inline-block;
+																												}
+																												*/
 	/* smart fix, flex direction from row to column */
 	.footer-contact-wrapper {
 		flex-flow: column;
@@ -423,7 +435,7 @@ p {
 @media (max-width: 420px) {
 	.footer-copyright {
 		line-height: 25px;
-		padding: 0 60px;
+		padding: 0 60px 0 60px;
 	}
 }
 
