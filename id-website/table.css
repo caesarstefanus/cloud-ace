@@ -1,0 +1,58 @@
+/* table */
+/* service table */
+table.company-profile-table {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	width: 90%;
+	max-width: 1000px;
+/*height: 600px;*/
+/*not that good, better to set the height of table header and row */
+	text-align: left;
+	border-collapse: collapse;
+	margin: 50px auto;
+}
+
+table.company-profile-table td, table.company-profile-table th {
+	border-bottom: 1px solid #AAAAAA;
+	padding: 3px 3px 3px 5px;
+}
+
+table.company-profile-table thead {
+	border-bottom: 4px solid gray;
+}
+
+table.company-profile-table thead th {
+	font-weight: normal;
+	text-align: left;
+	font-size: 24px;
+	font-weight: bold;
+/*width: 250px;*/
+	height: 60px;
+}
+
+table.company-profile-table tr td:nth-child(1) {
+	border-bottom: 1px solid #000000;
+	font-weight: bold;
+	text-align: left;
+	width: 30%;
+}
+
+table.company-profile-table tr td {
+	text-align: left;
+	height: 50px;
+}
+
+table.company-profile-table ul {
+	padding: 0;
+}
+
+table.company-profile-table li {
+	margin: 0 0 0 20px;
+}
+
+table.company-profile-table p {
+	padding: 3px 3px 3px 5px;
+	margin: 0;
+}
+
+/* end of table */

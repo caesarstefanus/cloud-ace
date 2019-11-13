@@ -1,9 +1,9 @@
+/* header */
 /* body */
 body {
 /* somehow this is necessary for local */
 	margin: 0;
 	padding: 0;
-/**/
 	background-color: #FFFFFF;
 }
 
@@ -26,33 +26,26 @@ body {
 }
 
 /* menu bar */
-
-.main-navigation {
-/*background-color: red;*/
-/*background-color: #026fd1;*/
+.main-navigation { /*change the name to footer-navigation ? */
 	display: inline-block;
-/*height: 80px;*/
 	position: fixed;
 	background-color: #FFFFFF;
 	width: 100%;
 	padding: 0;
 	margin: 0;
-/*height: 50px;*/
 	top: 0;
 	left: 0;
 	right: 0;
 }
 
-/*
 @media (max-width: 420px) {
 	.main-navigation {
 		display: none;
 	}
 }
-*/
+
+/* the most shallow, ul main-menu class */
 .main-menu {
-/*background-color: #026fd1;*/
-/*overflow: hidden;*/
 	display: flex;
 	flex-flow: row;
 	flex-wrap: wrap;
@@ -63,22 +56,21 @@ body {
 	position: relative;
 }
 
-.main-menu li {
-/*float: left;*/
+/* changed all ".main-menu li" to ".main-menu .menu-item" for easier look */
+.main-menu .menu-item {
 	color: #f2f2f2;
 	text-align: center;
-/*padding: 15px;*/
 	padding: 0;
 	text-decoration: none;
 	font-size: 17px;
 	width: 200px;
 	height: 50px;
-/*background-color: blue;*/
 	transition: all .4s ease;
 }
 
+/* half screen width for mobile */
 @media (max-width: 420px) {
-	.main-menu li {
+	.main-menu .menu-item {
 		width: 50%;
 	}
 }
@@ -90,42 +82,41 @@ body {
 	color: rgba(0,0,0,0.6399999857);
 	font-weight: 300;
 	line-height: 50px;
-/*padding: 0 10px 0 10px;*/
 	margin: 0;
 	padding: 0;
 	display: block;
 	vertical-align: middle;
 	text-align: center;
-/*background-color: red;*/
 }
 
-.main-menu li:hover {
-/*transition: background-color 0.4s;*/
+
+.main-menu .menu-item:hover {
 	background-color: #ddd;
 	color: black;
 }
 
-.main-menu li:hover .sub-menu {
-/*transition: all 2s ease;*/
+/* show the level 1 sub-menu */
+.main-menu .menu-item-has-children:hover .sub-menu {
 	background-color: #FFFFFF;
 	color: black;
 	display: block;
 	opacity: 1;
 }
 
-.main-menu li:hover .menu-item-has-children li {
+/* confusing part */
+/* hide the level 2 children below the level 1*/
+.main-menu .menu-item-has-children:hover .sub-menu .menu-item-has-children .sub-menu .menu-item {
 	display: none;
 }
 
-/* down arrow symbol */
-/* override the  first */
-.menu-item-has-children a {
+/* override the first <a> tag just for has-children */
+.main-menu .menu-item-has-children a {
 	margin: 0 0 -20px;
 }
 
-.menu-item-has-children::after {
+/* down arrow symbol */
+.main-menu .menu-item-has-children::after {
 	content: "";
-/*background-color: red;*/
 	border: solid black;
 	border-width: 0 3px 3px 0;
 	display: inline-block;
@@ -134,64 +125,63 @@ body {
 	-webkit-transform: rotate(45deg);
 }
 
-.menu-item-has-children:hover::after {
+/* down arrow transition spin animation */
+.main-menu .menu-item-has-children:hover::after {
 	transition: transform .5s ease;
 	transform: rotate(225deg);
 }
 
-.menu-item-has-children:not(hover)::after {
+.main-menu .menu-item-has-children:not(hover)::after {
 	transition: transform .5s ease;
 	transform: rotate(45deg);
 }
 
-.sub-menu {
+/* level 1 sub-menu */
+.main-menu .menu-item-has-children .sub-menu {
 	padding: 0;
 	margin: 20px 0 0;
-/*margin: 15px 0 0 -15px;*/
 	list-style-type: none;
-	display: none;
-/*hidden by default*/
+	display: none; /* hidden by default */
 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 	position: absolute;
 	width: 200px;
 }
 
+/* half screen width for mobile */
 @media (max-width: 420px) {
-	.sub-menu {
+	.main-menu .menu-item-has-children .sub-menu {
 		width: 50%;
 	}
 }
 
-.sub-menu li {
-/*float: none;*/
+/* changed all ".sub-menu li" to ".sub-menu .menu-item" for easier look */
+.main-menu .menu-item-has-children .sub-menu .menu-item {
 	color: #FFFFFF;
 	text-align: center;
 	text-decoration: none;
 	font-size: 17px;
-/*width: 200px;*/
-/*margin: 15px 0 0 0;*/
-/*padding: 15px 15px 15px 15px;*/
 }
 
 @media (max-width: 420px) {
-	.sub-menu li {
+	.main-menu .menu-item-has-children .sub-menu .menu-item {
 		width: 100%;
 	}
 
-	.sub-menu .sub-menu {
+	/* level 2 sub-menu */
+	.main-menu .menu-item-has-children .sub-menu .menu-item-has-children .sub-menu {
 		width: 100%;
 	}
 }
 
-.sub-menu li:hover {
+.main-menu .menu-item-has-children .sub-menu .menu-item:hover {
 	background-color: #ddd;
 	color: black;
 }
 
 /* new menu parts */
-.main-menu li:hover .menu-item-has-children::after {
+/* right arrow '>' for level 2 sub menu */
+.main-menu .menu-item-has-children:hover .sub-menu .menu-item-has-children::after {
 	content: "";
-/*background-color: red;*/
 	border: solid black;
 	border-width: 0 3px 3px 0;
 	display: inline-block;
@@ -204,41 +194,33 @@ body {
 	margin-right: 5px;
 }
 
-.main-menu li:hover .menu-item-has-children:hover::after {
+/* right arrow '>' transition spin animation */
+.main-menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover::after {
 	transition: transform .5s ease;
 	transform: rotate(135deg);
 }
 
-.main-menu li:hover .menu-item-has-children:not(hover)::after {
+.main-menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:not(hover)::after {
 	transition: transform .5s ease;
 	transform: rotate(-45deg);
 }
 
 /* new menu parts */
-.main-menu li:hover .menu-item-has-children:hover {
-/*background-color: red;*/
-}
-
-.main-menu li:hover .menu-item-has-children:hover ul {
+/* show the content of level 2 sub menu */
+.main-menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover .sub-menu {
 	padding: 0;
 	margin-top: -30px;
 	position: absolute;
 	left: 100%;
 }
 
-.main-menu li:hover .menu-item-has-children:hover li {
+.main-menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover .sub-menu .menu-item {
 	display: block;
-/*background-color: blue;*/
 }
 
-/* Add a color to the active/current link */
-/* Is this possible? */
-/*
-.main-menu li.active {
-  background-color: #4CAF50;
-  color: white;
-}
-*/
+/* end of menu bar */
+/* end of header */
+
 /* page title */
 .page-title-image {
 /*background-position: center;*/
@@ -427,12 +409,234 @@ p {
 	}
 }
 
+/* customized footer menu */
+/* hide on desktop view */
+.widget_nav_menu {
+	display: none;
+}
+
+/* show on mobile view */
+@media (max-width: 420px) {
+	.widget_nav_menu {
+		display: inline-block;
+		position: fixed;
+		background-color: #FFFFFF;
+		width: 25%;
+		padding: 0;
+		margin: 0;
+		top: 0; /* this put the widget menu on top */
+		left: 0;
+		/*right: 0;*/
+	}
+
+	.widget_nav_menu:hover {
+		transition: all .5s ease;
+		width: 100%;
+	}
+
+	.widget_nav_menu:not(hover) {
+		transition: all .5s ease;
+		width: 25%;
+	}
+
+	.widget_nav_menu .menu .menu-item {
+		width: 100%;
+	}
+
+	.widget_nav_menu:hover .menu .menu-item {
+		transition: all .5s ease;
+		width: 50%;
+	}
+
+	.widget_nav_menu:(not)hover .menu .menu-item {
+		transition: all .5s ease;
+		width: 100%;
+	}
+}
+
+/* the most shallow, ul main-menu class */
+.widget_nav_menu .menu {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	margin: 0 auto;
+	padding: 0;
+	list-style-type: none;
+	position: relative;
+}
+
+/* changed all ".widget_nav_menu .menu li" to ".widget_nav_menu .menu .menu-item" for easier look */
+.widget_nav_menu .menu .menu-item {
+	color: #f2f2f2;
+	text-align: center;
+	padding: 0;
+	text-decoration: none;
+	font-size: 17px;
+	width: 200px;
+	height: 50px;
+	transition: all .4s ease;
+}
+
+/* half screen width for mobile */
+/*
+@media (max-width: 420px) {
+	.widget_nav_menu .menu .menu-item {
+		width: 50%;
+	}
+}
+*/
+.widget_nav_menu .menu a {
+	text-decoration: none;
+	font-family: Lato, sans-serif;
+	font-size: 16px;
+	color: rgba(0,0,0,0.6399999857);
+	font-weight: 300;
+	line-height: 50px;
+	margin: 0;
+	padding: 0;
+	display: block;
+	vertical-align: middle;
+	text-align: center;
+}
+
+
+.widget_nav_menu .menu .menu-item:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+/* show the level 1 sub-menu */
+.widget_nav_menu .menu .menu-item-has-children:hover .sub-menu {
+	background-color: #FFFFFF;
+	color: black;
+	display: block;
+	opacity: 1;
+}
+
+/* confusing part */
+/* hide the level 2 children below the level 1*/
+.widget_nav_menu .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children .sub-menu .menu-item {
+	display: none;
+}
+
+/* override the first <a> tag just for has-children */
+.widget_nav_menu .menu .menu-item-has-children a {
+	margin: 0 0 -20px;
+}
+
+/* down arrow symbol */
+.widget_nav_menu .menu .menu-item-has-children::after {
+	content: "";
+	border: solid black;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+}
+
+/* down arrow transition spin animation */
+.widget_nav_menu .menu .menu-item-has-children:hover::after {
+	transition: transform .5s ease;
+	transform: rotate(225deg);
+}
+
+.widget_nav_menu .menu .menu-item-has-children:not(hover)::after {
+	transition: transform .5s ease;
+	transform: rotate(45deg);
+}
+
+/* level 1 sub-menu */
+.widget_nav_menu .menu .menu-item-has-children .sub-menu {
+	padding: 0;
+	margin: 20px 0 0;
+	list-style-type: none;
+	display: none; /* hidden by default */
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	position: absolute;
+	width: 200px;
+}
+
+/* half screen width for mobile */
+@media (max-width: 420px) {
+	.widget_nav_menu .menu .menu-item-has-children .sub-menu {
+		width: 50%;
+	}
+}
+
+/* changed all ".sub-menu li" to ".sub-menu .menu-item" for easier look */
+.widget_nav_menu .menu .menu-item-has-children .sub-menu .menu-item {
+	color: #FFFFFF;
+	text-align: center;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+@media (max-width: 420px) {
+	.widget_nav_menu .menu .menu-item-has-children .sub-menu .menu-item {
+		width: 100%;
+	}
+
+	/* level 2 sub-menu */
+	.widget_nav_menu .menu .menu-item-has-children .sub-menu .menu-item-has-children .sub-menu {
+		width: 100%;
+	}
+}
+
+.widget_nav_menu .menu .menu-item-has-children .sub-menu .menu-item:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+/* new menu parts */
+/* right arrow '>' for level 2 sub menu */
+.widget_nav_menu .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children::after {
+	content: "";
+	border: solid black;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	text-align: right;
+	float: right;
+	margin-top: -10px;
+	margin-right: 5px;
+}
+
+/* right arrow '>' transition spin animation */
+.widget_nav_menu .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover::after {
+	transition: transform .5s ease;
+	transform: rotate(135deg);
+}
+
+.widget_nav_menu .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:not(hover)::after {
+	transition: transform .5s ease;
+	transform: rotate(-45deg);
+}
+
+/* new menu parts */
+/* show the content of level 2 sub menu */
+.widget_nav_menu .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover .sub-menu {
+	padding: 0;
+	margin-top: -30px;
+	position: absolute;
+	left: 100%;
+}
+
+.widget_nav_menu .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover .sub-menu .menu-item {
+	display: block;
+}
+/* end of customized footer menu */
+
 /* table */
 /* service table */
 table.company-profile-table {
 	font-family: Arial, Helvetica, sans-serif;
 	background-color: #FFFFFF;
-	width: 1000px;
+	width: 90%;
+	max-width: 1000px;
 /*height: 600px;*/
 /*not that good, better to set the height of table header and row */
 	text-align: left;
@@ -482,6 +686,7 @@ table.company-profile-table p {
 	padding: 3px 3px 3px 5px;
 	margin: 0;
 }
+/* end of table */
 
 /* overseas office box */
 .office-box-wrapper {
@@ -577,3 +782,13 @@ table.company-profile-table p {
 	display: none;
 }
 */
+
+/* debugging */
+/* debug the navigation menu bar hover error */
+@media(hover: hover) {
+
+}
+
+@media(hover: none) {
+
+}
