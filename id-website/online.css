@@ -266,6 +266,7 @@ body {
 	}
 }
 
+/* main style main design, can be used for all pages */
 /* text: general header and paragraph*/
 h1 {
 	font-family: 'Roboto', sans-serif;
@@ -306,6 +307,28 @@ p {
 		max-width: 800px;
 	*/
 }
+
+/* wrapper and container */
+.main-container {
+	width: 90%;
+  max-width: 1000px;
+  margin: 0 auto 0 auto;
+}
+
+/* Backgrounds */
+.gray-bg{
+  background-color: #EFEFEF;
+}
+
+.white-bg{
+  background-color: white;
+}
+
+.blue-bg{
+  background-color: #026fd1;
+}
+
+/* end of main style and main design */
 
 /* footer */
 .site-footer {
