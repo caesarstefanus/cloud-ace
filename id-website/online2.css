@@ -92,6 +92,7 @@ body {
 .main-menu .menu-item:hover {
 	background-color: #ddd;
 	color: black;
+	cursor: pointer;
 }
 
 /* show the level 1 sub-menu */
@@ -314,6 +315,22 @@ p {
 	margin: 0 auto;
 }
 
+.main-wrapper:nth-child(odd) {
+	background-color: red;
+}
+
+.main-wrapper:nth-of-type(even) {
+	background-color: #EFEFEF;
+}
+
+.main-wrapper {
+	/*
+	width: 90%;
+	max-width: 1000px;
+	margin: 0 auto;
+	*/
+}
+
 /* Backgrounds */
 .gray-bg {
 	background-color: #EFEFEF;
@@ -388,11 +405,11 @@ p {
 
 .footer-featured-content .title::after {
 	content: "";
-  display: block;
-  width: 90%;
-  height: 1px;
-  background-color: #A3BFDF;
-  margin: 5px 0;
+	display: block;
+	width: 90%;
+	height: 1px;
+	background-color: #A3BFDF;
+	margin: 5px 0;
 }
 
 .footer-featured-content ul {
@@ -404,11 +421,11 @@ p {
 .footer-featured-content a {
 	text-decoration: none;
 	font-family: 'Roboto', sans-serif;
-  font-size: 15px;
-  line-height: 1.5;
-  color: #A3BFDF;
-  display: block;
-  text-align: left;
+	font-size: 15px;
+	line-height: 1.5;
+	color: #A3BFDF;
+	display: block;
+	text-align: left;
 }
 
 /* 75px */
@@ -492,7 +509,6 @@ p {
 }
 
 /* end of footer */
-
 /* customized footer menu */
 /* hide on desktop view */
 .widget_nav_menu {
@@ -876,3 +892,423 @@ table.company-profile-table p {
 @media(hover: none) {
 
 }
+
+/* homepage */
+/* attention section 1 */
+.attention-1-box-container {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 90%;
+	margin: 0 5%;
+}
+
+.attention-1-box {
+	height: 400px;
+	width: 500px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	margin: 20px auto;
+}
+
+.attention-1-box img {
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+	padding: 10%;
+	vertical-align: middle;
+}
+
+.attention-1-box p {
+	padding: 0;
+	margin: 0;
+}
+
+.attention-1-box-title {
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	font-size: 24px;
+	line-height: 60px;
+	font-weight: bold;
+	margin: 0 0 5%;
+	color: #026fd1;
+}
+
+.attention-1-box-description {
+	font-family: 'Roboto', sans-serif;
+	text-align: left;
+	padding: 0 0 0 5%;
+	font-size: 15px;
+	font-weight: normal;
+}
+
+.attention-1-box > a {
+	font-family: 'Roboto', sans-serif;
+	text-align: left;
+	padding: 0 0 0 5%;
+}
+
+/* attention section 2 */
+.attention-2-box-container {
+	display: flex;
+	flex-flow: column;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	margin: 0 5%;
+	padding: 0 10%;
+}
+
+.attention-2-box {
+	height: 200px;
+	width: 100%;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	margin: 20px 0;
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+}
+
+.attention-2-box-image-wrapper {
+	height: 150px;
+	width: 200px;
+}
+
+.attention-2-box img {
+	display: block;
+	height: 150px;
+	width: auto;
+	vertical-align: middle;
+	margin: auto;
+}
+
+.attention-2-box p {
+	padding: 0;
+	margin: 0;
+}
+
+.attention-2-box-title {
+	font-family: 'Roboto', sans-serif;
+	text-align: left;
+	padding: 0 0 0 10px;
+	font-size: 24px;
+	line-height: 60px;
+	font-weight: bold;
+	color: #026fd1;
+}
+
+.attention-2-box-description {
+	font-family: 'Roboto', sans-serif;
+	text-align: left;
+	padding: 0 0 0 10px;
+	font-size: 15px;
+	font-weight: normal;
+}
+
+.attention-2-box > a {
+	font-family: 'Roboto', sans-serif;
+	text-align: left;
+	padding: 0 0 0 5%;
+}
+
+.attention-2-box-row-container {
+	display: flex;
+	flex-flow: column;
+	flex-wrap: wrap;
+}
+
+/* seminar-events */
+.seminar-events {
+	padding: 0;
+	margin: 0;
+}
+
+.seminar-events-box-container {
+	display: flex;
+	/*justify-content: center;
+	align-items: center;*/
+	width: 100%;
+	overflow-x: auto;
+	min-height: 400px;
+}
+
+.seminar-events-box {
+	min-height: 400px;
+	min-width: 320px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	margin: 30px;
+}
+
+.seminar-events-box img {
+	width: 90%;
+	height: auto;
+	margin: 0 auto;
+	padding: 5%;
+	vertical-align: middle;
+}
+
+.seminar-events-box p {
+	padding: 0;
+	margin: 0;
+}
+
+.seminar-events-box-date {
+	color: #FFFFFF;
+	background-color: #026fd1;
+	line-height: 40px;
+	height: 40px;
+	width: 80px;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+}
+
+.seminar-events-box-title {
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0 0 5%;
+}
+
+.seminar-events-box-description {
+	font-family: 'Roboto', sans-serif;
+	text-align: left;
+	padding: 0 0 0 5%;
+	font-size: 15px;
+	font-weight: normal;
+}
+
+.seminar-events-box > a {
+	font-family: 'Roboto', sans-serif;
+	text-align: left;
+	padding: 0 0 0 5%;
+}
+
+/* news */
+.news-item-container {
+	display: flex;
+	flex-flow: column;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 90%;
+	margin: 0 5%;
+}
+
+.news-item {
+	height: 50px;
+	width: 600px;
+	/*box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);*/
+	margin: 20px auto;
+}
+
+.news-item-date {
+	font-family: 'Roboto', sans-serif;
+	text-align: left;
+	font-size: 24px;
+	color: #026fd1;
+}
+
+.news-item-date::after {
+	content: "";
+	display: block;
+	height: 3px;
+	width: 70px;
+	background-color: #026fd1;
+}
+
+.news-item-title {
+	font-family: 'Roboto', sans-serif;
+	text-align: left;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 5px 0 5%;
+}
+
+.news-item-description {
+	font-family: 'Roboto', sans-serif;
+	text-align: left;
+	padding: 0 0 0 5%;
+	font-size: 15px;
+	font-weight: normal;
+}
+
+.news-item > a {
+	font-family: 'Roboto', sans-serif;
+	text-align: left;
+	padding: 0 0 0 5%;
+}
+
+/* service-packages */
+.service-packages-box-container {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 90%;
+	margin: 0 5%;
+}
+
+.service-packages-box {
+	height: 400px;
+	width: 320px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	margin: 20px auto;
+}
+
+.service-packages-box-row-container {
+	display: flex;
+	flex-flow: column;
+	flex-wrap: nowrap;
+}
+
+.service-packages-box img {
+	height: 150px;
+	width: auto;
+	margin: 0 auto;
+	padding: 5%;
+	vertical-align: middle;
+}
+
+.service-packages-box p {
+	padding: 0;
+	margin: 0;
+}
+
+.service-packages-box ul {
+	padding: 0;
+	margin: 0;
+}
+
+.service-packages-box li {
+	padding: 0;
+	margin: 0;
+}
+
+.service-packages-box-title {
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0 0 5%;
+}
+
+.service-packages-box-description {
+	font-family: 'Roboto', sans-serif;
+	text-align: left;
+	padding: 0 0 0 5%;
+	font-size: 15px;
+	font-weight: normal;
+}
+
+.service-packages-box > a {
+	font-family: 'Roboto', sans-serif;
+	text-align: left;
+	padding: 0 0 0 5%;
+}
+
+/* service-fields */
+.service-fields-box-container {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 90%;
+	margin: 0 5%;
+}
+
+.service-fields-box {
+	height: 600px;
+	width: 420px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	margin: 20px auto;
+}
+
+.service-fields-box img {
+	width: 90%;
+	height: auto;
+	margin: 0 auto;
+	padding: 5%;
+	vertical-align: middle;
+}
+
+.service-fields-box p {
+	padding: 0;
+	margin: 0;
+}
+
+.service-fields-box .title {
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0 0 5%;
+}
+
+.service-fields-box .description {
+	font-family: 'Roboto', sans-serif;
+	text-align: left;
+	padding: 0 0 0 5%;
+	font-size: 15px;
+	font-weight: normal;
+}
+
+.service-fields-box > a {
+	font-family: 'Roboto', sans-serif;
+	text-align: left;
+	padding: 0 0 0 5%;
+}
+
+/* reasons */
+.reasons-box-container {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 90%;
+	margin: 0 5%;
+}
+
+.reasons-box {
+	height: 600px;
+	width: 420px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	margin: 20px auto;
+}
+
+.reasons-box img {
+	width: 90%;
+	height: auto;
+	margin: 0 auto;
+	padding: 5%;
+	vertical-align: middle;
+}
+
+.reasons-box p {
+	padding: 0;
+	margin: 0;
+}
+
+.reasons-box .title {
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0 0 5%;
+}
+
+.reasons-box .description {
+	font-family: 'Roboto', sans-serif;
+	text-align: left;
+	padding: 0 0 0 5%;
+	font-size: 15px;
+	font-weight: normal;
+}
+
+.reasons-box > a {
+	font-family: 'Roboto', sans-serif;
+	text-align: left;
+	padding: 0 0 0 5%;
+}
+
+/* end of homepage */

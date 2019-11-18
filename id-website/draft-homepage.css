@@ -1,3 +1,4 @@
+/* homepage */
 /* attention section 1 */
 .attention-1-box-container {
 	display: flex;
@@ -63,26 +64,25 @@
 }
 
 .attention-2-box {
-	height: 200px;
+	min-height: 200px;
 	width: 100%;
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 	margin: 20px 0;
 	display: flex;
 	flex-flow: row;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 }
 
 .attention-2-box-image-wrapper {
 	height: 150px;
-	width: 200px;
+	width: 150px;
+	margin: 20px 0 0 0;¥
 }
 
 .attention-2-box img {
 	display: block;
-	height: 150px;
-	width: auto;
+	height: auto;
+	width: 150px;
 	vertical-align: middle;
-	margin: auto;
 }
 
 .attention-2-box p {
@@ -93,9 +93,9 @@
 .attention-2-box-title {
 	font-family: 'Roboto', sans-serif;
 	text-align: left;
-	padding: 0 0 0 10px;
+	padding: 10px 0 10px 10px;
 	font-size: 24px;
-	line-height: 60px;
+	line-height: 1.25;
 	font-weight: bold;
 	color: #026fd1;
 }
@@ -118,6 +118,7 @@
 	display: flex;
 	flex-flow: column;
 	flex-wrap: wrap;
+	max-width: 100%;
 }
 
 /* seminar-events */
@@ -243,6 +244,78 @@
 	padding: 0 0 0 5%;
 }
 
+/* gcp-services */
+.gcp-services-box-container {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 90%;
+	margin: 0 5%;
+}
+
+.gcp-services-box {
+	height: 200px;
+	width: 200px;
+	box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+	margin: 20px 0 20px 0;
+}
+
+.gcp-services-box:hover {
+	transition: all .5s ease;
+	background-color: #026fd1;
+}
+
+.gcp-services-box:hover .gcp-services-box-title {
+	color: #FFFFFF;
+}
+
+.gcp-services-box img {
+	display: block;
+	height: 100px;
+	width: auto;
+	margin: 5% auto;
+	padding: 5%;
+	vertical-align: middle;
+}
+
+.gcp-services-box p {
+	padding: 0;
+	margin: 0;
+}
+
+.gcp-services-box ul {
+	padding: 0;
+	margin: 0;
+}
+
+.gcp-services-box li {
+	padding: 0;
+	margin: 0;
+}
+
+.gcp-services-box-title {
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0 0 5%;
+}
+
+.gcp-services-box-description {
+	font-family: 'Roboto', sans-serif;
+	text-align: left;
+	padding: 0 0 0 5%;
+	font-size: 15px;
+	font-weight: normal;
+}
+
+.gcp-services-box > a {
+	font-family: 'Roboto', sans-serif;
+	text-align: left;
+	padding: 0 0 0 5%;
+}
+
 /* service-packages */
 .service-packages-box-container {
 	display: flex;
@@ -322,47 +395,72 @@
 }
 
 .service-fields-box {
-	height: 600px;
-	width: 420px;
+	height: 400px;
+	width: 320px;
 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-	margin: 20px auto;
+	/*margin: 20px auto;*/
+	background-color: #026fd1;
+}
+
+/* 200px */
+.service-fields-box-image-wrapper {
+	margin: 0;
+	height: 200px;
+	width: 100%;
 }
 
 .service-fields-box img {
-	width: 90%;
-	height: auto;
+	display: block;
+	height: 90%;
+	width: auto;
 	margin: 0 auto;
-	padding: 5%;
-	vertical-align: middle;
+	background-color: #026fd1;
 }
-
+/*
+.service-fields-box img {
+	display: block;
+	width: auto;
+	height: 250px;
+	margin: 0 auto;
+	vertical-align: middle;
+	background-color: #026fd1;
+}
+*/
 .service-fields-box p {
 	padding: 0;
 	margin: 0;
 }
 
-.service-fields-box .title {
+/* 80px */
+.service-fields-box-title {
 	font-family: 'Roboto', sans-serif;
 	text-align: center;
 	font-size: 18px;
 	font-weight: bold;
-	margin: 0 0 5%;
+	vertical-align: middle;
+	padding: 5%;
+	height: 10%;
+	background-color: #026fd1;
+	color: #FFFFFF;
 }
 
-.service-fields-box .description {
+/* 120px 30%*/
+.service-fields-box-description {
 	font-family: 'Roboto', sans-serif;
 	text-align: left;
-	padding: 0 0 0 5%;
+	padding: 5% 10% 0 10%;
 	font-size: 15px;
 	font-weight: normal;
+	height: 25%;
+	background-color: #FFFFFF;
 }
-
+/*
 .service-fields-box > a {
 	font-family: 'Roboto', sans-serif;
 	text-align: left;
 	padding: 0 0 0 5%;
 }
-
+*/
 /* reasons */
 .reasons-box-container {
 	display: flex;
@@ -381,6 +479,7 @@
 }
 
 .reasons-box img {
+	display: block;
 	width: 90%;
 	height: auto;
 	margin: 0 auto;
@@ -393,18 +492,30 @@
 	margin: 0;
 }
 
-.reasons-box .title {
+.reasons-box-title1 {
 	font-family: 'Roboto', sans-serif;
 	text-align: center;
-	font-size: 18px;
+	font-size: 20px;
 	font-weight: bold;
-	margin: 0 0 5%;
+	padding: 5%;
+	background-color: #026fd1;
+	color: #FFFFFF;
 }
 
-.reasons-box .description {
+.reasons-box-title2 {
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	margin: 5%;
+	color: gray;
+}
+
+.reasons-box-description {
 	font-family: 'Roboto', sans-serif;
 	text-align: left;
-	padding: 0 0 0 5%;
+	padding: 0 0 0 0;
+	margin: 0 10% 50px 10%;
 	font-size: 15px;
 	font-weight: normal;
 }
@@ -414,3 +525,5 @@
 	text-align: left;
 	padding: 0 0 0 5%;
 }
+
+/* end of homepage */

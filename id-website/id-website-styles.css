@@ -1,9 +1,9 @@
+/* header */
 /* body */
 body {
 /* somehow this is necessary for local */
 	margin: 0;
 	padding: 0;
-/**/
 	background-color: #FFFFFF;
 }
 
@@ -27,46 +27,52 @@ body {
 
 /* menu bar */
 .main-navigation {
-/*background-color: red;*/
-/*background-color: #026fd1;*/
 	display: inline-block;
-/*height: 80px;*/
 	position: fixed;
 	background-color: #FFFFFF;
 	width: 100%;
 	padding: 0;
 	margin: 0;
-/*height: 50px;*/
 	top: 0;
 	left: 0;
 	right: 0;
 }
 
+@media (max-width: 420px) {
+	.main-navigation {
+		display: none;
+	}
+}
+
+/* the most shallow, ul main-menu class */
 .main-menu {
-/*background-color: #026fd1;*/
-/*overflow: hidden;*/
 	display: flex;
 	flex-flow: row;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: flex-start;
 	margin: 0 auto;
 	padding: 0;
 	list-style-type: none;
 	position: relative;
 }
 
-.main-menu li {
-/*float: left;*/
+/* changed all ".main-menu li" to ".main-menu .menu-item" for easier look */
+.main-menu .menu-item {
 	color: #f2f2f2;
 	text-align: center;
-/*padding: 15px;*/
 	padding: 0;
 	text-decoration: none;
 	font-size: 17px;
 	width: 200px;
 	height: 50px;
-/*background-color: blue;*/
 	transition: all .4s ease;
+}
+
+/* half screen width for mobile */
+@media (max-width: 420px) {
+	.main-menu .menu-item {
+		width: 50%;
+	}
 }
 
 .main-menu a {
@@ -76,38 +82,41 @@ body {
 	color: rgba(0,0,0,0.6399999857);
 	font-weight: 300;
 	line-height: 50px;
-/*padding: 0 10px 0 10px;*/
 	margin: 0;
 	padding: 0;
 	display: block;
 	vertical-align: middle;
 	text-align: center;
-/*background-color: red;*/
 }
 
-.main-menu li:hover {
-/*transition: background-color 0.4s;*/
+.main-menu .menu-item:hover {
 	background-color: #ddd;
 	color: black;
+	cursor: pointer;
 }
 
-.main-menu li:hover .sub-menu {
-	transition: all 2s ease;
+/* show the level 1 sub-menu */
+.main-menu .menu-item-has-children:hover .sub-menu {
 	background-color: #FFFFFF;
 	color: black;
 	display: block;
 	opacity: 1;
 }
 
-/* down arrow symbol */
-/* override the  first */
-.menu-item-has-children a {
+/* confusing part */
+/* hide the level 2 children below the level 1*/
+.main-menu .menu-item-has-children:hover .sub-menu .menu-item-has-children .sub-menu .menu-item {
+	display: none;
+}
+
+/* override the first  tag just for has-children */
+.main-menu .menu-item-has-children a {
 	margin: 0 0 -20px;
 }
 
-.menu-item-has-children::after {
+/* down arrow symbol */
+.main-menu .menu-item-has-children::after {
 	content: "";
-/*background-color: red;*/
 	border: solid black;
 	border-width: 0 3px 3px 0;
 	display: inline-block;
@@ -116,51 +125,102 @@ body {
 	-webkit-transform: rotate(45deg);
 }
 
-.menu-item-has-children:hover::after {
+/* down arrow transition spin animation */
+.main-menu .menu-item-has-children:hover::after {
 	transition: transform .5s ease;
 	transform: rotate(225deg);
 }
 
-.menu-item-has-children:not(hover)::after {
+.main-menu .menu-item-has-children:not(hover)::after {
 	transition: transform .5s ease;
 	transform: rotate(45deg);
 }
 
-.sub-menu {
+/* level 1 sub-menu */
+.main-menu .menu-item-has-children .sub-menu {
 	padding: 0;
 	margin: 20px 0 0;
-/*margin: 15px 0 0 -15px;*/
 	list-style-type: none;
 	display: none;
-/*hidden by default*/
+/* hidden by default */
 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 	position: absolute;
+	width: 200px;
 }
 
-.sub-menu li {
-	float: none;
+/* half screen width for mobile */
+@media (max-width: 420px) {
+	.main-menu .menu-item-has-children .sub-menu {
+		width: 50%;
+	}
+}
+
+/* changed all ".sub-menu li" to ".sub-menu .menu-item" for easier look */
+.main-menu .menu-item-has-children .sub-menu .menu-item {
 	color: #FFFFFF;
 	text-align: center;
 	text-decoration: none;
 	font-size: 17px;
-	width: 200px;
-/*margin: 15px 0 0 0;*/
-/*padding: 15px 15px 15px 15px;*/
 }
 
-.sub-menu li:hover {
+@media (max-width: 420px) {
+	.main-menu .menu-item-has-children .sub-menu .menu-item {
+		width: 100%;
+	}
+
+	/* level 2 sub-menu */
+	.main-menu .menu-item-has-children .sub-menu .menu-item-has-children .sub-menu {
+		width: 100%;
+	}
+}
+
+.main-menu .menu-item-has-children .sub-menu .menu-item:hover {
 	background-color: #ddd;
 	color: black;
 }
 
-/* Add a color to the active/current link */
-/* Is this possible? */
-/*
-.main-menu li.active {
-  background-color: #4CAF50;
-  color: white;
+/* new menu parts */
+/* right arrow '>' for level 2 sub menu */
+.main-menu .menu-item-has-children:hover .sub-menu .menu-item-has-children::after {
+	content: "";
+	border: solid black;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	text-align: right;
+	float: right;
+	margin-top: -10px;
+	margin-right: 5px;
 }
-*/
+
+/* right arrow '>' transition spin animation */
+.main-menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover::after {
+	transition: transform .5s ease;
+	transform: rotate(135deg);
+}
+
+.main-menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:not(hover)::after {
+	transition: transform .5s ease;
+	transform: rotate(-45deg);
+}
+
+/* new menu parts */
+/* show the content of level 2 sub menu */
+.main-menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover .sub-menu {
+	padding: 0;
+	margin-top: -30px;
+	position: absolute;
+	left: 100%;
+}
+
+.main-menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover .sub-menu .menu-item {
+	display: block;
+}
+
+/* end of menu bar */
+/* end of header */
 /* page title */
 .page-title-image {
 /*background-position: center;*/
@@ -206,7 +266,8 @@ body {
 	}
 }
 
-/* main-design: header, text, container, gray-white */
+/* main style main design, can be used for all pages */
+/* text: general header and paragraph*/
 h1 {
 	font-family: 'Roboto', sans-serif;
 	text-align: center;
@@ -247,38 +308,56 @@ p {
 	*/
 }
 
+/* wrapper and container */
 .main-container {
-  max-width: 80%;
-  margin: 0 auto 0 auto;
+	width: 90%;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.main-wrapper {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 /* Backgrounds */
-
-.gray-bg{
-  background-color: #EFEFEF;
+.alternate-bg-color:nth-of-type(odd) {
+	background-color: #FFFFFF;
 }
 
-.white-bg{
-  background-color: #FFFFFF;
+.alternate-bg-color:nth-of-type(even) {
+	background-color: #EFEFEF;
 }
 
-.blue-bg{
-  background-color: #026fd1;
+.gray-bg {
+	background-color: #EFEFEF;
 }
 
-/* end of main-design */
+.white-bg {
+	background-color: white;
+}
 
+.blue-bg {
+	background-color: #026fd1;
+}
+
+/* end of main style and main design */
 /* footer */
+/* 75 + 75 + 50 */
+/* +75 +150 */
 .site-footer {
 	vertical-align: center;
 	text-align: center;
 	background-color: #003371;
-	height: 200px;
+	height: 425px;
 }
 
+/* 75 + 120 + 50 */
+/* +75 +150 */
 @media (max-width: 420px) {
 	.site-footer {
-		height: 225px;
+		height: 470px;
 	}
 }
 
@@ -288,17 +367,92 @@ p {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-/*background-color: #003371;*/
 	height: 75px;
 	width: 100%;
-/*z-index: 1000;*/
 }
 
 .footer-logo-wrapper img {
 	display: flex;
 	text-align: center;
 	height: 40px;
-/*margin: 20px auto 10px;*/
+}
+
+/* 150px */
+.footer-featured-content-wrapper {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 150px;
+	width: 100%;
+}
+
+.footer-featured-content {
+	width: 200px;
+}
+
+.footer-featured-content .title {
+	font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+	line-height: 1.75;
+	color: #A3BFDF;
+	display: block;
+	text-align: left;
+	padding: 0 0 0 5px;
+}
+
+.footer-featured-content .title::after {
+	content: "";
+	display: block;
+	width: 90%;
+	height: 1px;
+	background-color: #A3BFDF;
+	margin: 5px 0;
+}
+
+.footer-featured-content ul {
+	list-style: none;
+	padding: 0 0 0 5px;
+	margin: 0;
+}
+
+.footer-featured-content a {
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+	line-height: 1.5;
+	color: #A3BFDF;
+	display: block;
+	text-align: left;
+}
+
+/* 75px */
+.footer-social-media-wrapper {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 75px;
+	width: 100%;
+}
+
+.footer-social-media-wrapper .image-wrapper {
+	height: 64px;
+	width: 64px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.footer-social-media-wrapper .image-wrapper:hover {
+	background-color: #3D699B;
+}
+
+.footer-social-media-wrapper .image-wrapper img {
+	display: block;
+	height: 50px;
+	width: 50px;
+	margin: 0 auto;
 }
 
 /* 75px */
@@ -309,11 +463,11 @@ p {
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
-/*background-color: #003371;*/
 	height: 75px;
 	width: 100%;
 }
 
+/* 10 + 40 + 10 + 10 + 40 + 10 = 120px */
 @media (max-width: 420px) {
 	.footer-contact-wrapper {
 		height: 120px;
@@ -322,7 +476,6 @@ p {
 
 .footer-contact-wrapper img {
 	display: flex;
-/*text-align: center;*/
 	height: 40px;
 	width: 180px;
 	margin: 10px 10px 10px 20px;
@@ -330,49 +483,259 @@ p {
 }
 
 @media (max-width: 420px) {
-	/* quick fix because the flex does not work ... for now */
-	/*
-																										.footer-contact-wrapper {
-																											display: inline-block;
-																										}
-
-																										.footer-contact-wrapper img {
-																											display: inline-block;
-																										}
-																										.footer-contact-wrapper a {
-																											display: inline-block;
-																										}
-																										.footer-contact-wrapper a img {
-																											display: inline-block;
-																										}
-																										*/
-	/* smart fix, flex direction from row to column */
 	.footer-contact-wrapper {
 		flex-flow: column;
 	}
 }
 
-/* height 50px */
+/* 50px */
 .footer-copyright {
 	font-family: 'Roboto', sans-serif;
 	vertical-align: center;
 	text-align: center;
-	color: #FFFFFF;
-	background-color: #003371;
+	color: #3D699B;
+	background-color: #002C61;
 	line-height: 50px;
 	height: 50px;
 }
 
 @media (max-width: 420px) {
-
+	.footer-copyright {
+		line-height: 25px;
+		padding: 0 60px;
+	}
 }
 
+/* end of footer */
+/* customized footer menu */
+/* hide on desktop view */
+.widget_nav_menu {
+	display: none;
+}
+
+/* show on mobile view */
+@media (max-width: 420px) {
+	.widget_nav_menu {
+		display: inline-block;
+		position: fixed;
+		background-color: #FFFFFF;
+		width: 25%;
+		padding: 0;
+		margin: 0;
+		top: 0;
+	/* this put the widget menu on top */
+		left: 0;
+	/*right: 0;*/
+	}
+
+	.widget_nav_menu:hover {
+		transition: all .5s ease;
+		width: 100%;
+	}
+
+	.widget_nav_menu:not(hover) {
+		transition: all .5s ease;
+		width: 25%;
+	}
+
+	.widget_nav_menu .menu .menu-item {
+		width: 100%;
+	}
+
+	.widget_nav_menu:hover .menu .menu-item {
+		transition: all .5s ease;
+		width: 50%;
+	}
+
+	.widget_nav_menu:(not)hover .menu .menu-item {
+		transition: all .5s ease;
+		width: 100%;
+	}
+}
+
+/* the most shallow, ul main-menu class */
+.widget_nav_menu .menu {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	margin: 0 auto;
+	padding: 0;
+	list-style-type: none;
+	position: relative;
+}
+
+/* changed all ".widget_nav_menu .menu li" to ".widget_nav_menu .menu .menu-item" for easier look */
+.widget_nav_menu .menu .menu-item {
+	color: #f2f2f2;
+	text-align: center;
+	padding: 0;
+	text-decoration: none;
+	font-size: 17px;
+	width: 200px;
+	height: 50px;
+	transition: all .4s ease;
+}
+
+/* half screen width for mobile */
+/*
+@media (max-width: 420px) {
+	.widget_nav_menu .menu .menu-item {
+		width: 50%;
+	}
+}
+*/
+.widget_nav_menu .menu a {
+	text-decoration: none;
+	font-family: Lato, sans-serif;
+	font-size: 16px;
+	color: rgba(0,0,0,0.6399999857);
+	font-weight: 300;
+	line-height: 50px;
+	margin: 0;
+	padding: 0;
+	display: block;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.widget_nav_menu .menu .menu-item:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+/* show the level 1 sub-menu */
+.widget_nav_menu .menu .menu-item-has-children:hover .sub-menu {
+	background-color: #FFFFFF;
+	color: black;
+	display: block;
+	opacity: 1;
+}
+
+/* confusing part */
+/* hide the level 2 children below the level 1*/
+.widget_nav_menu .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children .sub-menu .menu-item {
+	display: none;
+}
+
+/* override the first  tag just for has-children */
+.widget_nav_menu .menu .menu-item-has-children a {
+	margin: 0 0 -20px;
+}
+
+/* down arrow symbol */
+.widget_nav_menu .menu .menu-item-has-children::after {
+	content: "";
+	border: solid black;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+}
+
+/* down arrow transition spin animation */
+.widget_nav_menu .menu .menu-item-has-children:hover::after {
+	transition: transform .5s ease;
+	transform: rotate(225deg);
+}
+
+.widget_nav_menu .menu .menu-item-has-children:not(hover)::after {
+	transition: transform .5s ease;
+	transform: rotate(45deg);
+}
+
+/* level 1 sub-menu */
+.widget_nav_menu .menu .menu-item-has-children .sub-menu {
+	padding: 0;
+	margin: 20px 0 0;
+	list-style-type: none;
+	display: none;
+/* hidden by default */
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	position: absolute;
+	width: 200px;
+}
+
+/* half screen width for mobile */
+@media (max-width: 420px) {
+	.widget_nav_menu .menu .menu-item-has-children .sub-menu {
+		width: 50%;
+	}
+}
+
+/* changed all ".sub-menu li" to ".sub-menu .menu-item" for easier look */
+.widget_nav_menu .menu .menu-item-has-children .sub-menu .menu-item {
+	color: #FFFFFF;
+	text-align: center;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+@media (max-width: 420px) {
+	.widget_nav_menu .menu .menu-item-has-children .sub-menu .menu-item {
+		width: 100%;
+	}
+
+	/* level 2 sub-menu */
+	.widget_nav_menu .menu .menu-item-has-children .sub-menu .menu-item-has-children .sub-menu {
+		width: 100%;
+	}
+}
+
+.widget_nav_menu .menu .menu-item-has-children .sub-menu .menu-item:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+/* new menu parts */
+/* right arrow '>' for level 2 sub menu */
+.widget_nav_menu .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children::after {
+	content: "";
+	border: solid black;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	text-align: right;
+	float: right;
+	margin-top: -10px;
+	margin-right: 5px;
+}
+
+/* right arrow '>' transition spin animation */
+.widget_nav_menu .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover::after {
+	transition: transform .5s ease;
+	transform: rotate(135deg);
+}
+
+.widget_nav_menu .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:not(hover)::after {
+	transition: transform .5s ease;
+	transform: rotate(-45deg);
+}
+
+/* new menu parts */
+/* show the content of level 2 sub menu */
+.widget_nav_menu .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover .sub-menu {
+	padding: 0;
+	margin-top: -30px;
+	position: absolute;
+	left: 100%;
+}
+
+.widget_nav_menu .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover .sub-menu .menu-item {
+	display: block;
+}
+
+/* end of customized footer menu */
 /* table */
 /* service table */
 table.company-profile-table {
 	font-family: Arial, Helvetica, sans-serif;
 	background-color: #FFFFFF;
-	width: 1000px;
+	width: 90%;
+	max-width: 1000px;
 /*height: 600px;*/
 /*not that good, better to set the height of table header and row */
 	text-align: left;
@@ -423,6 +786,7 @@ table.company-profile-table p {
 	margin: 0;
 }
 
+/* end of table */
 /* overseas office box */
 .office-box-wrapper {
 	display: flex;
@@ -517,3 +881,12 @@ table.company-profile-table p {
 	display: none;
 }
 */
+/* debugging */
+/* debug the navigation menu bar hover error */
+@media(hover: hover) {
+
+}
+
+@media(hover: none) {
+
+}
