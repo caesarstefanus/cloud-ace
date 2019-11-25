@@ -1,0 +1,133 @@
+.cloud-migration-title {
+  font-family: 'Roboto', sans-serif;
+	font-size: 24px;
+  line-height: 25px;
+	font-weight: bold;
+	margin: 5% auto;
+	color: #026fd1;
+  text-align: center;
+  width: 50%;
+}
+
+.cloud-migration-key-benefits-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  line-height: 25px;
+  font-weight: bold;
+  margin: 5% auto;
+  color: #777;
+  text-align: left;
+}
+
+.cloud-migration-key-benefits-title::after {
+  content: "";
+  background-color: #777;
+  margin: 3px 0 0 0;
+  width: 100%;
+  height: 1px;
+  display: block;
+}
+
+.cloud-migration-key-benefits-image-wrapper {
+  margin: 0 auto;
+  display: block;
+  background-color: #026fd1;
+  border-radius: 20px;
+  width: 150px;
+  height: 150px;
+}
+
+.cloud-migration-key-benefits-image {
+  margin: 11px;
+  width: 128px;
+  height: 128px;
+}
+
+.cloud-migration-key-benefits-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: normal;
+  margin: 10px auto;
+  color: #000;
+  text-align: left;
+}
+
+.migration-methods-container {
+  width: 90%;
+  margin: 0 5%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.migration-methods {
+  margin: 5px;
+  width: 350px;
+}
+
+.migration-methods-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  line-height: 25px;
+  font-weight: normal;
+  margin: 5% auto;
+  color: #026fd1;
+  text-align: left;
+  padding: 5%;
+}
+
+.migration-methods-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: normal;
+  margin: 5% auto;
+  color: #000000;
+  text-align: justify;
+  padding: 5%;
+}
+
+.migration-phases {
+  background-color: #FFFFFF;
+  border: solid #026fd1;
+  border-radius: 20px;
+  width: 400px;
+  height: 300px;
+  margin: 20px auto;
+}
+
+.migration-phases::after {
+  content: url('https://idcloudace.files.wordpress.com/2019/11/arrow-213-16.png');
+  display: block;
+  margin: 15px auto;
+  padding: 10px;
+  height: 20px;
+  width: 20px;
+}
+
+.migration-phases-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  line-height: 25px;
+  font-weight: normal;
+  padding: 5% 10%;
+  color: #777;
+}
+
+.migration-phases-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: normal;
+  padding: 5% 10%;
+  color: #000000;
+}
+
+.migration-phases-image {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  display: block;
+}

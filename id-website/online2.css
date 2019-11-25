@@ -304,6 +304,8 @@ h1::after {
 }
 
 h2 {
+	font-family: 'Roboto', sans-serif;
+	color: #777777;
 	text-align: center;
 	font-size: 30px;
 }
@@ -328,7 +330,7 @@ p {
 /* wrapper and container */
 .main-container {
 	width: 90%;
-	max-width: 1000px;
+	max-width: 1200px;
 	margin: 0 auto;
 }
 
@@ -359,6 +361,11 @@ p {
 	background-color: #026fd1;
 }
 
+/* image */
+.image-center {
+	margin: 0 auto;
+	display: block;
+}
 /* end of main style and main design */
 /* footer */
 /* 75 + 75 + 50 */
@@ -1588,3 +1595,107 @@ table.company-profile-table p {
 }
 
 /* end of homepage */
+/* about gcp */
+.about-gcp p {
+  display: none;
+}
+
+.about-gcp-logo {
+  height: 200px;
+  width: 200px;
+}
+
+.about-gcp-description {
+  font-family: 'Roboto', sans-serif;
+	text-align: center;
+	font-size: 15px;
+	line-height: 1.5;
+	color: #3e3e3e;
+	margin: 30px auto;
+	padding: 10px;
+}
+
+.gcp-box-container {
+  width: 90%;
+  margin: 0 5%;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.gcp-box {
+  /*height: 550px;*/
+	width: 340px;
+	/*border: solid 2px #EFEFEF;
+	border-radius: 10px;*/
+	margin: 20px 5px 20px 5px;
+	background-color: #FFFFFF;
+}
+
+.gcp-box p {
+  display: none;
+}
+
+.gcp-box-image {
+  width: 90%;
+  display: block;
+  margin: 5% auto;
+}
+
+.gcp-box-title {
+  font-family: 'Roboto', sans-serif;
+	text-align: left;
+	font-size: 18px;
+  line-height: 25px;
+	font-weight: bold;
+	margin: 0 5% 5%;
+	color: #000000;
+}
+
+.gcp-box-description {
+  font-family: 'Roboto', sans-serif;
+	text-align: justify;
+	font-size: 14px;
+  line-height: 1.5;
+	font-weight: normal;
+	margin: 0 5% 5%;
+	color: #000000;
+}
+/* end of about gcp */
+/* privacy policy */
+.privacy-policy p {
+  display: none;
+}
+
+.privacy-policy-description {
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #3e3e3e;
+  margin: 30px auto;
+  padding: 10px;
+}
+
+.privacy-policy-description ol li {
+  margin: 10px 0;
+}
+
+.privacy-policy-signature {
+  font-family: 'Roboto', sans-serif;
+  text-align: right;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #3e3e3e;
+  margin: 30px auto;
+  padding: 10px;
+}
+/* end of privacy policy */
+/* contact-us */
+.contact-us-large {
+  width: 30%;
+  margin: 10px auto;
+  display: block;
+}
+/* end of contact us */

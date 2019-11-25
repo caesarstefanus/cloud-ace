@@ -1,0 +1,68 @@
+/* about gcp */
+.about-gcp p {
+  display: none;
+}
+
+.about-gcp-logo {
+  height: 200px;
+  width: 200px;
+}
+
+.about-gcp-description {
+  font-family: 'Roboto', sans-serif;
+	text-align: center;
+	font-size: 15px;
+	line-height: 1.5;
+	color: #3e3e3e;
+	margin: 30px auto;
+	padding: 10px;
+}
+
+.gcp-box-container {
+  width: 90%;
+  margin: 0 5%;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.gcp-box {
+  /*height: 550px;*/
+	width: 340px;
+	/*border: solid 2px #EFEFEF;
+	border-radius: 10px;*/
+	margin: 20px 5px 20px 5px;
+	background-color: #FFFFFF;
+}
+
+.gcp-box p {
+  display: none;
+}
+
+.gcp-box-image {
+  width: 90%;
+  display: block;
+  margin: 5% auto;
+}
+
+.gcp-box-title {
+  font-family: 'Roboto', sans-serif;
+	text-align: left;
+	font-size: 18px;
+  line-height: 25px;
+	font-weight: bold;
+	margin: 0 5% 5%;
+	color: #000000;
+}
+
+.gcp-box-description {
+  font-family: 'Roboto', sans-serif;
+	text-align: justify;
+	font-size: 14px;
+  line-height: 1.5;
+	font-weight: normal;
+	margin: 0 5% 5%;
+	color: #000000;
+}
+/* end of about gcp */
