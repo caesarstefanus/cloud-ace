@@ -1,12 +1,25 @@
+/* cloud migration */
 .cloud-migration-title {
   font-family: 'Roboto', sans-serif;
-	font-size: 24px;
-  line-height: 25px;
+	font-size: 36px;
 	font-weight: bold;
-	margin: 5% auto;
-	color: #026fd1;
+	background-color: #026fd1;
+  color: #FFFFFF;
+  padding: 25px 0 25px 0;
   text-align: center;
-  width: 50%;
+}
+
+.cloud-migration-image {
+  width: 200px;
+  height: 200px;
+  background-color: #FFFFFF;
+  border-radius: 50px;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+.cloud-migration-key-benefits-container {
+  padding: 5% 0;
 }
 
 .cloud-migration-key-benefits-title {
@@ -14,9 +27,10 @@
   font-size: 24px;
   line-height: 25px;
   font-weight: bold;
-  margin: 5% auto;
+  margin: 5% auto 2% auto;
   color: #777;
   text-align: left;
+  padding: 0 5%;
 }
 
 .cloud-migration-key-benefits-title::after {
@@ -44,6 +58,8 @@
 }
 
 .cloud-migration-key-benefits-description {
+  width: 90%;
+  margin: 0 5%;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   line-height: 25px;
@@ -89,22 +105,43 @@
   padding: 5%;
 }
 
+.migration-phases-container {
+  padding: 5% 0;
+}
+
 .migration-phases {
   background-color: #FFFFFF;
   border: solid #026fd1;
   border-radius: 20px;
   width: 400px;
-  height: 300px;
+  height: 320px;
   margin: 20px auto;
+  /*background-color: cyan;*/
 }
 
-.migration-phases::after {
+@media (max-width:400px) {
+	.migration-phases {
+		width: 90%;
+	}
+}
+
+.down-arrow {
+  /*
   content: url('https://idcloudace.files.wordpress.com/2019/11/arrow-213-16.png');
   display: block;
-  margin: 15px auto;
-  padding: 10px;
+  margin: auto;
   height: 20px;
   width: 20px;
+  background-color: magenta;
+  */
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+
+  border-top: 20px solid #026fd1;
+  display: block;
+  margin: auto;
 }
 
 .migration-phases-title {
@@ -118,7 +155,7 @@
 
 .migration-phases-description {
   font-family: 'Roboto', sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 25px;
   font-weight: normal;
   padding: 5% 10%;
@@ -128,6 +165,31 @@
 .migration-phases-image {
   width: 100px;
   height: 100px;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   display: block;
 }
+
+.specialization {
+  width: 90%;
+  margin: 0 5%;
+  padding: 5% 0;
+}
+
+.specialization p {
+  display: none;
+}
+
+.specialization img {
+  display: block;
+  margin: 5% auto;
+  width: 250px;
+}
+
+.specialization-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: normal;
+  margin: 5% auto;
+}
+/* end of cloud migration */
