@@ -905,16 +905,16 @@ table.company-profile-table p {
 	display: none;
 }
 */
-/* debugging */
-/* debug the navigation menu bar hover error */
-@media(hover: hover) {
 
+.entry-footer {
+	display: none;
 }
 
-@media(hover: none) {
-
+.entry-meta {
+	display: none;
 }
 
+/* end of hide */
 /* homepage */
 /* attention section 1 */
 .attention-1-box-container {
@@ -1894,3 +1894,29 @@ table.company-profile-table p {
   margin: 5% auto;
 }
 /* end of cloud migration */
+/* seminar */
+.click-here-button {
+  display: block;
+  width: 120px;
+  height: 40px;
+  background-color: #026fd1;
+  border-radius: 10px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  font-size: 20px;
+  color: #FFFFFF;
+  line-height: 40px;
+}
+/* end of seminar */
+
+/* debugging */
+/* debug the navigation menu bar hover error */
+@media(hover: hover) {
+
+}
+
+@media(hover: none) {
+
+}
