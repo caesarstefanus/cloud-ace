@@ -1114,7 +1114,7 @@ table.company-profile-table p {
 }
 
 .seminar-events-box {
-	height: 440px;
+	height: 470px;
 	width: 320px;
 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 	margin: 30px;
@@ -1167,10 +1167,19 @@ table.company-profile-table p {
 	height: 120px;
 }
 
-.seminar-events-box > a {
-	font-family: 'Roboto', sans-serif;
-	text-align: left;
-	padding: 0 0 0 5%;
+.seminar-events-box a {
+	display: block;
+  width: 200px;
+  height: 40px;
+  background-color: #026fd1;
+  border-radius: 10px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  font-size: 18px;
+  color: #FFFFFF;
+  line-height: 40px;
 }
 
 /* news */
@@ -1247,17 +1256,20 @@ table.company-profile-table p {
 	margin: 20px 5px 20px 5px;
 	border-radius: 10px;
 	background-color: #FFFFFF;
+
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	color: #000000;
 }
 
 .gcp-services-box:hover {
 	transition: all .5s ease;
 	background-color: #026fd1;
 	cursor: pointer;
-	/*box-shadow: 1px 3px 3px 1px rgba(0,0,0,0.2);*/
 	transition: all .5s ease;
-}
 
-.gcp-services-box:hover .gcp-services-box-title {
 	color: #FFFFFF;
 }
 
@@ -1275,7 +1287,7 @@ table.company-profile-table p {
 	background-color: #FFFFFF;
 }
 
-.gcp-services-box p {
+.gcp-services-box-container p {
 	padding: 0;
 	margin: 0;
 }
@@ -1288,29 +1300,6 @@ table.company-profile-table p {
 .gcp-services-box li {
 	padding: 0;
 	margin: 0;
-}
-
-.gcp-services-box-title {
-	font-family: 'Roboto', sans-serif;
-	text-align: center;
-	font-size: 18px;
-	font-weight: bold;
-	margin: 0 5% 5%;
-	color: #000000;
-}
-
-.gcp-services-box-description {
-	font-family: 'Roboto', sans-serif;
-	text-align: left;
-	padding: 0 0 0 5%;
-	font-size: 15px;
-	font-weight: normal;
-}
-
-.gcp-services-box > a {
-	font-family: 'Roboto', sans-serif;
-	text-align: left;
-	padding: 0 0 0 5%;
 }
 
 /* service-packages */
@@ -1929,8 +1918,84 @@ table.company-profile-table p {
   color: #FFFFFF;
   line-height: 40px;
 }
-/* end of seminar */
 
+.category-past-seminars .site-main {
+  width: 80%;
+  max-width: 1200px;
+	display: block;
+	margin: 0 auto;
+}
+
+.single-post .category-past-seminars {
+  width: 80%;
+  max-width: 1200px;
+	display: block;
+	margin: 0 auto;
+}
+
+.category-upcoming-seminars {
+  width: 80%;
+  max-width: 1200px;
+	display: block;
+	margin: 0 auto;
+}
+
+.seminars h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  line-height: 1.5;
+	color: #3e3e3e;
+	margin: 20px auto;
+	padding: 10px;
+}
+
+.seminars h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  line-height: 1.5;
+	color: #3e3e3e;
+	margin: 20px auto;
+	padding: 10px;
+}
+
+.seminars h4 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+	color: #3e3e3e;
+	margin: 20px auto;
+	padding: 10px;
+}
+
+.seminars p {
+  font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+	line-height: 1.5;
+	color: #3e3e3e;
+	margin: 20px auto;
+	padding: 15px;
+}
+
+.googlemaps iframe {
+  width: 100%;
+}
+
+.googlemaps {
+  height: 100%;
+}
+
+iframe {
+  width: 100%;
+}
+/* end of seminar */
+/* jobs */
+.page-id-934 .site-content {
+  width: 90%;
+  max-width: 1200;
+	display: block;
+	margin: 0 auto;
+}
+/* end of jobs */
 /* debugging */
 /* debug the navigation menu bar hover error */
 @media(hover: hover) {

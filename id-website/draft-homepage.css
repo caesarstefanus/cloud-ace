@@ -234,6 +234,19 @@
 	font-family: 'Roboto', sans-serif;
 	text-align: left;
 	padding: 0 0 0 5%;
+
+	display: block;
+  width: 120px;
+  height: 40px;
+  background-color: #026fd1;
+  border-radius: 10px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  font-size: 20px;
+  color: #FFFFFF;
+  line-height: 40px;
 }
 
 /* news */
@@ -310,17 +323,20 @@
 	margin: 20px 5px 20px 5px;
 	border-radius: 10px;
 	background-color: #FFFFFF;
+
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	color: #000000;
 }
 
 .gcp-services-box:hover {
 	transition: all .5s ease;
 	background-color: #026fd1;
 	cursor: pointer;
-	/*box-shadow: 1px 3px 3px 1px rgba(0,0,0,0.2);*/
 	transition: all .5s ease;
-}
 
-.gcp-services-box:hover .gcp-services-box-title {
 	color: #FFFFFF;
 }
 
@@ -338,7 +354,7 @@
 	background-color: #FFFFFF;
 }
 
-.gcp-services-box p {
+.gcp-services-box-container p {
 	padding: 0;
 	margin: 0;
 }
@@ -351,29 +367,6 @@
 .gcp-services-box li {
 	padding: 0;
 	margin: 0;
-}
-
-.gcp-services-box-title {
-	font-family: 'Roboto', sans-serif;
-	text-align: center;
-	font-size: 18px;
-	font-weight: bold;
-	margin: 0 5% 5%;
-	color: #000000;
-}
-
-.gcp-services-box-description {
-	font-family: 'Roboto', sans-serif;
-	text-align: left;
-	padding: 0 0 0 5%;
-	font-size: 15px;
-	font-weight: normal;
-}
-
-.gcp-services-box > a {
-	font-family: 'Roboto', sans-serif;
-	text-align: left;
-	padding: 0 0 0 5%;
 }
 
 /* service-packages */

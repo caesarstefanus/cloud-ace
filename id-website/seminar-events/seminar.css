@@ -13,22 +13,29 @@
   color: #FFFFFF;
   line-height: 40px;
 }
-
+/*
 .category-past-seminars .site-main {
-  width: 90%;
+  width: 80%;
   max-width: 1200px;
 	display: block;
 	margin: 0 auto;
 }
 
 .single-post .category-past-seminars {
-  width: 90%;
+  width: 80%;
+  max-width: 1200px;
+	display: block;
+	margin: 0 auto;
+}
+*/
+.category-seminars {
+  width: 80%;
   max-width: 1200px;
 	display: block;
 	margin: 0 auto;
 }
 
-.category-past-seminars h2 {
+.category-seminars h2 {
   font-family: 'Roboto', sans-serif;
   font-size: 30px;
   line-height: 1.5;
@@ -37,7 +44,7 @@
 	padding: 10px;
 }
 
-.category-past-seminars h3 {
+.category-seminars h3 {
   font-family: 'Roboto', sans-serif;
   font-size: 25px;
   line-height: 1.5;
@@ -46,7 +53,7 @@
 	padding: 10px;
 }
 
-.category-past-seminars h4 {
+.category-seminars h4 {
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   line-height: 1.5;
@@ -55,13 +62,18 @@
 	padding: 10px;
 }
 
-.category-past-seminars p {
+.category-seminars p {
   font-family: 'Roboto', sans-serif;
 	font-size: 15px;
 	line-height: 1.5;
 	color: #3e3e3e;
 	margin: 20px auto;
-	padding: 15px;
+	padding: 0 15px;
+}
+
+.category-seminars a {
+  font-family: 'Roboto', sans-serif;
+	line-height: 1.5;
 }
 
 .googlemaps iframe {
