@@ -38,7 +38,7 @@ body {
 	right: 0;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 1000px) {
 	.main-navigation {
 		display: none;
 	}
@@ -386,6 +386,12 @@ p {
 	color: #000000;
 	text-decoration: none;
 }
+
+/* override link button font-family */
+.wp-block-button__link {
+	font-family: 'Roboto', sans-serif;
+}
+
 /* end of main style and main design */
 /* footer */
 /* 75 + 75 + 50 */
@@ -558,7 +564,7 @@ p {
 }
 
 /* show on mobile view */
-@media (max-width: 420px) {
+@media (max-width: 1000px) {
 	.widget_nav_menu {
 		display: inline-block;
 		position: fixed;
@@ -702,7 +708,7 @@ p {
 }
 
 /* half screen width for mobile */
-@media (max-width: 420px) {
+@media (max-width: 1000px) {
 	.widget_nav_menu .menu .menu-item-has-children .sub-menu {
 		width: 50%;
 	}
@@ -716,7 +722,7 @@ p {
 	font-size: 17px;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 1000px) {
 	.widget_nav_menu .menu .menu-item-has-children .sub-menu .menu-item {
 		width: 100%;
 	}
@@ -944,7 +950,7 @@ table.company-profile-table p {
 	display: flex;
 	flex-flow: row;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: center;
 	width: 90%;
 	margin: 0 5%;
 	padding: 5% 0;
@@ -954,7 +960,7 @@ table.company-profile-table p {
 	height: 350px;
 	width: 450px;
 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-	margin: 20px auto;
+	margin: 20px;
 	background-color: #FFFFFF;
 }
 
@@ -1513,6 +1519,12 @@ table.company-profile-table p {
 	flex-wrap: wrap;
 }
 
+.indonesian-customers-image {
+	max-width: 200px;
+	max-height: 200px;
+	margin: 20px;
+}
+
 .customers-image {
 	height: 100px;
 	width: 150px;
@@ -1906,6 +1918,58 @@ table.company-profile-table p {
 }
 /* end of cloud migration */
 /* seminar */
+/* seminar pages */
+.page-id-1161 .site-content {
+  width: 80%;
+  max-width: 1200px;
+	display: block;
+	margin: 0 auto;
+}
+
+.page-id-1161 .wp-block-columns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+	justify-content: space-around;
+  flex-grow: 1;
+	flex-basis: auto;
+  width: 100%;
+  min-height: 470px;
+}
+
+.page-id-1161 .wp-block-column {
+	flex-grow: 1;
+	flex-basis: auto;
+  display: block;
+  height: 470px;
+	width: 320px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	margin: 5px 10px;
+	background-color: #FFFFFF;
+}
+
+.page-id-1161 .wp-block-column h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+	margin: 5% 0 5% 0;
+  height: 50px;
+}
+
+.page-id-1161 .wp-block-column p {
+  font-family: 'Roboto', sans-serif;
+  height: 150px;
+}
+
+.page-id-1161 .wp-block-column .wp-block-image {
+  width: 320px;
+	height: auto;
+	margin: 5% auto 0 auto;
+	display: block;
+	vertical-align: bottom;
+	bottom: 0;
+}
+
+/* seminar post*/
 .click-here-button {
   display: block;
   width: 120px;

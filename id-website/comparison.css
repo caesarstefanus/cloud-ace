@@ -1,0 +1,25 @@
+.comparison-image {
+  max-height: 200px;
+  max-width: 400px;
+  margin: 0 auto;
+  display: block;
+}
+
+.comparison-image-flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.comparison-image-container {
+  flex: 1 0 21%;
+  margin: 5px 10px;
+}
+
+.comparison-image-title {
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+}

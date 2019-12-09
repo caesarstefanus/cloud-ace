@@ -38,7 +38,7 @@ body {
 	right: 0;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 1000px) {
 	.main-navigation {
 		display: none;
 	}
@@ -558,7 +558,7 @@ p {
 }
 
 /* show on mobile view */
-@media (max-width: 420px) {
+@media (max-width: 1000px) {
 	.widget_nav_menu {
 		display: inline-block;
 		position: fixed;
@@ -2019,7 +2019,7 @@ iframe {
 	right: 0;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 1000px) {
 	.main-navigation {
 		display: none;
 	}
