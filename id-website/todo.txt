@@ -1,0 +1,19 @@
+spacing check (*much better now? update the smaller css files)
+cleanup seminars overview page (*added button wrapper, margin from percentage to px)
+cleanup pictures for seminars posts (*updated so that max height and width is 100%)
+check posts navigation part for the seminars posts
+
+cleanup job opportunities page and posts
+
+revisit <p> tag
+
+ipad (mainly image sizes)
+cleanup layanan kami, client indonesia menu bar, contact us
+
+reminder: don't forget to put category to seminars, jobs etc.
+otherwise the style/design will not be updated
+
+
++ download comparison sheet (*google form for now)
+(don't forget @media query)
++ google cloud for startups

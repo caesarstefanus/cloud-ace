@@ -1,0 +1,70 @@
+.gcp-startups-title {
+  font-family: 'Roboto', sans-serif;
+	font-size: 36px;
+	font-weight: bold;
+	background-color: #026fd1;
+  color: #FFFFFF;
+  padding: 25px 0 25px 0;
+  text-align: center;
+}
+
+.gcp-startups-image-wrapper {
+  padding: 5px 10px;
+  width: 200px;
+  height: 50px;
+  background-color: #FFFFFF;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.gcp-startups-image {
+  max-width: 200px;
+  max-height: 50px;
+  background-color: #FFFFFF;
+  /*border-radius: 50px;*/
+  display: block;
+  margin: auto;
+}
+
+.gcp-startups-reasons-container {
+  width: 90%;
+  margin: 0 5%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.gcp-startups-reasons {
+  margin: 5px;
+  width: 350px;
+}
+
+.gcp-startups-reasons img {
+  display: block;
+  margin: auto;
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.gcp-startups-reasons-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  line-height: 25px;
+  font-weight: normal;
+  margin: 5% auto;
+  color: #026fd1;
+  text-align: center;
+  padding: 5%;
+}
+
+.gcp-startups-reasons-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: normal;
+  margin: 5% auto;
+  color: #000000;
+  text-align: justify;
+  padding: 5%;
+}

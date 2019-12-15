@@ -64,6 +64,8 @@ p {
 }
 
 .main-wrapper {
+	padding-top: 50px;
+	padding-bottom: 50px;
 	width: 90%;
 	max-width: 1200px;
 	margin: 0 auto;

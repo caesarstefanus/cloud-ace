@@ -1,4 +1,5 @@
-.comparison-image {
+/* cloud platform comparison table */
+.comparison-header-image {
   max-height: 200px;
   max-width: 400px;
   margin: 0 auto;
@@ -17,9 +18,40 @@
   margin: 5px 10px;
 }
 
+.comparison-image-wrapper {
+  display: block;
+  margin: auto;
+  height: 150px;
+  width: 150px;
+}
+
+.comparison-image-wrapper img {
+  max-height: 150px;
+  max-width: 150px;
+  margin: 0 auto;
+  display: block;
+}
+
 .comparison-image-title {
   display: block;
   text-align: center;
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
 }
+
+/* try wordpress jetpack form */
+.contact-form {
+  margin: 0 auto;
+  background-color: cyan;
+}
+
+.contact-form .grunion-field-wrap {
+  margin: 0 auto;
+  background-color: magenta;
+}
+
+input {
+  background-color: blue;
+  margin: 0 auto;
+}
+/* end of comparison table */
