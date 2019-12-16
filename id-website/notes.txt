@@ -1,0 +1,9 @@
+seminars events
+job opportunities
+study case
+news
+
+smaller width for menu bar
+maxwidth 1000
+simple documentation page
+why cloud ace -> bad? more image? style?

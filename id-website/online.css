@@ -364,19 +364,20 @@ p {
 	font-family: 'Roboto', sans-serif;
 	text-align: left;
 	font-size: 18px;
-	list-style-position: outside;
 }
 
 .list-checkmark li::before {
-	content: '';
+	content: '✓';
 	display: inline-block;
+	/*
   height: 20px;
   width: 20px;
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-image: url('https://idcloudace.files.wordpress.com/2019/12/check3.png');
-	padding-left: 10px;
+	*/
 	margin: auto;
+	color: #026fd1;
 }
 
 .list-checkmark li {
@@ -385,7 +386,7 @@ p {
 /* wrapper and container */
 .main-container {
 	width: 90%;
-	max-width: 1200px;
+	max-width: 1000px;
 	margin: 0 auto;
 }
 
@@ -393,7 +394,7 @@ p {
 	padding-top: 50px;
 	padding-bottom: 50px;
 	width: 90%;
-	max-width: 1200px;
+	max-width: 1000px;
 	margin: 0 auto;
 }
 
@@ -1272,7 +1273,7 @@ table.company-profile-table p {
 /*width: 600px;*/
 	width: 90%;
 /*box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);*/
-	margin: 20px auto;
+	margin: 10px auto;
 }
 
 .news-item-date {
@@ -1296,7 +1297,7 @@ table.company-profile-table p {
 	text-align: left;
 	font-size: 18px;
 	font-weight: bold;
-	margin: 5% 0;
+	margin: 10px 0;
 	line-height: 1.5;
 }
 
@@ -2290,6 +2291,461 @@ blockquote p {
   display: inline;
 }
 /* end of case studies */
+/* gcp startups */
+.gcp-startups-title {
+  font-family: 'Roboto', sans-serif;
+	font-size: 36px;
+	font-weight: bold;
+	background-color: #026fd1;
+  color: #FFFFFF;
+  padding: 25px 0 25px 0;
+  text-align: center;
+}
+
+.gcp-startups-image-wrapper {
+  padding: 5px 10px;
+  width: 200px;
+  height: 50px;
+  background-color: #FFFFFF;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.gcp-startups-image {
+  max-width: 200px;
+  max-height: 50px;
+  background-color: #FFFFFF;
+  /*border-radius: 50px;*/
+  display: block;
+  margin: auto;
+}
+
+.gcp-startups-reasons-container {
+  width: 90%;
+  margin: 0 5%;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gcp-startups-reasons {
+  width: 400px;
+}
+
+.gcp-startups-reasons-image {
+  display: block;
+  margin: auto;
+  width: 150px;
+  height: 150px;
+}
+
+.gcp-startups-reasons-image img {
+  display: block;
+  margin: auto;
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.gcp-startups-reasons-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  line-height: 25px;
+  font-weight: normal;
+  margin: 10px auto;
+  color: #026fd1;
+  text-align: center;
+  padding: 0 5%;
+  height: 50px;
+}
+
+.gcp-startups-reasons-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: normal;
+  margin: 5% auto;
+  color: #000000;
+  text-align: justify;
+  padding: 5%;
+}
+
+.gcp-startups-details-container {
+  padding: 5% 0;
+}
+
+.gcp-startups-details {
+  background-color: #FFFFFF;
+  /*border: solid #026fd1;*/
+  border-radius: 20px;
+  width: 500px;
+  padding-bottom: 20px;
+  margin: 20px auto;
+  /*background-color: cyan;*/
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+@media (max-width:400px) {
+	.gcp-startups-details {
+		width: 90%;
+	}
+}
+
+.gcp-startups-details-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  line-height: 25px;
+  font-weight: normal;
+  padding: 5% 10%;
+  text-align: center;
+  color: #026fd1;
+}
+
+.gcp-startups-details-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  line-height: 25px;
+  font-weight: normal;
+  width: 90%;
+  margin: auto;
+}
+
+.gcp-startups-additional-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+}
+
+.gcp-startups-additional-container p {
+  font-size: 24px;
+}
+
+.gcp-startups-additional {
+  display: block;
+  background-color: #026fd1;
+  color: #FFFFFF;
+  width: 200px;
+  height: 70px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 10px;
+}
+
+.gcp-startups-additional-link {
+  /*color: #000000;*/
+}
+
+.gcp-startups-additional-link:hover {
+  text-decoration: none;
+}
+
+.gcp-startups-phases-container {
+  /*padding: 5% 0;*/
+}
+
+.gcp-startups-phases {
+  background-color: #FFFFFF;
+  border: solid #026fd1;
+  border-radius: 20px;
+  width: 450px;
+  /*height: 320px;*/
+  margin: 20px auto;
+  /*background-color: cyan;*/
+}
+
+@media (max-width:400px) {
+	.gcp-startups-phases {
+		width: 90%;
+	}
+}
+
+.down-arrow {
+  /*
+  content: url('https://idcloudace.files.wordpress.com/2019/11/arrow-213-16.png');
+  display: block;
+  margin: auto;
+  height: 20px;
+  width: 20px;
+  background-color: magenta;
+  */
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+
+  border-top: 20px solid #026fd1;
+  display: block;
+  margin: auto;
+}
+
+.gcp-startups-phases-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  line-height: 25px;
+  font-weight: normal;
+  padding: 5% 10%;
+  color: #777;
+}
+
+.gcp-startups-phases-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: normal;
+  padding: 5% 10%;
+  color: #000000;
+}
+
+.gcp-startups-phases-image {
+  max-width: 100px;
+  max-height: 100px;
+  margin: 0 auto 20px auto;
+  display: block;
+}
+/* end of gcp startups */
+/* application development */
+.application-development-title {
+  font-family: 'Roboto', sans-serif;
+	font-size: 36px;
+	font-weight: bold;
+	background-color: #026fd1;
+  color: #FFFFFF;
+  padding: 25px 0 25px 0;
+  text-align: center;
+}
+
+.application-development-image {
+  width: 200px;
+  height: 200px;
+  background-color: #FFFFFF;
+  border-radius: 50px;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+.application-development-key-benefits-container {
+  /*padding: 5% 0;*/
+}
+
+.application-development-key-benefits-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  line-height: 25px;
+  font-weight: bold;
+  margin: 5% auto 2% auto;
+  color: #777;
+  text-align: left;
+  padding: 0 5%;
+}
+
+.application-development-key-benefits-title::after {
+  content: "";
+  background-color: #777;
+  margin: 3px 0 0 0;
+  width: 100%;
+  height: 1px;
+  display: block;
+}
+
+.application-development-key-benefits-image-wrapper {
+  margin: 0 auto;
+  display: block;
+  background-color: #026fd1;
+  border-radius: 20px;
+  width: 150px;
+  height: 150px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+}
+
+.application-development-key-benefits-image {
+  margin: 11px;
+  width: 128px;
+  height: 128px;
+  background-color: #FFFF;
+  border-radius: 30px;
+}
+
+.application-development-description {
+  width: 90%;
+  margin: 0 5%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: normal;
+  margin: 10px auto;
+  color: #000;
+  text-align: left;
+}
+
+.application-development-serverless-legend-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: "roboto", sans-serif;
+  font-size: 20px;
+  margin: 30px 0;
+}
+
+.application-development-serverless-solid {
+  display: inline-block;
+  width: 200px;
+  height: 44px;
+  background-color: #026fd1;
+  border-radius: 3px;
+  margin: 10px;
+  line-height: 44px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.application-development-serverless-dash {
+  display: inline-block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: white;
+  border: 2px dashed #026fd1;
+  border-radius: 3px;
+  margin: 10px;
+}
+
+/**/
+.application-development-serverless-container {
+  margin: 30px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: "roboto", sans-serif;
+  text-align: center;
+  font-weight: 300;
+}
+
+.application-development-serverless-column {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+  min-height: 380px;
+  /*max-width: 240px;*/
+  background-color: #FFFFFF;
+}
+
+.application-development-serverless-column img {
+  max-width: 500px;
+  max-height: 500px;
+  margin: auto;
+}
+
+@media (max-width:500px) {
+  .application-development-serverless-column img {
+    max-width: 90%;
+  }
+}
+
+.application-development-serverless-title {
+  margin: 30px 0 0 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+/**/
+.application-development-firebase-title {
+  margin: 10px 0;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.application-development-firebase-box {
+  display: inline-block;
+  width: 220px;
+  height: 50px;
+  background-color: #026fd1;
+  border-radius: 3px;
+  margin: 10px auto;
+  line-height: 50px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.application-development-serverless-benefits-container {
+  margin: 30px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  font-family: "roboto", sans-serif;
+  text-align: center;
+  font-weight: 300;
+}
+
+.application-development-serverless-benefits-column {
+  width: 350px;
+  margin: 20px;
+}
+
+.application-development-serverless-benefits-image-wrapper {
+  width: 180px;
+  height: 180px;
+  margin: auto;
+}
+
+.application-development-serverless-benefits-image-wrapper img {
+  display: block;
+  max-width: 150px;
+  max-height: 150px;
+  margin: auto;
+}
+
+.application-development-serverless-benefits-title {
+  margin: 10px auto;
+  color: #026fd1;
+  font-size: 25px;
+  line-height: 25px;
+  height: 50px;
+}
+
+.application-development-serverless-benefits-description {
+  text-align: justify;
+  line-height: 1.5;
+}
+
+/**/
+.specialization {
+  width: 90%;
+  margin: 0 20px;
+}
+
+.specialization p {
+  display: none;
+}
+
+.specialization img {
+  display: block;
+  margin: 20px auto;
+  max-width: 250px;
+  max-height: 250px;
+  height: auto;
+  width: auto;
+}
+
+.specialization-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: normal;
+  margin: 20px auto;
+}
+/* end of application development */
 /* debugging */
 /* debug the navigation menu bar hover error */
 @media(hover: hover) {

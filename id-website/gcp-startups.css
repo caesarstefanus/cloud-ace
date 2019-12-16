@@ -139,6 +139,7 @@
   text-align: center;
   border-radius: 10px;
   margin: 20px;
+  padding: 10px;
 }
 
 .gcp-startups-additional-link {
@@ -150,14 +151,14 @@
 }
 
 .gcp-startups-phases-container {
-  padding: 5% 0;
+  /*padding: 5% 0;*/
 }
 
 .gcp-startups-phases {
   background-color: #FFFFFF;
   border: solid #026fd1;
   border-radius: 20px;
-  width: 400px;
+  width: 450px;
   /*height: 320px;*/
   margin: 20px auto;
   /*background-color: cyan;*/
