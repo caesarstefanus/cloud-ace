@@ -16,12 +16,14 @@ body {
 }
 
 .site-content {
-	min-height: calc(100vh - 475px); /* 100vh - 50px top margin - total height of footer */
+	min-height: calc(100vh - 475px);
+/* 100vh - 50px top margin - total height of footer */
 }
 
 @media (max-width: 420px) {
 	.site-content {
-		min-height: calc(100vh - 520px); /* 100vh - 50px top margin - total height of footer */
+		min-height: calc(100vh - 520px);
+	/* 100vh - 50px top margin - total height of footer */
 	}
 }
 
@@ -300,7 +302,8 @@ h1 {
 	margin-top: 50px;
 }
 
-.page-title { /* only for past seminars */
+.page-title {
+/* only for past seminars */
 	margin-top: 50px;
 }
 
@@ -407,6 +410,7 @@ p {
 	font-family: 'Roboto', sans-serif;
 	background-color: #026fd1;
 }
+
 /*
 a:-webkit-any-link {
 	color: #FFFFFF;
@@ -980,7 +984,8 @@ table.company-profile-table p {
 	justify-content: center;
 	width: 90%;
 	margin: 0 5%;
-	padding: 3% 0; /* */
+	padding: 3% 0;
+/* */
 }
 
 .attention-1-box {
@@ -994,7 +999,7 @@ table.company-profile-table p {
 .attention-1-box-image-wrapper {
 	display: block;
 	height: 90px;
-	margin: 5% auto 0 auto;
+	margin: 5% auto 0;
 	padding: 0 10%;
 }
 
@@ -1002,7 +1007,7 @@ table.company-profile-table p {
 	display: block;
 	max-width: 80%;
 	height: auto;
-	margin: 0 auto 0 auto;
+	margin: 0 auto;
 }
 
 .attention-1-box p {
@@ -1017,7 +1022,7 @@ table.company-profile-table p {
 	line-height: 25px;
 	height: 50px;
 	font-weight: bold;
-	margin: 5% 0 0 0;
+	margin: 5% 0 0;
 	padding: 0 5%;
 	color: #026fd1;
 }
@@ -1025,7 +1030,7 @@ table.company-profile-table p {
 .attention-1-box-description {
 	font-family: 'Roboto', sans-serif;
 	text-align: left;
-	padding: 0 10% 0 10%;
+	padding: 0 10%;
 	margin: 5% 0;
 	font-size: 15px;
 	height: 51px;

@@ -1,3 +1,4 @@
+/* gcp startups */
 .gcp-startups-title {
   font-family: 'Roboto', sans-serif;
 	font-size: 36px;
@@ -31,16 +32,22 @@
   margin: 0 5%;
   display: flex;
   flex-flow: row;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .gcp-startups-reasons {
-  margin: 5px;
-  width: 350px;
+  width: 400px;
 }
 
-.gcp-startups-reasons img {
+.gcp-startups-reasons-image {
+  display: block;
+  margin: auto;
+  width: 150px;
+  height: 150px;
+}
+
+.gcp-startups-reasons-image img {
   display: block;
   margin: auto;
   max-width: 150px;
@@ -52,10 +59,11 @@
   font-size: 24px;
   line-height: 25px;
   font-weight: normal;
-  margin: 5% auto;
+  margin: 10px auto;
   color: #026fd1;
   text-align: center;
-  padding: 5%;
+  padding: 0 5%;
+  height: 50px;
 }
 
 .gcp-startups-reasons-description {
@@ -68,3 +76,140 @@
   text-align: justify;
   padding: 5%;
 }
+
+.gcp-startups-details-container {
+  padding: 5% 0;
+}
+
+.gcp-startups-details {
+  background-color: #FFFFFF;
+  /*border: solid #026fd1;*/
+  border-radius: 20px;
+  width: 500px;
+  padding-bottom: 20px;
+  margin: 20px auto;
+  /*background-color: cyan;*/
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+@media (max-width:400px) {
+	.gcp-startups-details {
+		width: 90%;
+	}
+}
+
+.gcp-startups-details-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  line-height: 25px;
+  font-weight: normal;
+  padding: 5% 10%;
+  text-align: center;
+  color: #026fd1;
+}
+
+.gcp-startups-details-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  line-height: 25px;
+  font-weight: normal;
+  width: 90%;
+  margin: auto;
+}
+
+.gcp-startups-additional-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+}
+
+.gcp-startups-additional-container p {
+  font-size: 24px;
+}
+
+.gcp-startups-additional {
+  display: block;
+  background-color: #026fd1;
+  color: #FFFFFF;
+  width: 200px;
+  height: 70px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.gcp-startups-additional-link {
+  /*color: #000000;*/
+}
+
+.gcp-startups-additional-link:hover {
+  text-decoration: none;
+}
+
+.gcp-startups-phases-container {
+  padding: 5% 0;
+}
+
+.gcp-startups-phases {
+  background-color: #FFFFFF;
+  border: solid #026fd1;
+  border-radius: 20px;
+  width: 400px;
+  /*height: 320px;*/
+  margin: 20px auto;
+  /*background-color: cyan;*/
+}
+
+@media (max-width:400px) {
+	.gcp-startups-phases {
+		width: 90%;
+	}
+}
+
+.down-arrow {
+  /*
+  content: url('https://idcloudace.files.wordpress.com/2019/11/arrow-213-16.png');
+  display: block;
+  margin: auto;
+  height: 20px;
+  width: 20px;
+  background-color: magenta;
+  */
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+
+  border-top: 20px solid #026fd1;
+  display: block;
+  margin: auto;
+}
+
+.gcp-startups-phases-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  line-height: 25px;
+  font-weight: normal;
+  padding: 5% 10%;
+  color: #777;
+}
+
+.gcp-startups-phases-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: normal;
+  padding: 5% 10%;
+  color: #000000;
+}
+
+.gcp-startups-phases-image {
+  max-width: 100px;
+  max-height: 100px;
+  margin: 0 auto 20px auto;
+  display: block;
+}
+/* end of gcp startups */
