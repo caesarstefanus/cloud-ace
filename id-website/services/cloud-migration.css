@@ -169,23 +169,23 @@
   display: block;
 }
 
-.specialization {
+.big-data-big-query-to-start {
   width: 90%;
   margin: 0 5%;
   padding: 5% 0;
 }
 
-.specialization p {
+.big-data-big-query-to-start p {
   display: none;
 }
 
-.specialization img {
+.big-data-big-query-to-start img {
   display: block;
   margin: 5% auto;
   width: 250px;
 }
 
-.specialization-description {
+.big-data-big-query-to-start-description {
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   line-height: 25px;
