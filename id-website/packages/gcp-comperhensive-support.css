@@ -1,0 +1,175 @@
+/* gcp comperhensive support */
+.gcp-comp-title {
+  padding: 30px 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: 36px;
+	font-weight: 200;
+	background-color: #026fd1;
+	color: #FFFFFF;
+	text-align: center;
+  height: 200px;
+  line-height: 40px;
+}
+
+.gcp-comp-image-wrapper {
+  display: block;
+	height: 200px;
+	margin: auto;
+}
+
+.gcp-comp-image {
+	max-width: 200px;
+	max-height: 200px;
+	display: block;
+	margin: auto;
+}
+
+.gcp-comp-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 200;
+  margin: 30px auto;
+  width: 90%;
+}
+
+.gcp-comp-about-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  flex-wrap: wrap;
+  /*background-color: magenta;*/
+}
+
+.gcp-comp-about-item {
+  display: inline-block;
+  width: 300px;
+  margin: 15px;
+  /*background-color: maroon;*/
+}
+
+.gcp-comp-about-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 45px;
+  color: #026fd1;
+  margin: 10px auto;
+  width: 90%;
+  height: 90px;
+  text-align: center;
+}
+
+.gcp-comp-about-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  line-height: 2;
+  color: #3e3e3e;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+}
+
+.gcp-comp-about-image-wrapper {
+  display: block;
+  height: 200px;
+  width: 200px;
+  /*min-height: 250px;
+  min-width: 250px;
+  max-height: 250px;
+  max-width: 250px;*/
+  margin: auto;
+}
+
+.gcp-comp-about-image {
+  display: block;
+  max-height: 200px;
+  max-width: 200px;
+  /*min-height: 250px;
+  min-width: 250px;
+  max-height: 250px;
+  max-width: 250px;*/
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gcp-comp-tiers-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  color: #3e3e3e;
+  width: 90%;
+  margin: 30px auto;
+  text-align: center;
+}
+
+/* table */
+.gcp-comp-plan-table-container {
+  overflow-x: auto;
+  margin: 50px auto;
+}
+
+table.gcp-comp-plan-table {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #FFFFFF;
+  width: 1000px;
+  height: 600px;
+  text-align: center;
+  border-collapse: collapse;
+  margin: auto;
+}
+table.gcp-comp-plan-table td, table.gcp-comp-plan-table th {
+  border-bottom: 1px solid #AAAAAA;
+  padding: 3px 3px;
+}
+table.gcp-comp-plan-table thead {
+  border-bottom: 2px solid black;
+}
+table.gcp-comp-plan-table thead th {
+  font-weight: normal;
+  text-align: center;
+  width: 250px;
+  height: 60px;
+}
+
+table.gcp-comp-plan-table tr td:nth-child(1) {
+  border-bottom: 1px solid black;
+  font-weight: bold;
+  text-align: left;
+}
+
+.gcp-comp-plan-table-image {
+  display: block;
+  margin: auto;
+  padding: auto;
+  height: 100%;
+  width: auto;
+}
+
+.gcp-comp-custom-container {
+  margin: 30px auto;
+  width: 90%;
+}
+
+.gcp-comp-custom-image-wrapper {
+  width: 200px;
+  height: 200px;
+  margin: 30px auto;
+}
+
+.gcp-comp-custom-image {
+  max-width: 200px;
+  max-height: 200px;
+  margin: 0 auto;
+  display: block;
+}
+
+.gcp-comp-custom-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 200;
+  margin: 30px auto;
+}
+/* end of gcp comperhensive support */

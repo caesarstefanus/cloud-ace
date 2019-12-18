@@ -1,5 +1,97 @@
 /* seminar */
-/* seminar pages */
+/* seminars events overview page */
+.seminars-events-overview {
+	padding: 0;
+	margin: 0;
+}
+
+.seminars-events-overview-box-container {
+	display: flex;
+	width: 100%;
+	/*overflow-x: auto;*/
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.seminars-events-overview-box {
+	height: 500px;
+	width: 300px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	margin: 20px;
+	background-color: #FFFFFF;
+}
+
+.seminars-events-overview-box img {
+	width: 300px;
+	height: 170px;
+	margin: 20px auto 0;
+/* */
+	display: block;
+	vertical-align: bottom;
+	bottom: 0;
+}
+
+.seminars-events-overview-box p {
+	padding: 0;
+	margin: 0;
+}
+
+.seminars-events-overview-box-date {
+	color: #FFFFFF;
+	background-color: #026fd1;
+	line-height: 40px;
+	height: 40px;
+	width: 150px;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+}
+
+.seminars-events-overview-box-title {
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 10px;
+/* */
+	height: 40px;
+	color: #026fd1;
+}
+
+.seminars-events-overview-box-description {
+	font-family: 'Roboto', sans-serif;
+	text-align: left;
+	padding: 0 10%;
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 1.25;
+	height: 160px;
+  margin: 10px auto;
+}
+
+.seminars-events-overview-box-link-wrapper {
+	height: 40px;
+	margin: 0 auto;
+	display: block;
+}
+
+.seminars-events-overview-box-link-wrapper a {
+	display: block;
+	width: 200px;
+	height: 40px;
+	background-color: #026fd1;
+	border-radius: 10px;
+	margin: 0 auto;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	text-decoration: none;
+	font-size: 18px;
+	color: #FFFFFF;
+	line-height: 40px;
+}
+
+/* draft seminar pages */
 .page-id-1161 .site-content {
   width: 80%;
   max-width: 1200px;
@@ -49,7 +141,7 @@
 	vertical-align: bottom;
 	bottom: 0;
 }
-
+/* end of draft seminar page */
 /* seminar post*/
 .click-here-button {
   display: block;
