@@ -1,4 +1,4 @@
-/* gcp startups */
+/* gcp for startups */
 .gcp-startups-title {
   font-family: 'Roboto', sans-serif;
 	font-size: 36px;
@@ -87,7 +87,7 @@
   border-radius: 20px;
   width: 500px;
   padding-bottom: 20px;
-  margin: 20px auto;
+  margin: 40px auto;
   /*background-color: cyan;*/
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
@@ -111,6 +111,42 @@
 .gcp-startups-details-description {
   font-family: 'Roboto', sans-serif;
   font-size: 24px;
+  line-height: 25px;
+  font-weight: normal;
+  width: 90%;
+  margin: auto;
+}
+
+.blue-text {
+  color: #026fd1;
+  display: inline;
+}
+
+.special-list-checkmark-item {
+  display: flex;
+  flex-direction: row;
+  margin: 10px auto;
+  color: black;
+}
+
+.special-list-checkmark-image-wrapper {
+  display: inline-block;
+  width: 25px;
+  margin: 0;
+}
+
+.special-list-checkmark-image {
+  display: block;
+  margin: 0;
+  line-height: 50px;
+  height: 50px;
+  color: #026fd1;
+}
+
+.special-list-checkmark-text {
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
   line-height: 25px;
   font-weight: normal;
   width: 90%;
@@ -213,4 +249,4 @@
   margin: 0 auto 20px auto;
   display: block;
 }
-/* end of gcp startups */
+/* end of gcp for startups */

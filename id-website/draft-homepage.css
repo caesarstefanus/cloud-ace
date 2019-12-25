@@ -620,26 +620,20 @@
 	display: flex;
 	flex-flow: column;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: center;
 	width: 90%;
-	margin: 0 5%;
+	margin: 0 auto;
 }
 
 .reasons-box {
 	height: auto;
-	width: 100%;
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-	margin: 20px auto;
-	background-color: #FFFFFF;
-}
-
-.reasons-box img {
-	display: block;
 	width: 90%;
-	height: auto;
-	margin: 0 auto;
-	padding: 5%;
-	vertical-align: middle;
+	margin: 20px auto;
+	/*background-color: red;*/
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
 }
 
 .reasons-box p {
@@ -647,36 +641,74 @@
 	margin: 0;
 }
 
-.reasons-box-title1 {
+.reasons-box-title {
 	font-family: 'Roboto', sans-serif;
 	text-align: center;
 	font-size: 24px;
-	font-weight: bold;
+	font-weight: normal;
 	line-height: 50px;
 	min-height: 50px;
+	/*min-width: 400px;*/
 	padding: 0 5%;
-	background-color: #026fd1;
-	color: #FFFFFF;
+	color: #026fd1;
+	border-radius: 30px;
+	margin: auto;
 }
 
-.reasons-box-title2 {
-	font-family: 'Roboto', sans-serif;
-	text-align: center;
-	font-size: 20px;
-	font-weight: bold;
-	margin: 20px auto 20px auto;
-	padding: 0 5% 0 5%;
-	color: gray;
+.reasons-box-description-container {
+	display: flex;
+	flex-flow: column;
+	flex-wrap: wrap;
+	/*background-color: purple;*/
+	align-items: center;
+	/*min-width: 70%;*/
+	max-width: 600px;
+	margin: auto;
 }
 
 .reasons-box-description {
 	font-family: 'Roboto', sans-serif;
-	text-align: left;
-	padding: 0 0 0 0;
-	margin: 0 10% 50px 10%;
+	text-align: justify;
+	padding: 0 5%;
+	margin: 30px auto;
 	font-size: 17px;
 	line-height: 1.25;
 	font-weight: normal;
+	display: block;
+	/*background-color: cyan;*/
+}
+
+.reasons-box-image-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	/*min-width: 250px;*/
+	height: 250px;
+	width: 200px;
+	margin: auto;
+}
+
+.reasons-box-image-wrapper img {
+	display: block;
+	max-width: 200px;
+	max-height: 250px;
+	margin: auto;
+}
+
+.reasons-box-image-wrapper-special {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	/*min-width: 250px;*/
+	height: 250px;
+	margin: auto;
+}
+
+.reasons-box-image-wrapper-special img {
+	display: block;
+	max-width: 50%;
+	max-height: 250px;
+	margin: auto;
 }
 
 .reasons-box > a {
@@ -684,5 +716,5 @@
 	text-align: left;
 	padding: 0 0 0 5%;
 }
-
+/* end of reasons */
 /* end of homepage */

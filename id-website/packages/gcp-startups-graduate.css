@@ -1,0 +1,107 @@
+/* gcp startups graduate */
+.gcp-startups-graduate-title {
+  padding: 30px 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: 36px;
+	font-weight: 200;
+	background-color: #026fd1;
+	color: #FFFFFF;
+	text-align: center;
+  height: 200px;
+  line-height: 40px;
+}
+
+.gcp-startups-graduate-image-wrapper {
+  display: block;
+	height: 150px;
+	margin: auto;
+}
+
+.gcp-startups-graduate-image {
+	max-width: 150px;
+	max-height: 150px;
+	display: block;
+	margin: auto;
+}
+
+.gcp-startups-graduate-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 200;
+  margin: 30px auto;
+  width: 90%;
+}
+
+.gcp-startups-graduate-about-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.gcp-startups-graduate-about-item {
+  display: inline-block;
+  width: 300px;
+  margin: 15px;
+  /*background-color: maroon;*/
+}
+
+.gcp-startups-graduate-about-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 45px;
+  color: #026fd1;
+  margin: 10px auto;
+  width: 90%;
+  height: 90px;
+  text-align: center;
+}
+
+.gcp-startups-graduate-about-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  line-height: 2;
+  color: #3e3e3e;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+}
+
+.gcp-startups-graduate-about-image-wrapper {
+  display: block;
+  height: 200px;
+  width: 200px;
+  margin: auto;
+}
+
+.gcp-startups-graduate-about-image {
+  display: block;
+  max-height: 200px;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gcp-startups-graduate-details-price-container {
+  border: 0.5px solid #000;
+  width: 500px;
+  max-width: 90%;
+  height: 150px;
+  display: block;
+  margin: 50px auto;
+}
+
+.gcp-startups-graduate-details-price {
+  line-height: 70px;
+  font-size: 40px;
+  color: #026fd1;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+	text-align: center;
+  margin: auto;
+}
+/* end of gcp startups graduate */
