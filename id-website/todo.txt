@@ -17,3 +17,16 @@ otherwise the style/design will not be updated
 + download comparison sheet (*google form for now)
 (don't forget @media query)
 + google cloud for startups
+
+
+font size spacing font weight Caps title
+update case studies
+update seminars and events
+english indonesian
+
+url slug:
+en version: english name - en
+id version: english name - id
+
+footer update
+letter spacing?

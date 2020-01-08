@@ -1085,15 +1085,15 @@ table.company-profile-table p {
 
 .attention-1-box-button {
 	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
+	font-size: 18px;
 	color: white;
 	text-align: center;
 	vertical-align: middle;
 	border-radius: 10px;
-	height: 30px;
+	height: 40px;
+	line-height: 40px;
 	width: 130px;
 	background-color: #026fd1;
-	padding-top: 10px;
 	display: block;
 	margin: 20px auto 0;
 	text-decoration: none;
@@ -1273,7 +1273,7 @@ table.company-profile-table p {
 	text-align: center;
 	font-family: 'Roboto', sans-serif;
 	text-decoration: none;
-	font-size: 20px;
+	font-size: 18px;
 	color: #FFFFFF;
 	line-height: 40px;
 }
@@ -1518,10 +1518,10 @@ table.company-profile-table p {
 	text-align: center;
 	vertical-align: middle;
 	border-radius: 10px;
-	height: 30px;
+	height: 40px;
+	line-height: 40px;
 	width: 130px;
 	background-color: #026fd1;
-	padding-top: 10px;
 	display: block;
 	margin: 20px auto 0;
 	text-decoration: none;
@@ -1642,10 +1642,10 @@ table.company-profile-table p {
 	text-align: center;
 	vertical-align: middle;
 	border-radius: 10px;
-	height: 30px;
+	height: 40px;
+	line-height: 40px;
 	width: 130px;
 	background-color: #026fd1;
-	padding-top: 10px;
 	display: block;
 	margin: 40px auto 10px;
 	text-decoration: none;
@@ -2328,6 +2328,7 @@ iframe {
 /* cloud platform comparison table */
 .comparison-header-image {
 	max-height: 200px;
+	width: 90%;
 	max-width: 400px;
 	margin: 0 auto;
 	display: block;
@@ -2346,17 +2347,19 @@ iframe {
 }
 
 .comparison-image-wrapper {
-	display: block;
-	margin: auto;
-	height: 150px;
-	width: 150px;
+  display: block;
+  margin: 20px auto;
+  height: 150px;
+  width: 150px;
+  border: solid #026fd1 20px;
+  border-radius: 50%;
 }
 
 .comparison-image-wrapper img {
-	max-height: 150px;
-	max-width: 150px;
-	margin: 0 auto;
-	display: block;
+  max-height: 100px;
+  max-width: 150px;
+  margin: 20px auto;
+  display: block;
 }
 
 .comparison-image-title {
