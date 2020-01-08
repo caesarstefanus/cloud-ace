@@ -438,6 +438,19 @@ p {
 	background-color: #026fd1;
 }
 
+/* override image & video size to maintain ratio */
+.wp-block-media-text__media {
+	height: 100%;
+	width: 100%;
+	display: flex;
+}
+
+.wp-block-media-text>figure>img, .wp-block-media-text>figure>video {
+	margin: auto;
+	max-width: 90%;
+	height: auto;
+	display: block;
+}
 /*
 a:-webkit-any-link {
 	color: #FFFFFF;
@@ -452,8 +465,7 @@ a:-webkit-any-link {
 */
 /* end of main style and main design */
 /* footer */
-/* 75 + 75 + 50 */
-/* +75 +150 */
+/* 75 + 75 + 50 */ /* +75 +150 */
 .site-footer {
 	vertical-align: center;
 	text-align: center;
@@ -461,8 +473,7 @@ a:-webkit-any-link {
 	height: 425px;
 }
 
-/* 75 + 120 + 50 */
-/* +75 +150 */
+/* 75 + 120 + 50 */ /* +75 +150 */
 @media (max-width: 420px) {
 	.site-footer {
 		height: 470px;
@@ -476,7 +487,8 @@ a:-webkit-any-link {
 	align-items: center;
 	justify-content: center;
 	height: 75px;
-	width: 100%;
+	max-width: 90%;
+	margin: auto;
 }
 
 .footer-logo-wrapper img {
@@ -489,33 +501,35 @@ a:-webkit-any-link {
 .footer-featured-content-wrapper {
 	position: relative;
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: center;
 	height: 150px;
-	width: 100%;
+	max-width: 90%;
+	margin: auto;
 }
 
 .footer-featured-content {
 	width: 200px;
+	max-width: 45%;
 }
 
 .footer-featured-content .title {
 	font-family: 'Roboto', sans-serif;
-	font-size: 18px;
-	line-height: 1.75;
-	color: #A3BFDF;
-	display: block;
-	text-align: left;
+  font-size: 18px;
+  line-height: 1.75;
+  color: #A3BFDF;
+  display: block;
+  text-align: left;
 	padding: 0 0 0 5px;
 }
 
 .footer-featured-content .title::after {
-	content: "";
-	display: block;
-	width: 90%;
-	height: 1px;
-	background-color: #A3BFDF;
-	margin: 5px 0;
+  content: "";
+  display: block;
+  width: 90%;
+  height: 1px;
+  background-color: #A3BFDF;
+  margin: 5px 0;
 }
 
 .footer-featured-content ul {
@@ -527,11 +541,11 @@ a:-webkit-any-link {
 .footer-featured-content a {
 	text-decoration: none;
 	font-family: 'Roboto', sans-serif;
-	font-size: 15px;
-	line-height: 1.5;
-	color: #A3BFDF;
-	display: block;
-	text-align: left;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #A3BFDF;
+  display: block;
+  text-align: left;
 }
 
 /* 75px */
@@ -541,7 +555,8 @@ a:-webkit-any-link {
 	align-items: center;
 	justify-content: center;
 	height: 75px;
-	width: 100%;
+	max-width: 90%;
+	margin: auto;
 }
 
 .footer-social-media-wrapper .image-wrapper {
@@ -572,7 +587,8 @@ a:-webkit-any-link {
 	align-items: center;
 	justify-content: center;
 	height: 75px;
-	width: 100%;
+	max-width: 90%;
+	margin: auto;
 }
 
 /* 10 + 40 + 10 + 10 + 40 + 10 = 120px */
@@ -1021,7 +1037,7 @@ table.company-profile-table p {
 }
 
 /* end of hide */
-/* homepage */
+/* homepage front page*/
 /* attention section 1 */
 .attention-1-box-container {
 	display: flex;
@@ -1708,7 +1724,7 @@ table.company-profile-table p {
 	padding: 0 5%;
 	margin: 30px auto;
 	font-size: 17px;
-	line-height: 1.25;
+	line-height: 1.5;
 	font-weight: normal;
 	display: block;
 	/*background-color: cyan;*/
@@ -1962,7 +1978,7 @@ table.company-profile-table p {
 .migration-methods-description {
 	font-family: 'Roboto', sans-serif;
 	font-size: 18px;
-	line-height: 25px;
+	line-height: 1.5;
 	font-weight: normal;
 	margin: 5% auto;
 	color: #000000;
@@ -2239,10 +2255,11 @@ table.company-profile-table p {
 }
 */
 .category-seminars {
-	width: 80%;
-	max-width: 1200px;
+	width: 90%;
+	max-width: 1000px;
 	display: block;
 	margin: 0 auto;
+	font-family: 'Roboto', sans-serif;
 }
 
 .category-seminars h2 {
@@ -2281,6 +2298,13 @@ table.company-profile-table p {
 	padding: 0 15px;
 }
 
+.category-seminars li {
+	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+	line-height: 1.25;
+	color: #3e3e3e;
+}
+
 .category-seminars a {
 	font-family: 'Roboto', sans-serif;
 	line-height: 1.5;
@@ -2298,7 +2322,23 @@ iframe {
 	width: 100%;
 }
 
-/* end of seminar */
+/* end of seminars */
+/* past seminars overview page */
+.site-content .category-past-seminars {
+	width: 90%;
+	max-width: 1000px;
+	display: block;
+	margin: 0 auto;
+}
+/* end of past seminars overview page */
+/* news overview page */
+.site-content .category-news {
+	width: 90%;
+	max-width: 1000px;
+	display: block;
+	margin: 0 auto;
+}
+/* end of news */
 /* jobs */
 .page-id-934 .site-content {
 	width: 90%;
@@ -2522,7 +2562,7 @@ blockquote p {
 .gcp-startups-reasons-description {
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
-  line-height: 25px;
+  line-height: 1.5;
   font-weight: normal;
   margin: 5% auto;
   color: #000000;
@@ -2820,7 +2860,7 @@ blockquote p {
 	flex-wrap: wrap;
 	font-family: "roboto", sans-serif;
 	text-align: center;
-	font-weight: 300;
+	font-weight: 400; /***/
 }
 
 .application-development-serverless-column {
@@ -2838,6 +2878,8 @@ blockquote p {
 .application-development-serverless-column img {
 	max-width: 500px;
 	max-height: 500px;
+	height: auto;
+	width: auto;
 	margin: auto;
 }
 
@@ -2882,7 +2924,7 @@ blockquote p {
 	flex-wrap: wrap;
 	font-family: "roboto", sans-serif;
 	text-align: center;
-	font-weight: 300;
+	font-weight: 400; /***/
 }
 
 .application-development-serverless-benefits-column {
@@ -3131,7 +3173,7 @@ blockquote p {
 	display: block;
 	margin: auto;
 	max-width: 90%;
-	max-width: 90%;
+	height: auto;
 }
 
 @media (min-width: 887px) {
@@ -3249,15 +3291,13 @@ blockquote p {
 
 /* end of big data */
 /* cloud booster */
-.cloud-booster {
-  background-color: cyan;
-}
+.cloud-booster {}
 
 .cloud-booster-title {
   padding: 30px 0;
 	font-family: 'Roboto', sans-serif;
 	font-size: 36px;
-	font-weight: bold;
+	font-weight: 400; /**/
 	background-color: #026fd1;
 	color: #FFFFFF;
 	text-align: center;
@@ -3285,10 +3325,13 @@ blockquote p {
 .cloud-booster-what {
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
-  font-weight: 300;
+  font-weight: 400; /***/
   margin: 20px;
 }
 
+.cloud-booster-what-container .cloud-booster-what {
+	font-weight: lighter;
+}
 /* attention section 2 */
 .cloud-booster-how-box-container {
 	display: flex;
@@ -3402,7 +3445,7 @@ blockquote p {
   font-size: 40px;
   color: #026fd1;
   font-family: 'Roboto', sans-serif;
-  font-weight: 200;
+  font-weight: 400; /**/
 	text-align: center;
   margin: auto;
 }
@@ -3446,7 +3489,7 @@ blockquote p {
   padding: 30px 0;
 	font-family: 'Roboto', sans-serif;
 	font-size: 36px;
-	font-weight: 200;
+	font-weight: 400; /**/
 	background-color: #026fd1;
 	color: #FFFFFF;
 	text-align: center;
@@ -3471,7 +3514,7 @@ blockquote p {
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   line-height: 1.5;
-  font-weight: 200;
+  font-weight: 400; /**/
   margin: 30px auto;
   width: 90%;
 }
@@ -3507,7 +3550,7 @@ blockquote p {
 .gcp-comp-about-description {
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
-  line-height: 2;
+  line-height: 1.5;
   color: #3e3e3e;
   width: 90%;
   margin-left: auto;
@@ -3612,7 +3655,7 @@ table.gcp-comp-plan-table tr td:nth-child(1) {
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   line-height: 1.5;
-  font-weight: 200;
+  font-weight: 400; /**/
   margin: 30px auto;
 }
 /* end of gcp comperhensive support */
@@ -3621,7 +3664,7 @@ table.gcp-comp-plan-table tr td:nth-child(1) {
   padding: 30px 0;
 	font-family: 'Roboto', sans-serif;
 	font-size: 36px;
-	font-weight: 200;
+	font-weight: 400; /**/
 	background-color: #026fd1;
 	color: #FFFFFF;
 	text-align: center;
@@ -3646,7 +3689,7 @@ table.gcp-comp-plan-table tr td:nth-child(1) {
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   line-height: 1.5;
-  font-weight: 200;
+  font-weight: 400; /**/
   margin: 30px auto;
   width: 90%;
 }
@@ -3681,7 +3724,7 @@ table.gcp-comp-plan-table tr td:nth-child(1) {
 .gcp-startups-graduate-about-description {
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
-  line-height: 2;
+  line-height: 1.5;
   color: #3e3e3e;
   width: 90%;
   margin-left: auto;
@@ -3718,7 +3761,7 @@ table.gcp-comp-plan-table tr td:nth-child(1) {
   font-size: 40px;
   color: #026fd1;
   font-family: 'Roboto', sans-serif;
-  font-weight: 200;
+  font-weight: 400; /**/
 	text-align: center;
   margin: auto;
 }

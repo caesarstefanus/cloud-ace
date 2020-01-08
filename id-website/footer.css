@@ -21,7 +21,8 @@
 	align-items: center;
 	justify-content: center;
 	height: 75px;
-	width: 100%;
+	max-width: 90%;
+	margin: auto;
 }
 
 .footer-logo-wrapper img {
@@ -34,14 +35,16 @@
 .footer-featured-content-wrapper {
 	position: relative;
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: center;
 	height: 150px;
-	width: 100%;
+	max-width: 90%;
+	margin: auto;
 }
 
 .footer-featured-content {
 	width: 200px;
+	max-width: 45%;
 }
 
 .footer-featured-content .title {
@@ -86,7 +89,8 @@
 	align-items: center;
 	justify-content: center;
 	height: 75px;
-	width: 100%;
+	max-width: 90%;
+	margin: auto;
 }
 
 .footer-social-media-wrapper .image-wrapper {
@@ -117,7 +121,8 @@
 	align-items: center;
 	justify-content: center;
 	height: 75px;
-	width: 100%;
+	max-width: 90%;
+	margin: auto;
 }
 
 /* 10 + 40 + 10 + 10 + 40 + 10 = 120px */
