@@ -3404,7 +3404,7 @@ table.gcp-comp-plan-table tr td:nth-child(1) {
 .language {
 	position: absolute;
 	right: 0;
-	width: 100px;
+	/*width: 100px;*/
 /*background-color: yellow;*/
 }
 
@@ -3491,14 +3491,14 @@ table.gcp-comp-plan-table tr td:nth-child(1) {
 /* customized footer menu */
 /****************************************************************************/
 /* hide on desktop view */
-@media (min-width: 1151px) {
+@media (min-width: 1201px) {
 	.menu-small-id-menu-container {
 		display: none;
 	}
 }
 
 /* show on mobile view */
-@media (max-width: 1150px) {
+@media (max-width: 1200px) {
 	.menu-small-id-menu-container {
 		display: inline-block;
 		position: fixed;
@@ -3662,7 +3662,7 @@ table.gcp-comp-plan-table tr td:nth-child(1) {
 }
 
 /* half screen width for mobile */
-@media (max-width: 1150px) {
+@media (max-width: 1200px) {
 	.menu-small-id-menu-container .menu .menu-item-has-children .sub-menu {
 		width: 50%;
 	}
@@ -3676,7 +3676,7 @@ table.gcp-comp-plan-table tr td:nth-child(1) {
 	font-size: 17px;
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1200px) {
 	.menu-small-id-menu-container .menu .menu-item-has-children .sub-menu .menu-item {
 		width: 100%;
 	}
@@ -3738,14 +3738,14 @@ table.gcp-comp-plan-table tr td:nth-child(1) {
 /* customized english footer menu */
 /****************************************************************************/
 /* hide on desktop view */
-@media (min-width: 1151px) {
+@media (min-width: 1201px) {
 	.menu-small-en-menu-container {
 		display: none;
 	}
 }
 
 /* show on mobile view */
-@media (max-width: 1150px) {
+@media (max-width: 1200px) {
 	.menu-small-en-menu-container {
 		display: inline-block;
 		position: fixed;
@@ -3909,7 +3909,7 @@ table.gcp-comp-plan-table tr td:nth-child(1) {
 }
 
 /* half screen width for mobile */
-@media (max-width: 1150px) {
+@media (max-width: 1200px) {
 	.menu-small-en-menu-container .menu .menu-item-has-children .sub-menu {
 		width: 50%;
 	}
@@ -3923,7 +3923,7 @@ table.gcp-comp-plan-table tr td:nth-child(1) {
 	font-size: 17px;
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1200px) {
 	.menu-small-en-menu-container .menu .menu-item-has-children .sub-menu .menu-item {
 		width: 100%;
 	}
@@ -3998,7 +3998,7 @@ table.gcp-comp-plan-table tr td:nth-child(1) {
 	right: 0;
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1200px) {
 	.menu-large-id-menu-container {
 		display: none;
 	}
@@ -4200,7 +4200,7 @@ table.gcp-comp-plan-table tr td:nth-child(1) {
 	right: 0;
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1200px) {
 	.menu-large-en-menu-container {
 		display: none;
 	}
