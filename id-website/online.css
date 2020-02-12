@@ -27,202 +27,6 @@ body {
 	}
 }
 
-/* menu bar */
-.main-navigation {
-	display: inline-block;
-	position: fixed;
-	background-color: #FFFFFF;
-	width: 100%;
-	padding: 0;
-	margin: 0;
-	top: 0;
-	left: 0;
-	right: 0;
-}
-
-@media (max-width: 1150px) {
-	.main-navigation {
-		display: none;
-	}
-}
-
-/* the most shallow, ul main-menu class */
-.main-menu {
-	display: flex;
-	flex-flow: row;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-	margin: 0 auto;
-	padding: 0;
-	list-style-type: none;
-	position: relative;
-}
-
-/* changed all ".main-menu li" to ".main-menu .menu-item" for easier look */
-.main-menu .menu-item {
-	color: #f2f2f2;
-	text-align: center;
-	padding: 0;
-	text-decoration: none;
-	font-size: 17px;
-	width: 150px;
-	height: 50px;
-	transition: all .4s ease;
-}
-
-/* half screen width for mobile */
-@media (max-width: 420px) {
-	.main-menu .menu-item {
-		width: 50%;
-	}
-}
-
-.main-menu a {
-	text-decoration: none;
-	font-family: Lato, sans-serif;
-	font-size: 16px;
-	color: rgba(0,0,0,0.6399999857);
-	font-weight: 300;
-	line-height: 50px;
-	margin: 0;
-	padding: 0;
-	display: block;
-	vertical-align: middle;
-	text-align: center;
-}
-
-.main-menu .menu-item:hover {
-	background-color: #ddd;
-	color: black;
-	cursor: pointer;
-}
-
-/* show the level 1 sub-menu */
-.main-menu .menu-item-has-children:hover .sub-menu {
-	background-color: #FFFFFF;
-	color: black;
-	display: block;
-	opacity: 1;
-}
-
-/* confusing part */
-/* hide the level 2 children below the level 1*/
-.main-menu .menu-item-has-children:hover .sub-menu .menu-item-has-children .sub-menu .menu-item {
-	display: none;
-}
-
-/* override the first  tag just for has-children */
-.main-menu .menu-item-has-children a {
-	margin: 0 0 -20px;
-}
-
-/* down arrow symbol */
-.main-menu .menu-item-has-children::after {
-	content: "";
-	border: solid black;
-	border-width: 0 3px 3px 0;
-	display: inline-block;
-	padding: 3px;
-	transform: rotate(45deg);
-	-webkit-transform: rotate(45deg);
-}
-
-/* down arrow transition spin animation */
-.main-menu .menu-item-has-children:hover::after {
-	transition: transform .5s ease;
-	transform: rotate(225deg);
-}
-
-.main-menu .menu-item-has-children:not(hover)::after {
-	transition: transform .5s ease;
-	transform: rotate(45deg);
-}
-
-/* level 1 sub-menu */
-.main-menu .menu-item-has-children .sub-menu {
-	padding: 0;
-	margin: 20px 0 0;
-	list-style-type: none;
-	display: none;
-/* hidden by default */
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-	position: absolute;
-	width: 250px;
-}
-
-/* half screen width for mobile */
-@media (max-width: 420px) {
-	.main-menu .menu-item-has-children .sub-menu {
-		width: 50%;
-	}
-}
-
-/* changed all ".sub-menu li" to ".sub-menu .menu-item" for easier look */
-.main-menu .menu-item-has-children .sub-menu .menu-item {
-	color: #FFFFFF;
-	text-align: center;
-	text-decoration: none;
-	font-size: 17px;
-	width: 250px;
-}
-
-@media (max-width: 420px) {
-	.main-menu .menu-item-has-children .sub-menu .menu-item {
-		width: 100%;
-	}
-
-	/* level 2 sub-menu */
-	.main-menu .menu-item-has-children .sub-menu .menu-item-has-children .sub-menu {
-		width: 100%;
-	}
-}
-
-.main-menu .menu-item-has-children .sub-menu .menu-item:hover {
-	background-color: #ddd;
-	color: black;
-}
-
-/* new menu parts */
-/* right arrow '>' for level 2 sub menu */
-.main-menu .menu-item-has-children:hover .sub-menu .menu-item-has-children::after {
-	content: "";
-	border: solid black;
-	border-width: 0 3px 3px 0;
-	display: inline-block;
-	padding: 3px;
-	transform: rotate(-45deg);
-	-webkit-transform: rotate(-45deg);
-	text-align: right;
-	float: right;
-	margin-top: -10px;
-	margin-right: 5px;
-}
-
-/* right arrow '>' transition spin animation */
-.main-menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover::after {
-	transition: transform .5s ease;
-	transform: rotate(135deg);
-}
-
-.main-menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:not(hover)::after {
-	transition: transform .5s ease;
-	transform: rotate(-45deg);
-}
-
-/* new menu parts */
-/* show the content of level 2 sub menu */
-.main-menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover .sub-menu {
-	padding: 0;
-	margin-top: -30px;
-	position: absolute;
-	left: 100%;
-}
-
-.main-menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover .sub-menu .menu-item {
-	display: block;
-}
-
-/* end of menu bar */
 /* end of header */
 /* page title */
 .page-title-image {
@@ -647,248 +451,6 @@ a:-webkit-any-link {
 }
 
 /* end of footer */
-/* customized footer menu */
-/* hide on desktop view */
-.widget_nav_menu {
-	display: none;
-}
-
-/* show on mobile view */
-@media (max-width: 1150px) {
-	.widget_nav_menu {
-		display: inline-block;
-		position: fixed;
-		background-color: #FFFFFF;
-		width: 25%;
-		padding: 0;
-		margin: 0;
-		top: 0;
-	/* this put the widget menu on top */
-		left: 0;
-	/*right: 0;*/
-	}
-
-	.widget_nav_menu:hover {
-		transition: all .5s ease;
-		width: 100%;
-	}
-
-	.widget_nav_menu:not(hover) {
-		transition: all .5s ease;
-		width: 25%;
-	}
-
-	.widget_nav_menu .menu .menu-item {
-		width: 100%;
-		cursor: pointer;
-	}
-
-	.widget_nav_menu:hover .menu .menu-item {
-		transition: all .5s ease;
-		width: 50%;
-	}
-
-	.widget_nav_menu:(not)hover .menu .menu-item {
-		transition: all .5s ease;
-		width: 100%;
-	}
-}
-
-/* the most shallow, ul main-menu class */
-.widget_nav_menu .menu {
-	display: flex;
-	flex-flow: row;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-	margin: 0 auto;
-	padding: 0;
-	list-style-type: none;
-	position: relative;
-}
-
-/* changed all ".widget_nav_menu .menu li" to ".widget_nav_menu .menu .menu-item" for easier look */
-.widget_nav_menu .menu .menu-item {
-	color: #f2f2f2;
-	text-align: center;
-	padding: 0;
-	text-decoration: none;
-	font-size: 17px;
-/*width: 200px;*/
-	height: 50px;
-	transition: all .4s ease;
-}
-
-/* half screen width for mobile */
-/*
-@media (max-width: 420px) {
-	.widget_nav_menu .menu .menu-item {
-		width: 50%;
-	}
-}
-*/
-.widget_nav_menu .menu a {
-	text-decoration: none;
-	font-family: Lato, sans-serif;
-	font-size: 16px;
-	color: rgba(0,0,0,0.6399999857);
-	font-weight: 300;
-	line-height: 50px;
-	margin: 0;
-	padding: 0;
-	display: block;
-	vertical-align: middle;
-	text-align: center;
-}
-
-/* special size menu bar (too long) */
-@media (max-width: 424px) {
-	#menu-item-1504 a {
-		line-height: 25px;
-	}
-}
-
-@media (max-width: 340px) {
-	#menu-item-1557 a {
-		line-height: 25px;
-	}
-}
-
-@media (max-width: 348px) {
-	#menu-item-1425 a {
-		line-height: 25px;
-	}
-}
-
-.widget_nav_menu .menu .menu-item:hover {
-	background-color: #ddd;
-	color: black;
-}
-
-/* show the level 1 sub-menu */
-.widget_nav_menu .menu .menu-item-has-children:hover .sub-menu {
-	background-color: #FFFFFF;
-	color: black;
-	display: block;
-	opacity: 1;
-}
-
-/* confusing part */
-/* hide the level 2 children below the level 1*/
-.widget_nav_menu .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children .sub-menu .menu-item {
-	display: none;
-}
-
-/* override the first  tag just for has-children */
-.widget_nav_menu .menu .menu-item-has-children a {
-	margin: 0 0 -20px;
-}
-
-/* down arrow symbol */
-.widget_nav_menu .menu .menu-item-has-children::after {
-	content: "";
-	border: solid black;
-	border-width: 0 3px 3px 0;
-	display: inline-block;
-	padding: 3px;
-	transform: rotate(45deg);
-	-webkit-transform: rotate(45deg);
-}
-
-/* down arrow transition spin animation */
-.widget_nav_menu .menu .menu-item-has-children:hover::after {
-	transition: transform .5s ease;
-	transform: rotate(225deg);
-}
-
-.widget_nav_menu .menu .menu-item-has-children:not(hover)::after {
-	transition: transform .5s ease;
-	transform: rotate(45deg);
-}
-
-/* level 1 sub-menu */
-.widget_nav_menu .menu .menu-item-has-children .sub-menu {
-	padding: 0;
-	margin: 20px 0 0;
-	list-style-type: none;
-	display: none;
-/* hidden by default */
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-	position: absolute;
-	width: 200px;
-}
-
-/* half screen width for mobile */
-@media (max-width: 1150px) {
-	.widget_nav_menu .menu .menu-item-has-children .sub-menu {
-		width: 50%;
-	}
-}
-
-/* changed all ".sub-menu li" to ".sub-menu .menu-item" for easier look */
-.widget_nav_menu .menu .menu-item-has-children .sub-menu .menu-item {
-	color: #FFFFFF;
-	text-align: center;
-	text-decoration: none;
-	font-size: 17px;
-}
-
-@media (max-width: 1150px) {
-	.widget_nav_menu .menu .menu-item-has-children .sub-menu .menu-item {
-		width: 100%;
-	}
-
-	/* level 2 sub-menu */
-	.widget_nav_menu .menu .menu-item-has-children .sub-menu .menu-item-has-children .sub-menu {
-		width: 100%;
-	}
-}
-
-.widget_nav_menu .menu .menu-item-has-children .sub-menu .menu-item:hover {
-	background-color: #ddd;
-	color: black;
-}
-
-/* new menu parts */
-/* right arrow '>' for level 2 sub menu */
-.widget_nav_menu .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children::after {
-	content: "";
-	border: solid black;
-	border-width: 0 3px 3px 0;
-	display: inline-block;
-	padding: 3px;
-	transform: rotate(-45deg);
-	-webkit-transform: rotate(-45deg);
-	text-align: right;
-	float: right;
-	margin-top: -10px;
-	margin-right: 5px;
-}
-
-/* right arrow '>' transition spin animation */
-.widget_nav_menu .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover::after {
-	transition: transform .5s ease;
-	transform: rotate(135deg);
-}
-
-.widget_nav_menu .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:not(hover)::after {
-	transition: transform .5s ease;
-	transform: rotate(-45deg);
-}
-
-/* new menu parts */
-/* show the content of level 2 sub menu */
-.widget_nav_menu .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover .sub-menu {
-	padding: 0;
-	margin-top: -30px;
-	position: absolute;
-	left: 100%;
-}
-
-.widget_nav_menu .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover .sub-menu .menu-item {
-	display: block;
-}
-
-/* end of customized footer menu */
 /* table */
 /* service table */
 table.company-profile-table {
@@ -997,6 +559,7 @@ table.company-profile-table p {
 	font-family: 'Roboto', sans-serif;
 	text-align: left;
 }
+
 /*
 .office-box a:hover {
 	text-decoration-line: none;
@@ -1231,7 +794,6 @@ table.company-profile-table p {
 	border-bottom: 2px black solid;
 }
 
-
 .seminar-events-box-container::-webkit-scrollbar {
 	-webkit-appearance: none;
 }
@@ -1239,15 +801,14 @@ table.company-profile-table p {
 .seminar-events-box-container::-webkit-scrollbar:horizontal {
 	background-color: white;
 	border-radius: 8px;
-  height: 15px;
+	height: 15px;
 }
 
 .seminar-events-box-container::-webkit-scrollbar-thumb {
-  border-radius: 8px;
-  border: 2px solid white;
-  background-color: rgba(0, 0, 0, .5);
+	border-radius: 8px;
+	border: 2px solid white;
+	background-color: rgba(0,0,0,.5);
 }
-
 
 .seminar-events-box {
 	height: 450px;
@@ -1330,6 +891,7 @@ table.company-profile-table p {
 	background-color: #228ff1;
 	background-color: #174EA7;
 }
+
 /* news */
 .news-item-container {
 	display: flex;
@@ -1382,7 +944,6 @@ table.company-profile-table p {
 	text-decoration: none;
 }
 */
-
 .news-item-description {
 	font-family: 'Roboto', sans-serif;
 	text-align: left;
@@ -1708,6 +1269,7 @@ table.company-profile-table p {
 	background-color: #228ff1;
 	background-color: #174EA7;
 }
+
 /* reasons */
 .reasons-box-container {
 	display: flex;
@@ -2219,6 +1781,7 @@ table.company-profile-table p {
 	background-color: #228ff1;
 	background-color: #174EA7;
 }
+
 /* end of seminars events overview page */
 /* draft seminar pages */
 .page-id-1161 .site-content {
@@ -3837,10 +3400,10 @@ table.gcp-comp-plan-table tr td:nth-child(1) {
 
 /* end of gcp startups graduate */
 /* debugging */
-.main-menu .language {
+.language {
 	position: absolute;
 	right: 0;
-	width: 100px;
+/*width: 100px;*/
 /*background-color: yellow;*/
 }
 
@@ -3923,3 +3486,889 @@ table.gcp-comp-plan-table tr td:nth-child(1) {
 @media(hover: none) {
 
 }
+
+/* customized footer menu */
+/****************************************************************************/
+/* hide on desktop view */
+@media (min-width: 1201px) {
+	.menu-small-id-menu-container {
+		display: none;
+	}
+}
+
+/* show on mobile view */
+@media (max-width: 1200px) {
+	.menu-small-id-menu-container {
+		display: inline-block;
+		position: fixed;
+		background-color: #FFFFFF;
+		width: 25%;
+		padding: 0;
+		margin: 0;
+		top: 0;
+	/* this put the widget menu on top */
+		left: 0;
+	/*right: 0;*/
+	}
+
+	.menu-small-id-menu-container:hover {
+		transition: all .5s ease;
+		width: 100%;
+	}
+
+	.menu-small-id-menu-container:not(hover) {
+		transition: all .5s ease;
+		width: 25%;
+	}
+
+	.menu-small-id-menu-container .menu .menu-item {
+		width: 100%;
+		cursor: pointer;
+	}
+
+	.menu-small-id-menu-container:hover .menu .menu-item {
+		transition: all .5s ease;
+		width: 50%;
+	}
+
+	.menu-small-id-menu-container:(not)hover .menu .menu-item {
+		transition: all .5s ease;
+		width: 100%;
+	}
+}
+
+/* the most shallow, ul main-menu class */
+.menu-small-id-menu-container .menu {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	margin: 0 auto;
+	padding: 0;
+	list-style-type: none;
+	position: relative;
+}
+
+/* changed all ".menu-small-id-menu-container .menu li" to ".menu-small-id-menu-container .menu .menu-item" for easier look */
+.menu-small-id-menu-container .menu .menu-item {
+	color: #f2f2f2;
+	text-align: center;
+	padding: 0;
+	text-decoration: none;
+	font-size: 17px;
+/*width: 200px;*/
+	height: 50px;
+	transition: all .4s ease;
+}
+
+/* half screen width for mobile */
+/*
+@media (max-width: 420px) {
+	.menu-small-id-menu-container .menu .menu-item {
+		width: 50%;
+	}
+}
+*/
+.menu-small-id-menu-container .menu a {
+	text-decoration: none;
+	font-family: Lato, sans-serif;
+	font-size: 16px;
+	color: rgba(0,0,0,0.6399999857);
+	font-weight: 300;
+	line-height: 50px;
+	margin: 0;
+	padding: 0;
+	display: block;
+	vertical-align: middle;
+	text-align: center;
+}
+
+/* special size menu bar (too long) */
+@media (max-width: 424px) {
+	#menu-item-1504 a {
+		line-height: 25px;
+	}
+}
+
+@media (max-width: 340px) {
+	#menu-item-1557 a {
+		line-height: 25px;
+	}
+}
+
+@media (max-width: 348px) {
+	#menu-item-1425 a {
+		line-height: 25px;
+	}
+}
+
+.menu-small-id-menu-container .menu .menu-item:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+/* show the level 1 sub-menu */
+.menu-small-id-menu-container .menu .menu-item-has-children:hover .sub-menu {
+	background-color: #FFFFFF;
+	color: black;
+	display: block;
+	opacity: 1;
+}
+
+/* confusing part */
+/* hide the level 2 children below the level 1*/
+.menu-small-id-menu-container .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children .sub-menu .menu-item {
+	display: none;
+}
+
+/* override the first  tag just for has-children */
+.menu-small-id-menu-container .menu .menu-item-has-children a {
+	margin: 0 0 -20px;
+}
+
+/* down arrow symbol */
+.menu-small-id-menu-container .menu .menu-item-has-children::after {
+	content: "";
+	border: solid black;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+}
+
+/* down arrow transition spin animation */
+.menu-small-id-menu-container .menu .menu-item-has-children:hover::after {
+	transition: transform .5s ease;
+	transform: rotate(225deg);
+}
+
+.menu-small-id-menu-container .menu .menu-item-has-children:not(hover)::after {
+	transition: transform .5s ease;
+	transform: rotate(45deg);
+}
+
+/* level 1 sub-menu */
+.menu-small-id-menu-container .menu .menu-item-has-children .sub-menu {
+	padding: 0;
+	margin: 20px 0 0;
+	list-style-type: none;
+	display: none;
+/* hidden by default */
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	position: absolute;
+	width: 200px;
+}
+
+/* half screen width for mobile */
+@media (max-width: 1200px) {
+	.menu-small-id-menu-container .menu .menu-item-has-children .sub-menu {
+		width: 50%;
+	}
+}
+
+/* changed all ".sub-menu li" to ".sub-menu .menu-item" for easier look */
+.menu-small-id-menu-container .menu .menu-item-has-children .sub-menu .menu-item {
+	color: #FFFFFF;
+	text-align: center;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+@media (max-width: 1200px) {
+	.menu-small-id-menu-container .menu .menu-item-has-children .sub-menu .menu-item {
+		width: 100%;
+	}
+
+	/* level 2 sub-menu */
+	.menu-small-id-menu-container .menu .menu-item-has-children .sub-menu .menu-item-has-children .sub-menu {
+		width: 100%;
+	}
+}
+
+.menu-small-id-menu-container .menu .menu-item-has-children .sub-menu .menu-item:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+/* new menu parts */
+/* right arrow '>' for level 2 sub menu */
+.menu-small-id-menu-container .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children::after {
+	content: "";
+	border: solid black;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	text-align: right;
+	float: right;
+	margin-top: -10px;
+	margin-right: 5px;
+}
+
+/* right arrow '>' transition spin animation */
+.menu-small-id-menu-container .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover::after {
+	transition: transform .5s ease;
+	transform: rotate(135deg);
+}
+
+.menu-small-id-menu-container .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:not(hover)::after {
+	transition: transform .5s ease;
+	transform: rotate(-45deg);
+}
+
+/* new menu parts */
+/* show the content of level 2 sub menu */
+.menu-small-id-menu-container .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover .sub-menu {
+	padding: 0;
+	margin-top: -30px;
+	position: absolute;
+	left: 100%;
+}
+
+.menu-small-id-menu-container .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover .sub-menu .menu-item {
+	display: block;
+}
+
+/* end of customized footer menu */
+/******************************************************************************/
+/* customized english footer menu */
+/****************************************************************************/
+/* hide on desktop view */
+@media (min-width: 1201px) {
+	.menu-small-en-menu-container {
+		display: none;
+	}
+}
+
+/* show on mobile view */
+@media (max-width: 1200px) {
+	.menu-small-en-menu-container {
+		display: inline-block;
+		position: fixed;
+		background-color: #FFFFFF;
+		width: 25%;
+		padding: 0;
+		margin: 0;
+		top: 0;
+	/* this put the widget menu on top */
+		left: 0;
+	/*right: 0;*/
+	}
+
+	.menu-small-en-menu-container:hover {
+		transition: all .5s ease;
+		width: 100%;
+	}
+
+	.menu-small-en-menu-container:not(hover) {
+		transition: all .5s ease;
+		width: 25%;
+	}
+
+	.menu-small-en-menu-container .menu .menu-item {
+		width: 100%;
+		cursor: pointer;
+	}
+
+	.menu-small-en-menu-container:hover .menu .menu-item {
+		transition: all .5s ease;
+		width: 50%;
+	}
+
+	.menu-small-en-menu-container:(not)hover .menu .menu-item {
+		transition: all .5s ease;
+		width: 100%;
+	}
+}
+
+/* the most shallow, ul main-menu class */
+.menu-small-en-menu-container .menu {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	margin: 0 auto;
+	padding: 0;
+	list-style-type: none;
+	position: relative;
+}
+
+/* changed all ".menu-small-en-menu-container .menu li" to ".menu-small-en-menu-container .menu .menu-item" for easier look */
+.menu-small-en-menu-container .menu .menu-item {
+	color: #f2f2f2;
+	text-align: center;
+	padding: 0;
+	text-decoration: none;
+	font-size: 17px;
+/*width: 200px;*/
+	height: 50px;
+	transition: all .4s ease;
+}
+
+/* half screen width for mobile */
+/*
+@media (max-width: 420px) {
+	.menu-small-en-menu-container .menu .menu-item {
+		width: 50%;
+	}
+}
+*/
+.menu-small-en-menu-container .menu a {
+	text-decoration: none;
+	font-family: Lato, sans-serif;
+	font-size: 16px;
+	color: rgba(0,0,0,0.6399999857);
+	font-weight: 300;
+	line-height: 50px;
+	margin: 0;
+	padding: 0;
+	display: block;
+	vertical-align: middle;
+	text-align: center;
+}
+
+/* special size menu bar (too long) */
+@media (max-width: 424px) {
+	#menu-item-1504 a {
+		line-height: 25px;
+	}
+}
+
+@media (max-width: 340px) {
+	#menu-item-1557 a {
+		line-height: 25px;
+	}
+}
+
+@media (max-width: 348px) {
+	#menu-item-1425 a {
+		line-height: 25px;
+	}
+}
+
+.menu-small-en-menu-container .menu .menu-item:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+/* show the level 1 sub-menu */
+.menu-small-en-menu-container .menu .menu-item-has-children:hover .sub-menu {
+	background-color: #FFFFFF;
+	color: black;
+	display: block;
+	opacity: 1;
+}
+
+/* confusing part */
+/* hide the level 2 children below the level 1*/
+.menu-small-en-menu-container .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children .sub-menu .menu-item {
+	display: none;
+}
+
+/* override the first  tag just for has-children */
+.menu-small-en-menu-container .menu .menu-item-has-children a {
+	margin: 0 0 -20px;
+}
+
+/* down arrow symbol */
+.menu-small-en-menu-container .menu .menu-item-has-children::after {
+	content: "";
+	border: solid black;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+}
+
+/* down arrow transition spin animation */
+.menu-small-en-menu-container .menu .menu-item-has-children:hover::after {
+	transition: transform .5s ease;
+	transform: rotate(225deg);
+}
+
+.menu-small-en-menu-container .menu .menu-item-has-children:not(hover)::after {
+	transition: transform .5s ease;
+	transform: rotate(45deg);
+}
+
+/* level 1 sub-menu */
+.menu-small-en-menu-container .menu .menu-item-has-children .sub-menu {
+	padding: 0;
+	margin: 20px 0 0;
+	list-style-type: none;
+	display: none;
+/* hidden by default */
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	position: absolute;
+	width: 200px;
+}
+
+/* half screen width for mobile */
+@media (max-width: 1200px) {
+	.menu-small-en-menu-container .menu .menu-item-has-children .sub-menu {
+		width: 50%;
+	}
+}
+
+/* changed all ".sub-menu li" to ".sub-menu .menu-item" for easier look */
+.menu-small-en-menu-container .menu .menu-item-has-children .sub-menu .menu-item {
+	color: #FFFFFF;
+	text-align: center;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+@media (max-width: 1200px) {
+	.menu-small-en-menu-container .menu .menu-item-has-children .sub-menu .menu-item {
+		width: 100%;
+	}
+
+	/* level 2 sub-menu */
+	.menu-small-en-menu-container .menu .menu-item-has-children .sub-menu .menu-item-has-children .sub-menu {
+		width: 100%;
+	}
+}
+
+.menu-small-en-menu-container .menu .menu-item-has-children .sub-menu .menu-item:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+/* new menu parts */
+/* right arrow '>' for level 2 sub menu */
+.menu-small-en-menu-container .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children::after {
+	content: "";
+	border: solid black;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	text-align: right;
+	float: right;
+	margin-top: -10px;
+	margin-right: 5px;
+}
+
+/* right arrow '>' transition spin animation */
+.menu-small-en-menu-container .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover::after {
+	transition: transform .5s ease;
+	transform: rotate(135deg);
+}
+
+.menu-small-en-menu-container .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:not(hover)::after {
+	transition: transform .5s ease;
+	transform: rotate(-45deg);
+}
+
+/* new menu parts */
+/* show the content of level 2 sub menu */
+.menu-small-en-menu-container .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover .sub-menu {
+	padding: 0;
+	margin-top: -30px;
+	position: absolute;
+	left: 100%;
+}
+
+.menu-small-en-menu-container .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover .sub-menu .menu-item {
+	display: block;
+}
+
+/* end of customized footer menu */
+/******************************************************************************/
+/* large id menu bar */
+.menu-large-id-menu-container {
+	display: inline-block;
+	position: fixed;
+	background-color: #FFFFFF;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+@media (max-width: 1200px) {
+	.menu-large-id-menu-container {
+		display: none;
+	}
+}
+
+/* the most shallow, ul main-menu class */
+.menu-large-id-menu-container .menu {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	margin: 0 auto;
+	padding: 0;
+	list-style-type: none;
+	position: relative;
+}
+
+/* changed all ".menu-large-id-menu-container .menu li" to ".menu-large-id-menu-container .menu .menu-item" for easier look */
+.menu-large-id-menu-container .menu .menu-item {
+	color: #f2f2f2;
+	text-align: center;
+	padding: 0;
+	text-decoration: none;
+	font-size: 17px;
+	width: 150px;
+	height: 50px;
+	transition: all .4s ease;
+}
+
+/* half screen width for mobile */
+@media (max-width: 420px) {
+	.menu-large-id-menu-container .menu .menu-item {
+		width: 50%;
+	}
+}
+
+.menu-large-id-menu-container .menu a {
+	text-decoration: none;
+	font-family: Lato, sans-serif;
+	font-size: 16px;
+	color: rgba(0,0,0,0.6399999857);
+	font-weight: 300;
+	line-height: 50px;
+	margin: 0;
+	padding: 0;
+	display: block;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.menu-large-id-menu-container .menu .menu-item:hover {
+	background-color: #ddd;
+	color: black;
+	cursor: pointer;
+}
+
+/* show the level 1 sub-menu */
+.menu-large-id-menu-container .menu .menu-item-has-children:hover .sub-menu {
+	background-color: #FFFFFF;
+	color: black;
+	display: block;
+	opacity: 1;
+}
+
+/* confusing part */
+/* hide the level 2 children below the level 1*/
+.menu-large-id-menu-container .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children .sub-menu .menu-item {
+	display: none;
+}
+
+/* override the first  tag just for has-children */
+.menu-large-id-menu-container .menu .menu-item-has-children a {
+	margin: 0 0 -20px;
+}
+
+/* down arrow symbol */
+.menu-large-id-menu-container .menu .menu-item-has-children::after {
+	content: "";
+	border: solid black;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+}
+
+/* down arrow transition spin animation */
+.menu-large-id-menu-container .menu .menu-item-has-children:hover::after {
+	transition: transform .5s ease;
+	transform: rotate(225deg);
+}
+
+.menu-large-id-menu-container .menu .menu-item-has-children:not(hover)::after {
+	transition: transform .5s ease;
+	transform: rotate(45deg);
+}
+
+/* level 1 sub-menu */
+.menu-large-id-menu-container .menu .menu-item-has-children .sub-menu {
+	padding: 0;
+	margin: 20px 0 0;
+	list-style-type: none;
+	display: none;
+/* hidden by default */
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	position: absolute;
+	width: 250px;
+}
+
+/* half screen width for mobile */
+@media (max-width: 420px) {
+	.menu-large-id-menu-container .menu .menu-item-has-children .sub-menu {
+		width: 50%;
+	}
+}
+
+/* changed all ".sub-menu li" to ".sub-menu .menu-item" for easier look */
+.menu-large-id-menu-container .menu .menu-item-has-children .sub-menu .menu-item {
+	color: #FFFFFF;
+	text-align: center;
+	text-decoration: none;
+	font-size: 17px;
+	width: 250px;
+}
+
+@media (max-width: 420px) {
+	.menu-large-id-menu-container .menu .menu-item-has-children .sub-menu .menu-item {
+		width: 100%;
+	}
+
+	/* level 2 sub-menu */
+	.menu-large-id-menu-container .menu .menu-item-has-children .sub-menu .menu-item-has-children .sub-menu {
+		width: 100%;
+	}
+}
+
+.menu-large-id-menu-container .menu .menu-item-has-children .sub-menu .menu-item:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+/* new menu parts */
+/* right arrow '>' for level 2 sub menu */
+.menu-large-id-menu-container .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children::after {
+	content: "";
+	border: solid black;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	text-align: right;
+	float: right;
+	margin-top: -10px;
+	margin-right: 5px;
+}
+
+/* right arrow '>' transition spin animation */
+.menu-large-id-menu-container .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover::after {
+	transition: transform .5s ease;
+	transform: rotate(135deg);
+}
+
+.menu-large-id-menu-container .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:not(hover)::after {
+	transition: transform .5s ease;
+	transform: rotate(-45deg);
+}
+
+/* new menu parts */
+/* show the content of level 2 sub menu */
+.menu-large-id-menu-container .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover .sub-menu {
+	padding: 0;
+	margin-top: -30px;
+	position: absolute;
+	left: 100%;
+}
+
+.menu-large-id-menu-container .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover .sub-menu .menu-item {
+	display: block;
+}
+
+/* end of large id menu bar */
+/******************************************************************************/
+/* large en menu bar */
+.menu-large-en-menu-container {
+	display: inline-block;
+	position: fixed;
+	background-color: #FFFFFF;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+@media (max-width: 1200px) {
+	.menu-large-en-menu-container {
+		display: none;
+	}
+}
+
+/* the most shallow, ul main-menu class */
+.menu-large-en-menu-container .menu {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	margin: 0 auto;
+	padding: 0;
+	list-style-type: none;
+	position: relative;
+}
+
+/* changed all ".menu-large-en-menu-container .menu li" to ".menu-large-en-menu-container .menu .menu-item" for easier look */
+.menu-large-en-menu-container .menu .menu-item {
+	color: #f2f2f2;
+	text-align: center;
+	padding: 0;
+	text-decoration: none;
+	font-size: 17px;
+	width: 150px;
+	height: 50px;
+	transition: all .4s ease;
+}
+
+/* half screen width for mobile */
+@media (max-width: 420px) {
+	.menu-large-en-menu-container .menu .menu-item {
+		width: 50%;
+	}
+}
+
+.menu-large-en-menu-container .menu a {
+	text-decoration: none;
+	font-family: Lato, sans-serif;
+	font-size: 16px;
+	color: rgba(0,0,0,0.6399999857);
+	font-weight: 300;
+	line-height: 50px;
+	margin: 0;
+	padding: 0;
+	display: block;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.menu-large-en-menu-container .menu .menu-item:hover {
+	background-color: #ddd;
+	color: black;
+	cursor: pointer;
+}
+
+/* show the level 1 sub-menu */
+.menu-large-en-menu-container .menu .menu-item-has-children:hover .sub-menu {
+	background-color: #FFFFFF;
+	color: black;
+	display: block;
+	opacity: 1;
+}
+
+/* confusing part */
+/* hide the level 2 children below the level 1*/
+.menu-large-en-menu-container .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children .sub-menu .menu-item {
+	display: none;
+}
+
+/* override the first  tag just for has-children */
+.menu-large-en-menu-container .menu .menu-item-has-children a {
+	margin: 0 0 -20px;
+}
+
+/* down arrow symbol */
+.menu-large-en-menu-container .menu .menu-item-has-children::after {
+	content: "";
+	border: solid black;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+}
+
+/* down arrow transition spin animation */
+.menu-large-en-menu-container .menu .menu-item-has-children:hover::after {
+	transition: transform .5s ease;
+	transform: rotate(225deg);
+}
+
+.menu-large-en-menu-container .menu .menu-item-has-children:not(hover)::after {
+	transition: transform .5s ease;
+	transform: rotate(45deg);
+}
+
+/* level 1 sub-menu */
+.menu-large-en-menu-container .menu .menu-item-has-children .sub-menu {
+	padding: 0;
+	margin: 20px 0 0;
+	list-style-type: none;
+	display: none;
+/* hidden by default */
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	position: absolute;
+	width: 250px;
+}
+
+/* half screen width for mobile */
+@media (max-width: 420px) {
+	.menu-large-en-menu-container .menu .menu-item-has-children .sub-menu {
+		width: 50%;
+	}
+}
+
+/* changed all ".sub-menu li" to ".sub-menu .menu-item" for easier look */
+.menu-large-en-menu-container .menu .menu-item-has-children .sub-menu .menu-item {
+	color: #FFFFFF;
+	text-align: center;
+	text-decoration: none;
+	font-size: 17px;
+	width: 250px;
+}
+
+@media (max-width: 420px) {
+	.menu-large-en-menu-container .menu .menu-item-has-children .sub-menu .menu-item {
+		width: 100%;
+	}
+
+	/* level 2 sub-menu */
+	.menu-large-en-menu-container .menu .menu-item-has-children .sub-menu .menu-item-has-children .sub-menu {
+		width: 100%;
+	}
+}
+
+.menu-large-en-menu-container .menu .menu-item-has-children .sub-menu .menu-item:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+/* new menu parts */
+/* right arrow '>' for level 2 sub menu */
+.menu-large-en-menu-container .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children::after {
+	content: "";
+	border: solid black;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	text-align: right;
+	float: right;
+	margin-top: -10px;
+	margin-right: 5px;
+}
+
+/* right arrow '>' transition spin animation */
+.menu-large-en-menu-container .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover::after {
+	transition: transform .5s ease;
+	transform: rotate(135deg);
+}
+
+.menu-large-en-menu-container .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:not(hover)::after {
+	transition: transform .5s ease;
+	transform: rotate(-45deg);
+}
+
+/* new menu parts */
+/* show the content of level 2 sub menu */
+.menu-large-en-menu-container .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover .sub-menu {
+	padding: 0;
+	margin-top: -30px;
+	position: absolute;
+	left: 100%;
+}
+
+.menu-large-en-menu-container .menu .menu-item-has-children:hover .sub-menu .menu-item-has-children:hover .sub-menu .menu-item {
+	display: block;
+}
+
+/* end of large en menu bar */
